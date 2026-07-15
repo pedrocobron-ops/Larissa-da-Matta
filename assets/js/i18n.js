@@ -58,7 +58,9 @@
       "contato.rep.body": "Acervo de Atores<br>Patricia Blanco<br><a href=\"tel:+5511991094535\">+55 11 99109-4535</a>",
       "contato.social.title": "Redes",
       "form.name": "Nome", "form.email": "E-mail", "form.msg": "Mensagem",
-      "form.send": "Enviar", "form.note": "Envio será ativado na publicação."
+      "form.send": "Enviar", "form.note": "Envio será ativado na publicação.",
+      "wa.label": "Falar no WhatsApp",
+      "wa.link": "https://wa.me/5511941220402?text=Ol%C3%A1%2C%20Larissa!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20falar%20com%20voc%C3%AA."
     },
     en: {
       "nav.sobre": "About", "nav.atriz": "Actress", "nav.dancarina": "Dancer",
@@ -114,7 +116,9 @@
       "contato.rep.body": "Acervo de Atores<br>Patricia Blanco<br><a href=\"tel:+5511991094535\">+55 11 99109-4535</a>",
       "contato.social.title": "Social",
       "form.name": "Name", "form.email": "Email", "form.msg": "Message",
-      "form.send": "Send", "form.note": "Sending will be enabled on launch."
+      "form.send": "Send", "form.note": "Sending will be enabled on launch.",
+      "wa.label": "Chat on WhatsApp",
+      "wa.link": "https://wa.me/5511941220402?text=Hi%2C%20Larissa!%20I%20found%20your%20website%20and%20would%20like%20to%20talk."
     },
     es: {
       "nav.sobre": "Sobre", "nav.atriz": "Actriz", "nav.dancarina": "Bailarina",
@@ -170,7 +174,9 @@
       "contato.rep.body": "Acervo de Atores<br>Patricia Blanco<br><a href=\"tel:+5511991094535\">+55 11 99109-4535</a>",
       "contato.social.title": "Redes",
       "form.name": "Nombre", "form.email": "Correo", "form.msg": "Mensaje",
-      "form.send": "Enviar", "form.note": "El envío se activará en la publicación."
+      "form.send": "Enviar", "form.note": "El envío se activará en la publicación.",
+      "wa.label": "Hablar por WhatsApp",
+      "wa.link": "https://wa.me/5511941220402?text=%C2%A1Hola%2C%20Larissa!%20Vi%20tu%20sitio%20y%20me%20gustar%C3%ADa%20hablar%20contigo."
     }
   };
 
@@ -186,6 +192,10 @@
     document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
       var k = el.getAttribute("data-i18n-html");
       if (dict[k] != null) el.innerHTML = dict[k];
+    });
+    document.querySelectorAll("[data-i18n-href]").forEach(function (el) {
+      var k = el.getAttribute("data-i18n-href");
+      if (dict[k] != null) el.setAttribute("href", dict[k]);
     });
     document.documentElement.setAttribute("lang", HTML_LANG[lang] || "pt-BR");
     document.querySelectorAll("#langSwitch button").forEach(function (b) {

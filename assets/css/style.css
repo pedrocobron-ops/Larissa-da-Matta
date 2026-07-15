@@ -585,3 +585,30 @@ body::after{
   font-size:clamp(2.5rem,6.4vw,5.4rem);line-height:1.1;
   letter-spacing:.02em;margin:.9rem 0 1.8rem;
 }
+
+/* ============================================================
+   WHATSAPP — botão e ação flutuante
+   ============================================================ */
+.btn-wa{
+  display:inline-flex;align-items:center;gap:.7rem;margin:1.9rem 0 .4rem;
+  background:var(--espresso);color:var(--cream);
+  padding:.9rem 1.7rem;border-radius:100px;
+  font-family:var(--font-sans);font-size:.82rem;letter-spacing:.04em;
+  box-shadow:0 16px 34px -18px rgba(0,0,0,.55);
+  transition:background .3s ease,transform .3s ease;
+}
+.btn-wa:hover{background:var(--umber);transform:translateY(-2px);}
+.btn-wa svg{width:20px;height:20px;fill:currentColor;flex:none;}
+.section--dark .btn-wa{background:var(--ocre);color:var(--espresso-2);}
+.section--dark .btn-wa:hover{background:var(--caramel);}
+
+.wa-float{
+  position:fixed;right:clamp(1rem,3vw,2.2rem);bottom:clamp(1rem,3vw,2.2rem);z-index:70;
+  width:58px;height:58px;border-radius:50%;
+  background:var(--espresso);color:var(--cream);
+  display:grid;place-items:center;
+  box-shadow:0 14px 34px -10px rgba(0,0,0,.55),0 0 0 1px rgba(245,240,231,.06);
+  transition:transform .3s ease,background .3s ease;
+}
+.wa-float:hover{transform:scale(1.09);background:var(--umber);}
+.wa-float svg{width:30px;height:30px;fill:currentColor;}
