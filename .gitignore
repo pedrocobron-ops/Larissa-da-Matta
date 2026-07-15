@@ -1,0 +1,10 @@
+# Dependências / artefatos
+node_modules/
+*.log
+
+# Preview autocontido gerado (não faz parte do site)
+preview-larissa.html
+
+# Sistema
+.DS_Store
+Thumbs.db
