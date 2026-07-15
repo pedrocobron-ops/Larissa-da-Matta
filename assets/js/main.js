@@ -30,7 +30,7 @@
 
   /* Revelar ao entrar na viewport */
   var revealEls = document.querySelectorAll(
-    ".section__head, .sobre__bio, .sobre__meta, .work, .intro-line, .media-grid, .cards, .card, .contato__grid, .form, .hero__text, .hero__media"
+    ".section__head, .sobre__bio, .sobre__meta, .feature, .work, .intro-line, .media-grid, .cards, .card, .contato__grid, .form, .hero__text, .hero__media"
   );
   revealEls.forEach(function (el) { el.classList.add("reveal"); });
 
