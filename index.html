@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Larissa da Matta — Atriz · Performer · Dramaturga</title>
-  <meta name="description" content="Larissa da Matta — atriz, dançarina, performer, dramaturga e pesquisadora. Portfólio de trabalhos, formação e contato." />
-  <link rel="preconnect" href="/" />
+  <title>Larissa da Matta — Atriz · Dançarina · Modelo</title>
+  <meta name="description" content="Larissa da Matta — atriz, dançarina e modelo. Portfólio de teatro, TV, cinema, dança e trabalhos com marcas, aulas e contato." />
+  <meta name="robots" content="index, follow" />
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
@@ -15,15 +15,19 @@
     <div class="nav__inner">
       <a href="#top" class="nav__brand">Larissa&nbsp;da&nbsp;Matta</a>
       <nav class="nav__links" id="navLinks">
-        <a href="#sobre">Sobre</a>
-        <a href="#trabalhos">Trabalhos</a>
-        <a href="#reel">Reel</a>
-        <a href="#contato">Contato</a>
-        <span class="nav__lang"><button class="is-active">PT</button><i>/</i><button>EN</button></span>
+        <a href="#sobre" data-i18n="nav.sobre">Sobre</a>
+        <a href="#atriz" data-i18n="nav.atriz">Atriz</a>
+        <a href="#dancarina" data-i18n="nav.dancarina">Dançarina</a>
+        <a href="#modelo" data-i18n="nav.modelo">Modelo</a>
+        <a href="#aulas" data-i18n="nav.aulas">Aulas</a>
+        <a href="#galeria" data-i18n="nav.galeria">Galeria</a>
+        <a href="#contato" data-i18n="nav.contato">Contato</a>
+        <a href="#" class="nav__cv" data-i18n="nav.cv">Currículo (PDF)</a>
+        <span class="nav__lang" id="langSwitch">
+          <button data-lang="pt" class="is-active">PT</button><i>·</i><button data-lang="en">EN</button><i>·</i><button data-lang="es">ES</button>
+        </span>
       </nav>
-      <button class="nav__toggle" id="navToggle" aria-label="Menu">
-        <span></span><span></span>
-      </button>
+      <button class="nav__toggle" id="navToggle" aria-label="Menu"><span></span><span></span></button>
     </div>
   </header>
 
@@ -31,19 +35,17 @@
   <section class="hero" id="top">
     <div class="hero__grid">
       <div class="hero__text">
-        <p class="eyebrow">Atriz · Performer · Dramaturga</p>
+        <p class="eyebrow" data-i18n="hero.eyebrow">Atriz · Dançarina · Modelo</p>
         <h1 class="hero__name">Larissa<br />da&nbsp;Matta</h1>
-        <p class="hero__lead"><em>Uma investigação cênica entre o corpo, a palavra<br />e a memória latino-americana.</em></p>
-        <a href="#trabalhos" class="hero__cta">Ver trabalhos <span>↓</span></a>
+        <p class="hero__lead" data-i18n-html="hero.lead"><em>Entre a cena, o corpo e a imagem —<br />uma artista latino-americana.</em></p>
+        <a href="#atriz" class="hero__cta"><span data-i18n="hero.cta">Ver trabalhos</span> <span aria-hidden="true">↓</span></a>
       </div>
       <div class="hero__media">
-        <div class="hero__frame">
-          <img src="./assets/images/larissa-01.jpg" alt="Larissa da Matta" />
-        </div>
-        <span class="hero__index">01 — Retrato</span>
+        <div class="hero__frame"><img src="./assets/images/larissa-01.jpg" alt="Larissa da Matta" /></div>
+        <span class="hero__index" data-i18n="hero.index">Retrato</span>
       </div>
     </div>
-    <div class="hero__scroll"><span>rolar</span></div>
+    <div class="hero__scroll"><span data-i18n="hero.scroll">rolar</span></div>
   </section>
 
   <!-- SOBRE -->
@@ -51,29 +53,29 @@
     <div class="wrap">
       <div class="section__head">
         <span class="label">01</span>
-        <span class="label label--title">Sobre</span>
+        <span class="label label--title" data-i18n="sobre.title">Sobre</span>
       </div>
       <div class="sobre__grid">
         <div class="sobre__bio">
-          <p class="lead">Larissa da Matta é atriz, dançarina, performer, dramaturga e pesquisadora.</p>
-          <p>Bacharel e licenciada em Teatro pela Escola Superior de Artes Célia Helena, transita entre a cena, a dança e a criação autoral. Sua trajetória atravessa o teatro, o audiovisual e a performance, com passagens por festivais internacionais na América Latina e na Rússia.</p>
-          <p>Investiga a presença cênica como território de pesquisa — do gesto à dramaturgia, da tradição popular brasileira ao teatro contemporâneo.</p>
+          <p class="lead" data-i18n="sobre.lead">Larissa da Matta é atriz, dançarina, performer e pesquisadora latino-americana.</p>
+          <p data-i18n="sobre.p1">Bacharel e licenciada em Teatro pela Escola Superior de Artes Célia Helena, transita entre o teatro, o audiovisual, a dança e a moda. Sua trajetória atravessa palcos e sets no Brasil e em festivais internacionais na América Latina e na Rússia.</p>
+          <p data-i18n="sobre.p2">Investiga a presença cênica como território de pesquisa — do gesto à dramaturgia, da tradição popular brasileira ao teatro contemporâneo — e leva essa sensibilidade também para a dança, o trabalho com marcas e o ensino.</p>
         </div>
         <aside class="sobre__meta">
           <div class="meta__block">
-            <h3>Formação</h3>
+            <h3 data-i18n="sobre.langs.title">Idiomas</h3>
             <ul>
-              <li>Teatro — Esc. Sup. de Artes Célia Helena</li>
-              <li>História da Arte — Prof. Dr. Rodrigo Naves</li>
-              <li>Danças Urbanas — Centro de Artes Lílian Gumieiro</li>
+              <li data-i18n="sobre.langs.pt">Português — nativo</li>
+              <li data-i18n="sobre.langs.es">Espanhol — fluente</li>
+              <li data-i18n="sobre.langs.en">Inglês — avançado</li>
             </ul>
           </div>
           <div class="meta__block">
-            <h3>Habilidades</h3>
+            <h3 data-i18n="sobre.form.title">Formação</h3>
             <ul>
-              <li>Combate cênico — Teatro de Arte de Moscou</li>
-              <li>Danças urbanas e folclóricas brasileiras</li>
-              <li>Performance e dramaturgia</li>
+              <li data-i18n="sobre.form.1">Teatro — Esc. Sup. de Artes Célia Helena</li>
+              <li data-i18n="sobre.form.2">História da Arte — Prof. Dr. Rodrigo Naves</li>
+              <li data-i18n="sobre.form.3">Danças Urbanas — Centro de Artes Lílian Gumieiro</li>
             </ul>
           </div>
         </aside>
@@ -81,78 +83,170 @@
     </div>
   </section>
 
-  <!-- TRABALHOS -->
-  <section class="trabalhos section section--dark" id="trabalhos">
+  <!-- ATRIZ -->
+  <section class="section section--dark" id="atriz">
     <div class="wrap">
       <div class="section__head">
         <span class="label">02</span>
-        <span class="label label--title">Trabalhos selecionados</span>
+        <span class="label label--title" data-i18n="atriz.title">Atriz</span>
+        <span class="section__sub" data-i18n="atriz.sub">Teatro · TV · Cinema</span>
       </div>
       <ul class="works">
         <li class="work">
-          <span class="work__year">Solo</span>
+          <span class="work__year" data-i18n="atriz.w1.tag">Teatro</span>
           <span class="work__title">A Última Valsa de Zelda Fitzgerald</span>
-          <span class="work__meta">Teatro · autoria e atuação</span>
+          <span class="work__meta" data-i18n="atriz.w1.meta">Solo · autoria e atuação</span>
           <span class="work__place">Espaço º Andar</span>
         </li>
         <li class="work">
-          <span class="work__year">Internacional</span>
+          <span class="work__year" data-i18n="atriz.w2.tag">Teatro</span>
           <span class="work__title">Granada</span>
-          <span class="work__meta">Teatro · elenco</span>
-          <span class="work__place">Festival MIRADA — Ibero-Americano</span>
+          <span class="work__meta" data-i18n="atriz.w2.meta">Internacional · elenco</span>
+          <span class="work__place">Festival MIRADA</span>
         </li>
         <li class="work">
-          <span class="work__year">Internacional</span>
+          <span class="work__year" data-i18n="atriz.w3.tag">Teatro</span>
           <span class="work__title">Édipo Rei</span>
-          <span class="work__meta">Teatro · dir. Valentin Teplyakov</span>
-          <span class="work__place">Festival de Escolas — BRICS, Rússia</span>
+          <span class="work__meta">dir. Valentin Teplyakov</span>
+          <span class="work__place">Festival BRICS — Rússia</span>
         </li>
-        <li class="work">
-          <span class="work__year">Audiovisual</span>
-          <span class="work__title">Curtas &amp; Videoclipes</span>
-          <span class="work__meta">Atriz e preparadora de elenco</span>
-          <span class="work__place">Diversos</span>
+        <li class="work work--soon">
+          <span class="work__year" data-i18n="atriz.w4.tag">TV · Cinema</span>
+          <span class="work__title" data-i18n="atriz.w4.title">Em atualização</span>
+          <span class="work__meta" data-i18n="atriz.w4.meta">Créditos de audiovisual</span>
+          <span class="work__place">—</span>
         </li>
       </ul>
-      <p class="works__note">Seleção — portfólio completo em atualização.</p>
+      <p class="works__note" data-i18n="atriz.note">Seleção — portfólio completo em atualização.</p>
     </div>
   </section>
 
-  <!-- REEL -->
-  <section class="reel section" id="reel">
+  <!-- DANÇARINA -->
+  <section class="section" id="dancarina">
     <div class="wrap">
       <div class="section__head">
         <span class="label">03</span>
-        <span class="label label--title">Reel</span>
+        <span class="label label--title" data-i18n="danc.title">Dançarina</span>
+        <span class="section__sub" data-i18n="danc.sub">Formação · Vídeos</span>
       </div>
-      <div class="reel__frame" role="img" aria-label="Demo reel em breve">
-        <button class="reel__play" aria-label="Reproduzir reel"><span></span></button>
-        <span class="reel__caption">Demo reel — em breve</span>
+      <div class="sobre__grid">
+        <div class="sobre__bio">
+          <p class="lead" data-i18n="danc.lead">Do popular ao contemporâneo — o corpo como linguagem.</p>
+          <p data-i18n="danc.p1">Formada em Danças Urbanas pelo Centro de Artes Lílian Gumieiro, com estudos em danças folclóricas brasileiras e combate cênico no Teatro de Arte de Moscou. A dança atravessa toda a sua pesquisa e presença em cena.</p>
+        </div>
+        <aside class="sobre__meta">
+          <div class="meta__block">
+            <h3 data-i18n="danc.form.title">Formação em dança</h3>
+            <ul>
+              <li data-i18n="danc.form.1">Danças Urbanas — Lílian Gumieiro</li>
+              <li data-i18n="danc.form.2">Danças folclóricas brasileiras</li>
+              <li data-i18n="danc.form.3">Combate cênico — Teatro de Arte de Moscou</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+      <div class="media-grid media-grid--video">
+        <div class="media-ph media-ph--video"><span data-i18n="danc.video">Vídeos de dança — em breve</span></div>
+        <div class="media-ph media-ph--video"><span data-i18n="danc.video">Vídeos de dança — em breve</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODELO -->
+  <section class="section section--dark" id="modelo">
+    <div class="wrap">
+      <div class="section__head">
+        <span class="label">04</span>
+        <span class="label label--title" data-i18n="modelo.title">Modelo</span>
+        <span class="section__sub" data-i18n="modelo.sub">Trabalhos com marcas</span>
+      </div>
+      <p class="intro-line" data-i18n="modelo.lead">Campanhas, editoriais e colaborações com marcas.</p>
+      <div class="media-grid media-grid--3">
+        <div class="media-ph"><span data-i18n="modelo.soon">Portfólio em breve</span></div>
+        <div class="media-ph"><span data-i18n="modelo.soon">Portfólio em breve</span></div>
+        <div class="media-ph"><span data-i18n="modelo.soon">Portfólio em breve</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AULAS -->
+  <section class="section" id="aulas">
+    <div class="wrap">
+      <div class="section__head">
+        <span class="label">05</span>
+        <span class="label label--title" data-i18n="aulas.title">Aulas</span>
+        <span class="section__sub" data-i18n="aulas.sub">Cursos e serviços</span>
+      </div>
+      <p class="intro-line" data-i18n="aulas.lead">Aulas particulares e cursos livres — presenciais e online.</p>
+      <div class="cards">
+        <article class="card">
+          <span class="card__num">01</span>
+          <h3 data-i18n="aulas.c1.t">Espanhol</h3>
+          <p data-i18n="aulas.c1.d">Aulas de espanhol para todos os níveis, com foco em conversação e fluência.</p>
+        </article>
+        <article class="card">
+          <span class="card__num">02</span>
+          <h3 data-i18n="aulas.c2.t">Inglês — Conversação</h3>
+          <p data-i18n="aulas.c2.d">Prática de conversação em inglês para ganhar confiança e naturalidade.</p>
+        </article>
+        <article class="card">
+          <span class="card__num">03</span>
+          <h3 data-i18n="aulas.c3.t">Pilates</h3>
+          <p data-i18n="aulas.c3.d">Aulas de Pilates com atenção à consciência corporal, postura e respiração.</p>
+        </article>
+        <article class="card">
+          <span class="card__num">04</span>
+          <h3 data-i18n="aulas.c4.t">Curso livre de Teatro</h3>
+          <p data-i18n="aulas.c4.d">Iniciação e aprofundamento em teatro: corpo, voz, presença e interpretação.</p>
+        </article>
+      </div>
+      <a href="#contato" class="btn-line"><span data-i18n="aulas.cta">Quero agendar uma aula</span> <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section class="section section--dark" id="galeria">
+    <div class="wrap">
+      <div class="section__head">
+        <span class="label">06</span>
+        <span class="label label--title" data-i18n="galeria.title">Galeria</span>
+        <span class="section__sub" data-i18n="galeria.sub">Fotos &amp; Videobook</span>
+      </div>
+      <div class="media-grid media-grid--gallery">
+        <div class="media-photo"><img src="./assets/images/larissa-01.jpg" alt="Larissa da Matta" /></div>
+        <div class="media-ph"><span data-i18n="galeria.soon">Foto — em breve</span></div>
+        <div class="media-ph"><span data-i18n="galeria.soon">Foto — em breve</span></div>
+        <div class="media-ph media-ph--video media-ph--wide"><span data-i18n="galeria.video">Videobook — em breve</span></div>
       </div>
     </div>
   </section>
 
   <!-- CONTATO -->
-  <section class="contato section section--dark" id="contato">
+  <section class="section" id="contato">
     <div class="wrap">
       <div class="section__head">
-        <span class="label">04</span>
-        <span class="label label--title">Contato</span>
+        <span class="label">07</span>
+        <span class="label label--title" data-i18n="contato.title">Contato</span>
       </div>
       <div class="contato__grid">
         <div>
-          <h2 class="contato__title">Vamos criar<br />algo juntos.</h2>
-        </div>
-        <div class="contato__info">
-          <div class="info__block">
-            <h3>Representação</h3>
-            <p>Acervo de Atores<br />Patricia Blanco<br /><a href="tel:+5511991094535">+55 11 99109-4535</a></p>
+          <h2 class="contato__title" data-i18n-html="contato.headline">Vamos criar<br />algo juntos.</h2>
+          <div class="info__block info__block--mt">
+            <h3 data-i18n="contato.rep.title">Representação</h3>
+            <p data-i18n-html="contato.rep.body">Acervo de Atores<br />Patricia Blanco<br /><a href="tel:+5511991094535">+55 11 99109-4535</a></p>
           </div>
           <div class="info__block">
-            <h3>Redes</h3>
+            <h3 data-i18n="contato.social.title">Redes</h3>
             <p><a href="https://instagram.com/larissadamatta_" target="_blank" rel="noopener">Instagram @larissadamatta_</a></p>
           </div>
         </div>
+        <form class="form" onsubmit="return false;" aria-label="Formulário de contato">
+          <label><span data-i18n="form.name">Nome</span><input type="text" name="nome" autocomplete="name" /></label>
+          <label><span data-i18n="form.email">E-mail</span><input type="email" name="email" autocomplete="email" /></label>
+          <label><span data-i18n="form.msg">Mensagem</span><textarea name="mensagem" rows="4"></textarea></label>
+          <button type="submit" class="btn" data-i18n="form.send">Enviar</button>
+          <span class="form__note" data-i18n="form.note">Envio será ativado na publicação.</span>
+        </form>
       </div>
     </div>
   </section>
@@ -161,11 +255,12 @@
   <footer class="footer">
     <div class="wrap footer__inner">
       <span class="footer__name">Larissa da Matta</span>
-      <span class="footer__role">Atriz · Performer · Dramaturga</span>
+      <span class="footer__role" data-i18n="hero.eyebrow">Atriz · Dançarina · Modelo</span>
       <span class="footer__copy">© 2026</span>
     </div>
   </footer>
 
+  <script src="./assets/js/i18n.js"></script>
   <script src="./assets/js/main.js"></script>
 </body>
 </html>

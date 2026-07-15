@@ -28,9 +28,9 @@
     });
   }
 
-  /* Revelar seções ao entrar na viewport */
+  /* Revelar ao entrar na viewport */
   var revealEls = document.querySelectorAll(
-    ".section__head, .sobre__bio, .sobre__meta, .work, .reel__frame, .contato__grid, .hero__text, .hero__media"
+    ".section__head, .sobre__bio, .sobre__meta, .work, .intro-line, .media-grid, .cards, .card, .contato__grid, .form, .hero__text, .hero__media"
   );
   revealEls.forEach(function (el) { el.classList.add("reveal"); });
 
@@ -44,20 +44,10 @@
           }
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+      { threshold: 0.1, rootMargin: "0px 0px -6% 0px" }
     );
     revealEls.forEach(function (el) { io.observe(el); });
   } else {
     revealEls.forEach(function (el) { el.classList.add("is-in"); });
   }
-
-  /* Toggle de idioma (protótipo — a implementar) */
-  document.querySelectorAll(".nav__lang button").forEach(function (b) {
-    b.addEventListener("click", function () {
-      document.querySelectorAll(".nav__lang button").forEach(function (x) {
-        x.classList.remove("is-active");
-      });
-      b.classList.add("is-active");
-    });
-  });
 })();
