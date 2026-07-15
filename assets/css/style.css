@@ -507,3 +507,58 @@ ul{list-style:none;}
   .press__item a{grid-template-columns:1fr;gap:.55rem;}
   .press__cta{justify-self:start;}
 }
+
+/* ============================================================
+   REFINO DE DESIGN — textura, profundidade e sombras suaves
+   (sem imagens de fundo; blocos deixam de ser chapados/rígidos)
+   ============================================================ */
+
+/* Fundo com leve variação de tom — não chapado */
+body{
+  background:linear-gradient(176deg,#f7f2ea 0%,#efe7db 55%,#ece2d4 100%);
+  background-attachment:fixed;
+}
+
+/* Grão de filme sutil sobre tudo (SVG, sem imagem externa) */
+body::after{
+  content:"";position:fixed;inset:0;z-index:60;pointer-events:none;
+  opacity:.42;mix-blend-mode:soft-light;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:160px 160px;
+}
+
+/* Seções escuras: brilho quente no topo + sombras suaves acima/abaixo
+   (dá separação e profundidade entre os blocos, sem peso) */
+.section--dark{
+  position:relative;z-index:1;
+  background:
+    radial-gradient(130% 85% at 50% -12%, rgba(180,130,80,.14), transparent 58%),
+    linear-gradient(180deg,#281f17,#201811);
+  background-color:var(--espresso);
+  box-shadow:
+    0 44px 90px -58px rgba(0,0,0,.62),
+    0 -44px 90px -58px rgba(0,0,0,.5);
+}
+
+/* Cabeçalhos de seção clara: leve profundidade na linha */
+.section__head{box-shadow:0 1px 0 rgba(255,255,255,.35);}
+.section--dark .section__head{box-shadow:0 1px 0 rgba(255,255,255,.04);}
+
+/* Cards de Aulas: elevação suave */
+.cards{
+  box-shadow:0 44px 80px -52px rgba(60,44,28,.42);
+}
+.card{
+  background:linear-gradient(165deg,#f6f0e7,#f1eadd);
+}
+.card:hover{background:linear-gradient(165deg,#f1e9db,#ece3d3);}
+
+/* Fotos: sombra para descolar do fundo */
+.media-photo{box-shadow:0 34px 64px -42px rgba(0,0,0,.5);}
+
+/* Placeholders com leve gradiente (não ficam chapados) */
+.media-ph{background:linear-gradient(160deg,rgba(33,26,20,.015),rgba(33,26,20,.055));}
+.section--dark .media-ph{background:linear-gradient(160deg,rgba(245,240,231,.02),rgba(245,240,231,.06));}
+
+/* Frame do hero: sombra um pouco mais rica */
+.hero__frame{box-shadow:0 50px 100px -46px rgba(0,0,0,.72),0 8px 24px -12px rgba(0,0,0,.4);}
