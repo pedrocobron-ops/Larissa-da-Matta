@@ -577,3 +577,11 @@ body::after{
   font-family:"Cinzel",Georgia,serif;font-weight:600;
   text-transform:uppercase;letter-spacing:.16em;font-size:.95rem;
 }
+
+/* Nome no hero em Cinzel (logo) — restaurado */
+.hero__name{
+  font-family:"Cinzel",Georgia,serif;font-weight:500;
+  text-transform:uppercase;
+  font-size:clamp(2.5rem,6.4vw,5.4rem);line-height:1.1;
+  letter-spacing:.02em;margin:.9rem 0 1.8rem;
+}
