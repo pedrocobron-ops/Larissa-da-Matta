@@ -387,7 +387,7 @@ ul{list-style:none;}
 
 /* ---------- Cards de Aulas ---------- */
 .cards{
-  display:grid;grid-template-columns:repeat(2,1fr);
+  display:grid;grid-template-columns:repeat(3,1fr);
   gap:clamp(1px,.2vw,2px);background:var(--line);
   border:1px solid var(--line);border-radius:2px;overflow:hidden;margin-bottom:2.6rem;
 }
@@ -572,12 +572,6 @@ body::after{
 .nav__brand{
   font-family:"Cinzel",Georgia,serif;font-weight:600;
   letter-spacing:.2em;font-size:.8rem;
-}
-.hero__name{
-  font-family:"Cinzel",Georgia,serif;font-weight:500;
-  text-transform:uppercase;
-  font-size:clamp(2.5rem,6.4vw,5.4rem);line-height:1.1;
-  letter-spacing:.02em;margin:.9rem 0 1.8rem;
 }
 .footer__name{
   font-family:"Cinzel",Georgia,serif;font-weight:600;
