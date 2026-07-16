@@ -64,6 +64,7 @@
       "imprensa.read": "Ler matéria →",
       "imprensa.note": "Matérias sobre o trabalho dela.",
       "contato.title": "Contato", "contato.headline": "Vamos<br>conversar.",
+      "contato.lead": "Para trabalhos, casting ou aulas, fale direto com a Larissa.",
       "contato.rep.title": "Representação",
       "contato.direct.title": "Direto",
       "contato.material.title": "Material", "contato.material.pdf": "Baixar portfólio (PDF)",
@@ -142,6 +143,7 @@
       "imprensa.read": "Read article →",
       "imprensa.note": "Press about her work.",
       "contato.title": "Contact", "contato.headline": "Let's<br>talk.",
+      "contato.lead": "For work, casting or classes, reach out to Larissa directly.",
       "contato.rep.title": "Representation",
       "contato.direct.title": "Direct",
       "contato.material.title": "Material", "contato.material.pdf": "Download portfolio (PDF)",
@@ -220,6 +222,7 @@
       "imprensa.read": "Leer nota →",
       "imprensa.note": "Prensa sobre su trabajo.",
       "contato.title": "Contacto", "contato.headline": "Hablemos.",
+      "contato.lead": "Para trabajos, casting o clases, habla directamente con Larissa.",
       "contato.rep.title": "Representación",
       "contato.direct.title": "Directo",
       "contato.material.title": "Material", "contato.material.pdf": "Descargar portafolio (PDF)",
@@ -260,7 +263,9 @@
     });
     document.documentElement.setAttribute("lang", HTML_LANG[lang] || "pt-BR");
     document.querySelectorAll("#langSwitch button").forEach(function (b) {
-      b.classList.toggle("is-active", b.getAttribute("data-lang") === lang);
+      var on = b.getAttribute("data-lang") === lang;
+      b.classList.toggle("is-active", on);
+      b.setAttribute("aria-pressed", on ? "true" : "false");
     });
     try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
   }

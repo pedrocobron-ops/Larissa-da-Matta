@@ -10,12 +10,15 @@
   <!-- Ícone -->
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
 
+  <link rel="canonical" href="https://pedrocobron-ops.github.io/Larissa-da-Matta/" />
+
   <!-- Open Graph / redes sociais -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Larissa da Matta" />
   <meta property="og:title" content="Larissa da Matta — Atriz · Dançarina · Modelo" />
   <meta property="og:description" content="Atriz, dançarina e modelo. Portfólio de teatro, TV, cinema, dança, moda e aulas." />
-  <meta property="og:image" content="./assets/images/og-cover.jpg" />
+  <meta property="og:url" content="https://pedrocobron-ops.github.io/Larissa-da-Matta/" />
+  <meta property="og:image" content="https://pedrocobron-ops.github.io/Larissa-da-Matta/assets/images/og-cover.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="pt_BR" />
@@ -26,7 +29,28 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Larissa da Matta — Atriz · Dançarina · Modelo" />
   <meta name="twitter:description" content="Atriz, dançarina e modelo. Portfólio de teatro, TV, cinema, dança, moda e aulas." />
-  <meta name="twitter:image" content="./assets/images/og-cover.jpg" />
+  <meta name="twitter:image" content="https://pedrocobron-ops.github.io/Larissa-da-Matta/assets/images/og-cover.jpg" />
+
+  <!-- Dados estruturados (schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Larissa da Matta",
+    "alternateName": "Larissa Fernandes da Matta",
+    "jobTitle": ["Atriz", "Dançarina", "Modelo"],
+    "description": "Atriz, dançarina, modelo e artista-pesquisadora. Bacharel e pós-graduada em Artes Cênicas pela Escola Superior de Artes Célia Helena.",
+    "url": "https://pedrocobron-ops.github.io/Larissa-da-Matta/",
+    "image": "https://pedrocobron-ops.github.io/Larissa-da-Matta/assets/images/og-cover.jpg",
+    "nationality": "Brazilian",
+    "knowsLanguage": ["pt-BR", "es", "en", "it", "ru"],
+    "sameAs": ["https://instagram.com/larissadamatta_"],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Escola Superior de Artes Célia Helena"
+    }
+  }
+  </script>
 
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
@@ -46,11 +70,11 @@
         <a href="#imprensa" data-i18n="nav.imprensa">Imprensa</a>
         <a href="#contato" data-i18n="nav.contato">Contato</a>
         <a href="./assets/larissa-da-matta-portfolio.pdf" target="_blank" rel="noopener" class="nav__cv" data-i18n="nav.cv">Currículo (PDF)</a>
-        <span class="nav__lang" id="langSwitch">
-          <button data-lang="pt" class="is-active">PT</button><i>·</i><button data-lang="en">EN</button><i>·</i><button data-lang="es">ES</button>
+        <span class="nav__lang" id="langSwitch" role="group" aria-label="Idioma / Language">
+          <button type="button" data-lang="pt" class="is-active" aria-pressed="true" aria-label="Português">PT</button><i aria-hidden="true">·</i><button type="button" data-lang="en" aria-pressed="false" aria-label="English">EN</button><i aria-hidden="true">·</i><button type="button" data-lang="es" aria-pressed="false" aria-label="Español">ES</button>
         </span>
       </nav>
-      <button class="nav__toggle" id="navToggle" aria-label="Menu"><span></span><span></span></button>
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-controls="navLinks" aria-expanded="false"><span></span><span></span></button>
     </div>
   </header>
 
@@ -64,7 +88,7 @@
         <a href="#atriz" class="hero__cta"><span data-i18n="hero.cta">Ver trabalhos</span> <span aria-hidden="true">↓</span></a>
       </div>
       <div class="hero__media">
-        <div class="hero__frame"><img src="./assets/images/larissa-01.jpg" alt="Larissa da Matta" /></div>
+        <div class="hero__frame"><img src="./assets/images/larissa-01.jpg" alt="Retrato de Larissa da Matta" width="846" height="650" decoding="async" fetchpriority="high" /></div>
         <span class="hero__index" data-i18n="hero.index">Retrato</span>
       </div>
     </div>
@@ -83,7 +107,7 @@
           <p class="lead" data-i18n="sobre.lead">Larissa da Matta é atriz, dançarina, modelo e artista-pesquisadora.</p>
           <p data-i18n="sobre.p1">É bacharel e licenciada em Teatro pela Escola Superior de Artes Célia Helena. Trabalha entre teatro, audiovisual, dança e moda, no Brasil e em festivais na América Latina e na Rússia.</p>
           <p data-i18n="sobre.p2">Na pesquisa Dramaturgias do Corpo, investigou a vida e a obra de mais de 40 mulheres artistas, do século XVI ao XXI. Foi desse trabalho que nasceu seu solo sobre Zelda Fitzgerald.</p>
-          <figure class="sobre__portrait"><img src="./assets/images/larissa-05.jpg" alt="Larissa da Matta" /></figure>
+          <figure class="sobre__portrait"><img src="./assets/images/larissa-05.jpg" alt="Larissa da Matta em retrato preto e branco" width="853" height="1280" loading="lazy" decoding="async" /></figure>
         </div>
         <aside class="sobre__meta">
           <div class="meta__block">
@@ -285,7 +309,7 @@
           </div>
         </aside>
       </div>
-      <figure class="danc-photo"><img src="./assets/images/larissa-07.jpg" alt="Larissa da Matta em movimento" /></figure>
+      <figure class="danc-photo"><img src="./assets/images/larissa-07.jpg" alt="Larissa da Matta em movimento" width="1280" height="912" loading="lazy" decoding="async" /></figure>
     </div>
   </section>
 
@@ -299,9 +323,9 @@
       </div>
       <p class="intro-line" data-i18n="modelo.lead">Trabalhos como modelo para marcas e campanhas.</p>
       <div class="media-grid media-grid--3">
-        <div class="media-photo"><img src="./assets/images/larissa-film-01.jpg" alt="Larissa da Matta — still do fashion film Mujeres al borde de un ataque de nervios" /></div>
-        <div class="media-photo"><img src="./assets/images/larissa-film-02.jpg" alt="Larissa da Matta — still do fashion film Mujeres al borde de un ataque de nervios" /></div>
-        <div class="media-photo"><img src="./assets/images/larissa-film-03.jpg" alt="Larissa da Matta — still do fashion film Mujeres al borde de un ataque de nervios" /></div>
+        <div class="media-photo"><img src="./assets/images/larissa-film-01.jpg" alt="Larissa da Matta — still do fashion film Mujeres al borde de un ataque de nervios" width="853" height="1280" loading="lazy" decoding="async" /></div>
+        <div class="media-photo"><img src="./assets/images/larissa-film-02.jpg" alt="Larissa da Matta — still do fashion film Mujeres al borde de un ataque de nervios" width="1280" height="853" loading="lazy" decoding="async" /></div>
+        <div class="media-photo"><img src="./assets/images/larissa-film-03.jpg" alt="Larissa da Matta — still do fashion film Mujeres al borde de un ataque de nervios" width="848" height="1280" loading="lazy" decoding="async" /></div>
       </div>
       <p class="works__note" data-i18n="modelo.credit">Fashion film “Mujeres al borde de un ataque de nervios” (2023) — Fotografia Dela · Rayssa Zago.</p>
     </div>
@@ -345,20 +369,29 @@
         <span class="label label--title" data-i18n="galeria.title">Galeria</span>
         <span class="section__sub" data-i18n="galeria.sub">Fotos &amp; Videobook</span>
       </div>
-      <div class="gallery">
-        <figure><img src="./assets/images/larissa-02.jpg" alt="Larissa da Matta" /></figure>
-        <figure><img src="./assets/images/larissa-09.jpg" alt="Larissa da Matta" /></figure>
-        <figure><img src="./assets/images/larissa-06.jpg" alt="Larissa da Matta" /></figure>
-        <figure><img src="./assets/images/larissa-04.jpg" alt="Larissa da Matta" /></figure>
-        <figure><img src="./assets/images/larissa-08.jpg" alt="Larissa da Matta" /></figure>
-        <figure><img src="./assets/images/larissa-05.jpg" alt="Larissa da Matta" /></figure>
-        <figure><img src="./assets/images/larissa-03.jpg" alt="Larissa da Matta" /></figure>
-        <figure><img src="./assets/images/larissa-10.jpg" alt="Larissa da Matta" /></figure>
+      <div class="gallery" id="gallery">
+        <button type="button" class="gallery__item" aria-label="Ampliar foto"><img src="./assets/images/larissa-02.jpg" alt="Larissa da Matta" width="939" height="1280" loading="lazy" decoding="async" /></button>
+        <button type="button" class="gallery__item" aria-label="Ampliar foto"><img src="./assets/images/larissa-09.jpg" alt="Larissa da Matta" width="853" height="1280" loading="lazy" decoding="async" /></button>
+        <button type="button" class="gallery__item" aria-label="Ampliar foto"><img src="./assets/images/larissa-06.jpg" alt="Larissa da Matta" width="881" height="1280" loading="lazy" decoding="async" /></button>
+        <button type="button" class="gallery__item" aria-label="Ampliar foto"><img src="./assets/images/larissa-04.jpg" alt="Larissa da Matta" width="853" height="1280" loading="lazy" decoding="async" /></button>
+        <button type="button" class="gallery__item" aria-label="Ampliar foto"><img src="./assets/images/larissa-08.jpg" alt="Larissa da Matta" width="1097" height="1280" loading="lazy" decoding="async" /></button>
+        <button type="button" class="gallery__item" aria-label="Ampliar foto"><img src="./assets/images/larissa-05.jpg" alt="Larissa da Matta" width="853" height="1280" loading="lazy" decoding="async" /></button>
+        <button type="button" class="gallery__item" aria-label="Ampliar foto"><img src="./assets/images/larissa-03.jpg" alt="Larissa da Matta" width="1024" height="1280" loading="lazy" decoding="async" /></button>
+        <button type="button" class="gallery__item" aria-label="Ampliar foto"><img src="./assets/images/larissa-10.jpg" alt="Larissa da Matta" width="1097" height="1280" loading="lazy" decoding="async" /></button>
       </div>
       <div class="videos">
-        <div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/629dMqAfO2Y" title="Vídeo — Larissa da Matta" loading="lazy" allowfullscreen></iframe></div>
-        <div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/TUWcgPKThBE" title="Vídeo — Larissa da Matta" loading="lazy" allowfullscreen></iframe></div>
-        <div class="video-embed"><iframe src="https://www.youtube-nocookie.com/embed/4cxqNd7R6mA" title="No Ar — Larissa da Matta" loading="lazy" allowfullscreen></iframe></div>
+        <button type="button" class="video-embed video-facade" data-embed="629dMqAfO2Y" aria-label="Reproduzir vídeo de Larissa da Matta">
+          <span class="video-facade__play" aria-hidden="true"></span>
+          <span class="video-facade__label">Assistir</span>
+        </button>
+        <button type="button" class="video-embed video-facade" data-embed="TUWcgPKThBE" aria-label="Reproduzir vídeo de Larissa da Matta">
+          <span class="video-facade__play" aria-hidden="true"></span>
+          <span class="video-facade__label">Assistir</span>
+        </button>
+        <button type="button" class="video-embed video-facade" data-embed="4cxqNd7R6mA" aria-label="Reproduzir vídeo No Ar de Larissa da Matta">
+          <span class="video-facade__play" aria-hidden="true"></span>
+          <span class="video-facade__label">No Ar</span>
+        </button>
       </div>
     </div>
   </section>
@@ -420,21 +453,24 @@
         <span class="label label--title" data-i18n="contato.title">Contato</span>
       </div>
       <div class="contato__grid">
-        <div>
+        <div class="contato__intro">
           <h2 class="contato__title" data-i18n-html="contato.headline">Vamos<br />conversar.</h2>
+          <p class="contato__lead" data-i18n="contato.lead">Para trabalhos, casting ou aulas, fale direto com a Larissa.</p>
           <a class="btn-wa" href="https://wa.me/5511941220402" data-i18n-href="wa.link" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.359.101 11.892c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a11.882 11.882 0 005.71 1.447h.006c6.585 0 11.946-5.359 11.949-11.893a11.821 11.821 0 00-3.495-8.407"/></svg>
             <span data-i18n="wa.label">Falar no WhatsApp</span>
           </a>
-          <div class="info__block info__block--mt">
+        </div>
+        <div class="contato__info">
+          <div class="info__block">
             <h3 data-i18n="contato.direct.title">Direto</h3>
             <p><a href="mailto:larissa.fmatta@gmail.com">larissa.fmatta@gmail.com</a></p>
           </div>
-          <div class="info__block info__block--mt">
+          <div class="info__block">
             <h3 data-i18n="contato.material.title">Material</h3>
             <p><a href="./assets/larissa-da-matta-portfolio.pdf" target="_blank" rel="noopener" data-i18n="contato.material.pdf">Baixar portfólio (PDF)</a></p>
           </div>
-          <div class="info__block info__block--mt">
+          <div class="info__block">
             <h3 data-i18n="contato.rep.title">Representação</h3>
             <p data-i18n-html="contato.rep.body">Acervo de Atores<br />Patricia Blanco<br /><a href="tel:+5511991094535">+55 11 99109-4535</a><br /><a href="mailto:pat.acervodeatores@gmail.com">pat.acervodeatores@gmail.com</a></p>
           </div>
@@ -443,13 +479,6 @@
             <p><a href="https://instagram.com/larissadamatta_" target="_blank" rel="noopener">Instagram @larissadamatta_</a></p>
           </div>
         </div>
-        <form class="form" onsubmit="return false;" aria-label="Formulário de contato">
-          <label><span data-i18n="form.name">Nome</span><input type="text" name="nome" autocomplete="name" /></label>
-          <label><span data-i18n="form.email">E-mail</span><input type="email" name="email" autocomplete="email" /></label>
-          <label><span data-i18n="form.msg">Mensagem</span><textarea name="mensagem" rows="4"></textarea></label>
-          <button type="submit" class="btn" data-i18n="form.send">Enviar</button>
-          <span class="form__note" data-i18n="form.note">Envio será ativado na publicação.</span>
-        </form>
       </div>
     </div>
   </section>
@@ -466,6 +495,14 @@
   <a class="wa-float" href="https://wa.me/5511941220402" data-i18n-href="wa.link" target="_blank" rel="noopener" aria-label="WhatsApp">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.359.101 11.892c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a11.882 11.882 0 005.71 1.447h.006c6.585 0 11.946-5.359 11.949-11.893a11.821 11.821 0 00-3.495-8.407"/></svg>
   </a>
+
+  <!-- Lightbox (galeria) -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada" hidden>
+    <button type="button" class="lightbox__close" id="lightboxClose" aria-label="Fechar">&times;</button>
+    <button type="button" class="lightbox__nav lightbox__prev" id="lightboxPrev" aria-label="Anterior">&#8249;</button>
+    <img class="lightbox__img" id="lightboxImg" src="" alt="" />
+    <button type="button" class="lightbox__nav lightbox__next" id="lightboxNext" aria-label="Próxima">&#8250;</button>
+  </div>
 
   <script src="./assets/js/i18n.js"></script>
   <script src="./assets/js/main.js"></script>
