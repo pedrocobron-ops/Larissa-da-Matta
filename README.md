@@ -32,7 +32,7 @@ index.html                 Página única com âncoras (nav = "abas")
   ├─ Projetos (Teatro · TV · Cinema · Dança · Modelo + bastidores)
   ├─ Pesquisa (Dramaturgias do Corpo · mestrado) — seção em verde
   ├─ Mídia (Fotos · Vídeos · Imprensa · Publicações · Entrevistas)
-  ├─ Currículos (Portfólio PDF · Lattes · Europass PT/EN/ES)
+  ├─ Currículos (Portfólio PDF · Lattes · CV PT/EN/ES)
   ├─ Aulas (Espanhol · Inglês · Curso livre de Teatro)
   └─ Contato (WhatsApp · e-mail · portfólio PDF · agência · redes)
 assets/
@@ -45,9 +45,13 @@ assets/
   larissa-da-matta-portfolio.pdf   Portfólio (vertical, na estética do site)
 ```
 
+Os **CVs em PT/EN/ES** (na estética do site) já estão gerados e ligados na
+seção Currículos, junto do Portfólio (PDF) e do Lattes.
+
 **Pendências de conteúdo (com a Larissa):** créditos de Cinema, texto/tema
-da pesquisa do mestrado, CVs Europass (PT/EN/ES), links de entrevistas,
-novos artigos — os espaços já estão prontos ("em breve") para receber.
+da pesquisa do mestrado, links de entrevistas e novos artigos — os espaços
+já estão prontos ("em breve") para receber. Se ela precisar do template
+oficial **Europass**, é só enviar os arquivos.
 
 ## Como visualizar
 

@@ -752,6 +752,77 @@ body::after{
 }
 
 /* ============================================================
+   REVISÃO — polimento (contraste, semântica, equilíbrio, tablet)
+   ============================================================ */
+
+/* Contraste: tom mais escuro p/ rótulos pequenos sobre fundo claro */
+:root{ --caramel-dark:#835a30; }
+.label{color:var(--caramel-dark);}
+.label--title{opacity:1;}
+.section__sub{color:var(--caramel-dark);}
+.meta__block h3,.info__block h3{color:var(--caramel-dark);}
+.press__outlet,.press__cta{color:var(--caramel-dark);}
+.card__num,.aulas__note,.projgroup__label--dark,.soon-line{color:var(--caramel-dark);}
+.section--dark .meta__block h3{color:var(--ocre);}
+/* micro-rótulos em fundo escuro: caramelo -> ocre (passa no espresso) */
+.eyebrow,.hero__index,.hero__scroll,.work__place,.works__note,.feature__credit,
+.footer__role,.footer__copy{color:var(--ocre);}
+.nav__lang button{opacity:.68;}
+
+/* Skip link */
+.skip-link{position:absolute;left:-9999px;top:0;z-index:100;background:var(--espresso);
+  color:var(--cream);padding:.7rem 1.1rem;border-radius:2px;font-size:.85rem;letter-spacing:.08em;}
+.skip-link:focus{left:1rem;top:1rem;}
+
+/* Título de seção como <h2> — mantém o visual de rótulo */
+h2.label{margin:0;font-size:.72rem;font-weight:500;line-height:1;}
+
+/* Sobre: retrato preenche a coluna e ancora o bloco */
+.sobre__portrait{max-width:none;width:100%;margin-top:clamp(1.8rem,3vw,2.6rem);}
+.sobre__portrait img{aspect-ratio:4/5;object-fit:cover;object-position:center 22%;}
+
+/* Dança (Projetos, escuro): assenta a foto de fundo claro */
+.projgroup__photo{position:relative;}
+.projgroup__photo::after{content:"";position:absolute;inset:0;pointer-events:none;
+  box-shadow:inset 0 0 90px 24px rgba(27,20,15,.34);}
+
+/* Modelo: emoldura os stills do fashion film e harmoniza a saturação */
+.media-grid--3 .media-photo{border:1px solid rgba(195,154,94,.32);}
+.media-grid--3 .media-photo img{filter:saturate(.93) contrast(1.01);}
+
+/* Currículos: uma fileira só de cartões no desktop */
+@media (min-width:1024px){ .cv-grid{grid-template-columns:repeat(5,1fr);} }
+.cv-card{padding:clamp(1.1rem,2vw,1.5rem);}
+
+/* Aulas: reserva 2 linhas no título p/ alinhar as descrições */
+.card h3{min-height:2.2em;}
+
+/* Trabalhos: evita palavra órfã no meta */
+.work__meta{text-wrap:balance;}
+
+/* Menu mobile: painel inerte (fora do Tab) quando fechado */
+@media (max-width:1080px){
+  .nav__links{transition:transform .45s cubic-bezier(.7,0,.2,1),visibility .45s;}
+  .nav__links:not(.is-open){visibility:hidden;}
+}
+
+/* Faixa tablet (561–900px): preenche colunas que ficavam vazias */
+@media (min-width:561px) and (max-width:900px){
+  .hero__media{max-width:min(74vw,600px);}
+  .hero__text{max-width:52ch;}
+  .sobre__portrait{max-width:min(64vw,520px);}
+  .pesquisa__grid{grid-template-columns:1fr;}
+  .pesquisa__photo{max-width:min(64vw,520px);}
+}
+
+/* WhatsApp flutuante: menor em telas pequenas + respiro nas Aulas */
+@media (max-width:900px){
+  .wa-float{width:48px;height:48px;}
+  .wa-float svg{width:26px;height:26px;}
+  #aulas{padding-bottom:5.5rem;}
+}
+
+/* ============================================================
    REESTRUTURA — Projetos, Pesquisa (verde), Mídia, Currículos
    ============================================================ */
 
@@ -815,3 +886,12 @@ a.cv-card:hover{background:rgba(245,240,231,.08);transform:translateY(-2px);bord
 
 /* Aulas — nota de formato */
 .aulas__note{margin:1.4rem 0 .2rem;font-size:.9rem;color:var(--caramel);letter-spacing:.02em;}
+
+/* ============================================================
+   OVERRIDES FINAIS — garantem precedência sobre os blocos acima
+   ============================================================ */
+.aulas__note,.projgroup__label--dark,.soon-line{color:var(--caramel-dark);}
+.section--dark .soon-line{color:var(--sand);}
+.cv-card{padding:clamp(1.1rem,2vw,1.5rem);}
+@media (min-width:1024px){ #curriculos .cv-grid{grid-template-columns:repeat(5,1fr);} }
+@media (min-width:561px) and (max-width:900px){ .pesquisa__photo{max-width:min(64vw,520px);} }

@@ -20,6 +20,7 @@
     nav.classList.toggle("is-menu-open", open);
     toggle.setAttribute("aria-expanded", open ? "true" : "false");
     toggle.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+    if (open) { var first = links.querySelector("a"); if (first) first.focus(); }
   }
   if (toggle) {
     toggle.addEventListener("click", function () {
@@ -131,6 +132,7 @@
       if (lastFocus && lastFocus.focus) lastFocus.focus();
     }
     document.querySelectorAll(".gallery__item").forEach(function (btn, i) {
+      btn.setAttribute("aria-label", "Ampliar foto " + (i + 1) + " de " + items.length);
       btn.addEventListener("click", function () { lbOpen(i); });
     });
     lbClose.addEventListener("click", lbHide);
@@ -142,6 +144,13 @@
       if (e.key === "Escape") lbHide();
       else if (e.key === "ArrowLeft") lbShow(idx - 1);
       else if (e.key === "ArrowRight") lbShow(idx + 1);
+      else if (e.key === "Tab") {
+        var f = [lbClose, lbPrev, lbNext];
+        var i = f.indexOf(document.activeElement);
+        e.preventDefault();
+        var n = e.shiftKey ? (i <= 0 ? f.length - 1 : i - 1) : (i >= f.length - 1 ? 0 : i + 1);
+        f[n].focus();
+      }
     });
   }
 })();
