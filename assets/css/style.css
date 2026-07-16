@@ -631,7 +631,7 @@ body::after{
 @media (max-width:560px){.gallery{columns:1;}}
 
 /* Vídeos (YouTube 16:9) */
-.videos{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(1rem,2vw,1.5rem);margin-top:clamp(2rem,4vw,3.2rem);}
+.videos{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(1rem,2vw,1.5rem);margin-top:clamp(2rem,4vw,3.2rem);}
 .video-embed{position:relative;aspect-ratio:16/9;border-radius:2px;overflow:hidden;background:var(--umber);box-shadow:0 30px 60px -40px rgba(0,0,0,.6);}
 .video-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
 @media (max-width:700px){.videos{grid-template-columns:1fr;}}
@@ -666,3 +666,8 @@ body::after{
 @media (max-width:640px){
   .skill-cat{grid-template-columns:1fr;gap:.7rem;}
 }
+
+/* Bastidores / equipe técnica (seção Atriz) */
+.bts{margin-top:clamp(2.2rem,4vw,3.2rem);padding-top:clamp(1.7rem,3vw,2.4rem);border-top:1px solid var(--line-light);}
+.bts__label{display:block;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ocre);margin-bottom:1.1rem;}
+.bts__list p{font-size:.92rem;color:var(--sand);opacity:.82;padding:.45rem 0;line-height:1.5;max-width:70ch;}
