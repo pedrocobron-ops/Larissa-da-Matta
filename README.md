@@ -3,9 +3,11 @@
 Site portfólio da **Larissa da Matta** — atriz, dançarina e modelo (+ professora).
 Objetivo: portfólio para trabalhos/casting + divulgação de serviços.
 
-> **Status:** v1 completa. Design finalizado; conteúdo real integrado (bio,
+> **Status:** v1 no ar. Design finalizado; conteúdo real integrado (bio,
 > filmografia, habilidades, idiomas, imprensa, vídeos, fotos). Aguardando novos
-> materiais da artista (reel/videobook, mais fotos) e o domínio para publicar.
+> materiais da artista (reel/videobook, mais fotos) e um domínio próprio.
+>
+> **🔗 No ar:** https://pedrocobron-ops.github.io/Larissa-da-Matta/ (GitHub Pages)
 
 ## Direção de design
 
@@ -54,17 +56,23 @@ python3 -m http.server 8000   # depois abra http://localhost:8000
 
 (`preview-larissa.html` é uma cópia autocontida gerada para envio — não versionada.)
 
-## Como publicar
+## Hospedagem
 
-O site é estático — sobe em qualquer hospedagem de arquivos:
+Atualmente publicado via **GitHub Pages** (branch do site, raiz), com o arquivo
+`.nojekyll` para servir os assets sem processamento:
 
-1. **Netlify / Vercel / Cloudflare Pages** — arraste a pasta do projeto (ou
-   conecte o repositório). Sem passo de build; a raiz é a própria pasta.
-2. **GitHub Pages** — habilite Pages apontando para a branch/raiz.
-3. **Domínio** — aponte o domínio comprado para a hospedagem escolhida.
+**https://pedrocobron-ops.github.io/Larissa-da-Matta/**
 
-Ao publicar, atualizar as URLs absolutas de `og:image`/`twitter:image` no
-`<head>` (hoje relativas) melhora o preview em redes sociais.
+Sendo estático, também roda em Netlify / Vercel / Cloudflare Pages (arraste a
+pasta ou conecte o repositório; sem passo de build).
+
+**Domínio próprio:** ao comprar o domínio, aponte-o para o GitHub Pages
+(Settings → Pages → Custom domain) e atualize as URLs absolutas de
+`og:image` / `twitter:image` no `<head>` para melhorar o preview em redes sociais.
+
+> Os arquivos também estão espelhados num bucket público do Supabase
+> (projeto `larissa-da-matta`), útil como CDN e para futuramente ativar o
+> formulário de contato.
 
 ## Pendências (a completar com a cliente)
 
