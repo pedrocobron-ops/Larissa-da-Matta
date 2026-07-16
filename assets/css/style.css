@@ -612,3 +612,26 @@ body::after{
 }
 .wa-float:hover{transform:scale(1.09);background:var(--umber);}
 .wa-float svg{width:30px;height:30px;fill:currentColor;}
+
+/* ============================================================
+   FOTOS REAIS — retrato, galeria (masonry), vídeos
+   ============================================================ */
+.sobre__portrait{margin:2.6rem 0 0;max-width:360px;}
+.sobre__portrait img{width:100%;border-radius:2px;box-shadow:0 34px 64px -42px rgba(0,0,0,.5);filter:saturate(1.02);}
+
+.danc-photo{margin-top:clamp(1.6rem,3vw,2.6rem);border-radius:2px;overflow:hidden;box-shadow:0 34px 64px -44px rgba(0,0,0,.55);}
+.danc-photo img{width:100%;display:block;filter:saturate(1.02);}
+
+/* Galeria em masonry (colunas) */
+.gallery{columns:3;column-gap:clamp(.9rem,1.6vw,1.4rem);}
+.gallery figure{break-inside:avoid;margin:0 0 clamp(.9rem,1.6vw,1.4rem);border-radius:2px;overflow:hidden;box-shadow:0 26px 54px -36px rgba(0,0,0,.6);}
+.gallery img{width:100%;display:block;transition:transform .6s ease;filter:saturate(1.02);}
+.gallery figure:hover img{transform:scale(1.03);}
+@media (max-width:900px){.gallery{columns:2;}}
+@media (max-width:560px){.gallery{columns:1;}}
+
+/* Vídeos (YouTube 16:9) */
+.videos{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(1rem,2vw,1.5rem);margin-top:clamp(2rem,4vw,3.2rem);}
+.video-embed{position:relative;aspect-ratio:16/9;border-radius:2px;overflow:hidden;background:var(--umber);box-shadow:0 30px 60px -40px rgba(0,0,0,.6);}
+.video-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+@media (max-width:700px){.videos{grid-template-columns:1fr;}}
