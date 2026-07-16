@@ -23,26 +23,31 @@ O texto padrão (PT) fica no próprio HTML — se o JS não carregar, o site con
 
 ## Estrutura
 
+Arquitetura enxuta (7 seções), cada uma com conteúdo rico:
+
 ```
 index.html                 Página única com âncoras (nav = "abas")
   ├─ Início (hero)
-  ├─ Sobre (bio · idiomas · características · habilidades)
-  ├─ Atriz (Teatro · TV · Cinema · bastidores)
-  ├─ Dançarina (formação · vídeos)
-  ├─ Modelo (trabalhos com marcas)
+  ├─ Sobre (bio · idiomas · características · formação · habilidades)
+  ├─ Projetos (Teatro · TV · Cinema · Dança · Modelo + bastidores)
+  ├─ Pesquisa (Dramaturgias do Corpo · mestrado) — seção em verde
+  ├─ Mídia (Fotos · Vídeos · Imprensa · Publicações · Entrevistas)
+  ├─ Currículos (Portfólio PDF · Lattes · Europass PT/EN/ES)
   ├─ Aulas (Espanhol · Inglês · Curso livre de Teatro)
-  ├─ Galeria (Fotos & Videobook)
-  ├─ Imprensa (matérias e artigo)
-  └─ Contato (WhatsApp · e-mail · portfólio PDF · agência · formulário)
+  └─ Contato (WhatsApp · e-mail · portfólio PDF · agência · redes)
 assets/
-  css/style.css                    Estilos + tokens da identidade
+  css/style.css                    Estilos + tokens (paleta terrosa + acento verde)
   js/i18n.js                       Traduções PT/EN/ES + seletor
-  js/main.js                       Nav, menu mobile, animações
+  js/main.js                       Nav, menu, scrollspy, lightbox, vídeos
   fonts/                           Cinzel + Fraunces + Inter (woff2)
-  images/                          Fotos + og-cover.jpg (social share)
+  images/                          Fotos + stills do fashion film + og-cover.jpg
   favicon.svg                      Ícone (monograma "L")
-  larissa-da-matta-portfolio.pdf   Portfólio (botão "Currículo (PDF)")
+  larissa-da-matta-portfolio.pdf   Portfólio (vertical, na estética do site)
 ```
+
+**Pendências de conteúdo (com a Larissa):** créditos de Cinema, texto/tema
+da pesquisa do mestrado, CVs Europass (PT/EN/ES), links de entrevistas,
+novos artigos — os espaços já estão prontos ("em breve") para receber.
 
 ## Como visualizar
 
