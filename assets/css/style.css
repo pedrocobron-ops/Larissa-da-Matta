@@ -635,3 +635,34 @@ body::after{
 .video-embed{position:relative;aspect-ratio:16/9;border-radius:2px;overflow:hidden;background:var(--umber);box-shadow:0 30px 60px -40px rgba(0,0,0,.6);}
 .video-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
 @media (max-width:700px){.videos{grid-template-columns:1fr;}}
+
+/* ============================================================
+   HABILIDADES — chips por categoria (currículo de casting)
+   ============================================================ */
+.skills{
+  margin-top:clamp(3rem,6vw,5rem);
+  padding-top:clamp(2.4rem,5vw,3.6rem);
+  border-top:1px solid var(--line);
+}
+.skills__head{margin-bottom:clamp(1.6rem,3vw,2.4rem);}
+.skill-cat{
+  display:grid;grid-template-columns:200px 1fr;gap:clamp(1rem,2.5vw,2rem);
+  align-items:start;padding:clamp(1.1rem,2vw,1.5rem) 0;border-top:1px solid var(--line);
+}
+.skill-cat:first-of-type{border-top:none;}
+.skill-cat__label{
+  font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--caramel);padding-top:.35rem;
+}
+.chips{display:flex;flex-wrap:wrap;gap:.55rem;}
+.chip{
+  font-family:var(--font-sans);font-size:.82rem;line-height:1;
+  padding:.5rem .95rem;border:1px solid var(--line);border-radius:100px;color:#4a3d30;
+  transition:border-color .25s,color .25s;
+}
+.chip:hover{border-color:var(--caramel);color:var(--ink);}
+.chip--pro{border-color:rgba(195,154,94,.6);color:var(--ink);}
+.chip--pro b{color:var(--caramel);font-weight:600;letter-spacing:.02em;}
+@media (max-width:640px){
+  .skill-cat{grid-template-columns:1fr;gap:.7rem;}
+}
