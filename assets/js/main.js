@@ -1,98 +1,141 @@
-/* Larissa da Matta — interações mínimas */
+/* Larissa da Matta — navegação em abas (capa + menu) e interações */
 (function () {
   "use strict";
 
-  var nav = document.getElementById("nav");
-  var toggle = document.getElementById("navToggle");
-  var links = document.getElementById("navLinks");
+  var topbar = document.getElementById("topbar");
+  var toggle = document.getElementById("menuToggle");
+  var menu = document.getElementById("menu");
+  var menuLinks = menu ? [].slice.call(menu.querySelectorAll(".menu__links a")) : [];
 
-  /* Fundo da nav ao rolar */
-  function onScroll() {
-    if (window.scrollY > 40) nav.classList.add("is-scrolled");
-    else nav.classList.remove("is-scrolled");
+  /* ---------------------------------------------------------
+     ROTEADOR DE VISTAS — cada seção é uma "aba"/página
+     --------------------------------------------------------- */
+  var views = {};
+  [].slice.call(document.querySelectorAll(".view")).forEach(function (el) {
+    if (el.id) views[el.id] = el;
+  });
+  var HOME = "top";
+  var started = false;
+
+  function showView(id) {
+    if (!views[id]) id = HOME;
+    Object.keys(views).forEach(function (k) {
+      views[k].classList.toggle("is-active", k === id);
+    });
+    // Barra sólida fora da capa
+    setTopbar(id);
+    // Link ativo no menu
+    menuLinks.forEach(function (a) {
+      a.classList.toggle("is-current", a.getAttribute("href") === "#" + id);
+    });
+    // Reexecuta a animação de revelação da vista ativa
+    var v = views[id];
+    var rev = v.querySelectorAll(".reveal");
+    rev.forEach(function (e) { e.classList.remove("is-in"); });
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        rev.forEach(function (e) { e.classList.add("is-in"); });
+      });
+    });
+    window.scrollTo(0, 0);
+    // Foco na vista (acessibilidade) — só quando o utilizador navega
+    if (started) {
+      v.setAttribute("tabindex", "-1");
+      v.focus({ preventScroll: true });
+    }
   }
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
 
-  /* Menu mobile */
-  function setMenu(open) {
-    links.classList.toggle("is-open", open);
-    nav.classList.toggle("is-menu-open", open);
-    toggle.setAttribute("aria-expanded", open ? "true" : "false");
-    toggle.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
-    if (open) { var first = links.querySelector("a"); if (first) first.focus(); }
+  function route() {
+    var h = (location.hash || "").replace(/^#/, "");
+    showView(views[h] ? h : HOME);
+    closeMenu();
+    started = true;
+  }
+  window.addEventListener("hashchange", route);
+
+  /* ---------------------------------------------------------
+     BARRA SUPERIOR — transparente na capa, sólida nas abas
+     --------------------------------------------------------- */
+  function setTopbar(id) {
+    var solid = id !== HOME || window.scrollY > 40;
+    topbar.classList.toggle("is-solid", solid);
+  }
+  window.addEventListener("scroll", function () {
+    var cur = document.querySelector(".view.is-active");
+    setTopbar(cur ? cur.id : HOME);
+  }, { passive: true });
+
+  /* ---------------------------------------------------------
+     MENU (abas) — abrir / fechar
+     --------------------------------------------------------- */
+  function openMenu() {
+    menu.classList.add("is-open");
+    menu.setAttribute("aria-hidden", "false");
+    toggle.setAttribute("aria-expanded", "true");
+    toggle.setAttribute("aria-label", "Fechar menu");
+    topbar.classList.add("is-menu-open");
+    document.body.style.overflow = "hidden";
+    var first = menu.querySelector(".menu__links a");
+    if (first) first.focus();
+  }
+  function closeMenu() {
+    if (!menu.classList.contains("is-open")) return;
+    menu.classList.remove("is-open");
+    menu.setAttribute("aria-hidden", "true");
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", "Abrir menu");
+    topbar.classList.remove("is-menu-open");
+    document.body.style.overflow = "";
   }
   if (toggle) {
     toggle.addEventListener("click", function () {
-      setMenu(!links.classList.contains("is-open"));
-    });
-    links.querySelectorAll("a").forEach(function (a) {
-      a.addEventListener("click", function () { setMenu(false); });
+      if (menu.classList.contains("is-open")) closeMenu();
+      else openMenu();
     });
   }
+  // Fecha o menu ao clicar num link (o roteador cuida da navegação)
+  menuLinks.forEach(function (a) {
+    a.addEventListener("click", function () {
+      // Se o destino já é a vista atual, o hashchange não dispara: fecha manualmente
+      if (a.getAttribute("href") === "#" + (document.querySelector(".view.is-active") || {}).id) {
+        closeMenu();
+      }
+    });
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && menu.classList.contains("is-open")) {
+      closeMenu();
+      toggle.focus();
+    }
+  });
+  // Retém o foco dentro do menu enquanto aberto
+  menu.addEventListener("keydown", function (e) {
+    if (e.key !== "Tab" || !menu.classList.contains("is-open")) return;
+    var f = [toggle].concat([].slice.call(menu.querySelectorAll("a, button")));
+    var i = f.indexOf(document.activeElement);
+    var n = e.shiftKey ? (i <= 0 ? f.length - 1 : i - 1) : (i >= f.length - 1 ? 0 : i + 1);
+    e.preventDefault();
+    f[n].focus();
+  });
 
-  /* Revelar ao entrar na viewport */
+  /* ---------------------------------------------------------
+     Revelar ao entrar na viewport (dentro de cada vista)
+     --------------------------------------------------------- */
   var revealEls = document.querySelectorAll(
-    ".section__head, .sobre__bio, .sobre__meta, .feature, .work, .press__item, .intro-line, .media-grid, .cards, .card, .contato__grid, .form, .hero__text, .hero__media"
+    ".section__head, .sobre__bio, .sobre__meta, .feature, .projgroup, .work, .press__item, .intro-line, .media-grid, .cards, .card, .contato__grid, .pesquisa__text, .skills, .bts"
   );
   revealEls.forEach(function (el) { el.classList.add("reveal"); });
 
-  if ("IntersectionObserver" in window) {
-    var io = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (e) {
-          if (e.isIntersecting) {
-            e.target.classList.add("is-in");
-            io.unobserve(e.target);
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: "0px 0px -6% 0px" }
-    );
-    revealEls.forEach(function (el) { io.observe(el); });
-  } else {
-    revealEls.forEach(function (el) { el.classList.add("is-in"); });
-  }
-
-  /* Scrollspy — destaca no menu a seção atual */
-  var navMap = {};
-  if (links) {
-    links.querySelectorAll('a[href^="#"]').forEach(function (a) {
-      var id = a.getAttribute("href").slice(1);
-      if (id) navMap[id] = a;
-    });
-  }
-  if ("IntersectionObserver" in window && Object.keys(navMap).length) {
-    var currentLink = null;
-    var spy = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (e) {
-          if (e.isIntersecting) {
-            var a = navMap[e.target.id];
-            if (a && a !== currentLink) {
-              if (currentLink) currentLink.classList.remove("is-current");
-              a.classList.add("is-current");
-              currentLink = a;
-            }
-          }
-        });
-      },
-      { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
-    );
-    Object.keys(navMap).forEach(function (id) {
-      var el = document.getElementById(id);
-      if (el) spy.observe(el);
-    });
-  }
-
-  /* Vídeos — carrega o YouTube só no clique (mais leve/privado) */
+  /* ---------------------------------------------------------
+     Vídeos — carrega o YouTube só no clique (mais leve/privado)
+     --------------------------------------------------------- */
   document.querySelectorAll(".video-facade").forEach(function (btn) {
     btn.addEventListener("click", function () {
       var id = btn.getAttribute("data-embed");
       if (!id) return;
       var f = document.createElement("iframe");
       f.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0";
-      f.title = "Vídeo — Larissa da Matta";
+      f.title = "Vídeo de Larissa da Matta";
       f.allow = "autoplay; encrypted-media; fullscreen";
       f.setAttribute("allowfullscreen", "");
       var wrap = document.createElement("div");
@@ -102,7 +145,9 @@
     });
   });
 
-  /* Lightbox da galeria */
+  /* ---------------------------------------------------------
+     Lightbox da galeria
+     --------------------------------------------------------- */
   var lb = document.getElementById("lightbox");
   if (lb) {
     var lbImg = document.getElementById("lightboxImg");
@@ -153,4 +198,7 @@
       }
     });
   }
+
+  /* Arranca o roteador */
+  route();
 })();

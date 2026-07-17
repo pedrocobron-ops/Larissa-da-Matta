@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="no-js">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Larissa da Matta — Atriz · Dançarina · Modelo</title>
-  <meta name="description" content="Larissa da Matta — atriz, dançarina e modelo. Portfólio de teatro, TV, cinema, dança e trabalhos com marcas, aulas e contato." />
+  <title>Larissa da Matta · Atriz · Dançarina · Modelo</title>
+  <meta name="description" content="Larissa da Matta, atriz, dançarina e modelo. Portfólio de teatro, TV, cinema, dança e trabalhos com marcas, aulas e contato." />
   <meta name="robots" content="index, follow" />
 
   <!-- Ícone -->
@@ -15,11 +15,11 @@
   <!-- Open Graph / redes sociais -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Larissa da Matta" />
-  <meta property="og:title" content="Larissa da Matta — Atriz · Dançarina · Modelo" />
+  <meta property="og:title" content="Larissa da Matta · Atriz · Dançarina · Modelo" />
   <meta property="og:description" content="Atriz, dançarina e modelo. Portfólio de teatro, TV, cinema, dança, moda e aulas." />
   <meta property="og:url" content="https://pedrocobron-ops.github.io/Larissa-da-Matta/" />
   <meta property="og:image" content="https://pedrocobron-ops.github.io/Larissa-da-Matta/assets/images/og-cover.jpg" />
-  <meta property="og:image:alt" content="Larissa da Matta — atriz, dançarina e modelo" />
+  <meta property="og:image:alt" content="Larissa da Matta, atriz, dançarina e modelo" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="pt_BR" />
@@ -28,10 +28,10 @@
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Larissa da Matta — Atriz · Dançarina · Modelo" />
+  <meta name="twitter:title" content="Larissa da Matta · Atriz · Dançarina · Modelo" />
   <meta name="twitter:description" content="Atriz, dançarina e modelo. Portfólio de teatro, TV, cinema, dança, moda e aulas." />
   <meta name="twitter:image" content="https://pedrocobron-ops.github.io/Larissa-da-Matta/assets/images/og-cover.jpg" />
-  <meta name="twitter:image:alt" content="Larissa da Matta — atriz, dançarina e modelo" />
+  <meta name="twitter:image:alt" content="Larissa da Matta, atriz, dançarina e modelo" />
 
   <!-- Dados estruturados (schema.org) -->
   <script type="application/ld+json">
@@ -54,53 +54,60 @@
   }
   </script>
 
+  <script>document.documentElement.classList.remove("no-js");document.documentElement.classList.add("js");</script>
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
 
   <a class="skip-link" href="#main" data-i18n="a11y.skip">Pular para o conteúdo</a>
 
-  <!-- NAV -->
-  <header class="nav" id="nav">
-    <div class="nav__inner">
-      <a href="#top" class="nav__brand">Larissa&nbsp;da&nbsp;Matta</a>
-      <nav class="nav__links" id="navLinks">
-        <a href="#sobre" data-i18n="nav.sobre">Sobre</a>
-        <a href="#projetos" data-i18n="nav.projetos">Projetos</a>
-        <a href="#pesquisa" data-i18n="nav.pesquisa">Pesquisa</a>
-        <a href="#midia" data-i18n="nav.midia">Mídia</a>
-        <a href="#curriculos" data-i18n="nav.curriculos">Currículos</a>
-        <a href="#aulas" data-i18n="nav.aulas">Aulas</a>
-        <a href="#contato" data-i18n="nav.contato">Contato</a>
-        <span class="nav__lang" id="langSwitch" role="group" aria-label="Idioma / Language">
+  <!-- BARRA SUPERIOR -->
+  <header class="topbar" id="topbar">
+    <div class="topbar__inner">
+      <a href="#top" class="topbar__brand">Larissa&nbsp;da&nbsp;Matta</a>
+      <div class="topbar__right">
+        <span class="topbar__lang" id="langSwitch" role="group" aria-label="Idioma / Language">
           <button type="button" data-lang="pt" class="is-active" aria-pressed="true" aria-label="Português">PT</button><i aria-hidden="true">·</i><button type="button" data-lang="en" aria-pressed="false" aria-label="English">EN</button><i aria-hidden="true">·</i><button type="button" data-lang="es" aria-pressed="false" aria-label="Español">ES</button>
         </span>
-      </nav>
-      <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-controls="navLinks" aria-expanded="false"><span></span><span></span></button>
+        <button class="menu-toggle" id="menuToggle" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+          <span class="menu-toggle__text" data-i18n="nav.menu">Menu</span>
+          <span class="menu-toggle__bars" aria-hidden="true"><span></span><span></span></span>
+        </button>
+      </div>
     </div>
   </header>
 
+  <!-- MENU (abas) -->
+  <nav class="menu" id="menu" aria-label="Menu principal" aria-hidden="true">
+    <div class="menu__inner">
+      <ul class="menu__links" id="menuLinks">
+        <li><a href="#top" data-i18n="nav.inicio">Início</a></li>
+        <li><a href="#sobre" data-i18n="nav.sobre">Sobre</a></li>
+        <li><a href="#projetos" data-i18n="nav.projetos">Projetos</a></li>
+        <li><a href="#pesquisa" data-i18n="nav.pesquisa">Pesquisa</a></li>
+        <li><a href="#midia" data-i18n="nav.midia">Mídia</a></li>
+        <li><a href="#curriculos" data-i18n="nav.curriculos">Currículos</a></li>
+        <li><a href="#aulas" data-i18n="nav.aulas">Aulas</a></li>
+        <li><a href="#contato" data-i18n="nav.contato">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <main id="main">
 
-  <!-- HERO -->
-  <section class="hero" id="top">
-    <div class="hero__grid">
-      <div class="hero__text">
-        <p class="eyebrow" data-i18n="hero.eyebrow">Atriz · Dançarina · Modelo</p>
-        <h1 class="hero__name">Larissa<br />da&nbsp;Matta</h1>
-        <p class="hero__lead" data-i18n-html="hero.lead"><em>Entre a cena, o corpo e a imagem —<br />uma artista latino-americana.</em></p>
-        <a href="#projetos" class="hero__cta"><span data-i18n="hero.cta">Ver trabalhos</span> <span aria-hidden="true">↓</span></a>
-      </div>
-      <div class="hero__media">
-        <div class="hero__frame"><picture><source type="image/webp" srcset="./assets/images/larissa-01.webp" /><img src="./assets/images/larissa-01.jpg" alt="Retrato de Larissa da Matta" width="846" height="650" decoding="async" fetchpriority="high" /></picture></div>
-        <span class="hero__index" data-i18n="hero.index">Retrato</span>
-      </div>
+  <!-- INÍCIO / CAPA -->
+  <section class="hero view is-active" id="top">
+    <picture class="hero__bg"><source type="image/webp" srcset="./assets/images/larissa-01.webp" /><img src="./assets/images/larissa-01.jpg" alt="Larissa da Matta" width="846" height="650" decoding="async" fetchpriority="high" /></picture>
+    <div class="hero__scrim" aria-hidden="true"></div>
+    <div class="hero__content">
+      <p class="eyebrow hero__eyebrow" data-i18n="hero.eyebrow">Atriz · Dançarina · Modelo</p>
+      <h1 class="hero__name">Larissa<br />da&nbsp;Matta</h1>
+      <a href="#projetos" class="hero__cta"><span data-i18n="hero.cta">Ver trabalhos</span> <span aria-hidden="true">→</span></a>
     </div>
-    <div class="hero__scroll"><span data-i18n="hero.scroll">rolar</span></div>
   </section>
 
   <!-- SOBRE -->
-  <section class="sobre section" id="sobre">
+  <section class="sobre section view" id="sobre">
     <div class="wrap">
       <div class="section__head">
         <span class="label">01</span>
@@ -110,24 +117,24 @@
         <div class="sobre__bio">
           <p class="lead" data-i18n="sobre.lead">Larissa da Matta é atriz, dançarina, modelo e artista-pesquisadora.</p>
           <p data-i18n="sobre.p1">Bacharel em Artes Cênicas, licenciada em Teatro e pós-graduada em Direção e Atuação pela Escola Superior de Artes Célia Helena. Trabalha entre teatro, audiovisual, dança e moda, no Brasil e em festivais na América Latina e na Rússia.</p>
-          <p data-i18n="sobre.p2">É dessa investigação — sobre mulheres artistas apagadas pela história — que nasce seu solo autoral sobre Zelda Fitzgerald.</p>
+          <p data-i18n="sobre.p2">É dessa investigação, sobre mulheres artistas apagadas pela história, que nasce seu solo autoral sobre Zelda Fitzgerald.</p>
           <figure class="sobre__portrait"><picture><source type="image/webp" srcset="./assets/images/larissa-05.webp" /><img src="./assets/images/larissa-05.jpg" alt="Larissa da Matta em retrato preto e branco" width="853" height="1280" loading="lazy" decoding="async" /></picture></figure>
         </div>
         <aside class="sobre__meta">
           <div class="meta__block">
             <h3 data-i18n="sobre.langs.title">Idiomas</h3>
             <ul>
-              <li data-i18n="sobre.langs.pt">Português — nativo</li>
-              <li data-i18n="sobre.langs.es">Espanhol — fluente (DELE C1)</li>
-              <li data-i18n="sobre.langs.en">Inglês — fluente (FCE · IELTS)</li>
-              <li data-i18n="sobre.langs.it">Italiano — básico</li>
-              <li data-i18n="sobre.langs.ru">Russo — básico</li>
+              <li data-i18n="sobre.langs.pt">Português: nativo</li>
+              <li data-i18n="sobre.langs.es">Espanhol: fluente (DELE C1)</li>
+              <li data-i18n="sobre.langs.en">Inglês: fluente (FCE · IELTS)</li>
+              <li data-i18n="sobre.langs.it">Italiano: básico</li>
+              <li data-i18n="sobre.langs.ru">Russo: básico</li>
             </ul>
           </div>
           <div class="meta__block">
             <h3 data-i18n="sobre.fisico.title">Características</h3>
             <ul>
-              <li data-i18n="sobre.fisico.1">Altura — 1,67 m</li>
+              <li data-i18n="sobre.fisico.1">Altura: 1,67 m</li>
               <li data-i18n="sobre.fisico.2">Olhos castanho-claros</li>
               <li data-i18n="sobre.fisico.3">Cabelo preto, liso e longo</li>
               <li data-i18n="sobre.fisico.4">Manequim 38 · Calçado 37</li>
@@ -137,13 +144,13 @@
           <div class="meta__block">
             <h3 data-i18n="sobre.form.title">Formação</h3>
             <ul>
-              <li data-i18n="sobre.form.1">Bacharel em Artes Cênicas — Célia Helena (2018)</li>
-              <li data-i18n="sobre.form.2">Pós-graduação em Direção e Atuação — Célia Helena (2021)</li>
-              <li data-i18n="sobre.form.3">Atuação cênica — Teatro de Arte de Moscou, Rússia (2020)</li>
-              <li data-i18n="sobre.form.4">Interpretação para câmera — Academia Internacional de Cinema</li>
-              <li data-i18n="sobre.form.5">Danças urbanas — Centro de Artes Lílian Gumieiro</li>
-              <li data-i18n="sobre.form.6">História da Arte — Prof. Dr. Rodrigo Naves</li>
-              <li data-i18n="sobre.form.7">Licenciatura em Teatro — Célia Helena (2025)</li>
+              <li data-i18n="sobre.form.1">Bacharel em Artes Cênicas · Célia Helena (2018)</li>
+              <li data-i18n="sobre.form.2">Pós-graduação em Direção e Atuação · Célia Helena (2021)</li>
+              <li data-i18n="sobre.form.3">Atuação cênica · Teatro de Arte de Moscou, Rússia (2020)</li>
+              <li data-i18n="sobre.form.4">Interpretação para câmera · Academia Internacional de Cinema</li>
+              <li data-i18n="sobre.form.5">Danças urbanas · Centro de Artes Lílian Gumieiro</li>
+              <li data-i18n="sobre.form.6">História da Arte · Prof. Dr. Rodrigo Naves</li>
+              <li data-i18n="sobre.form.7">Licenciatura em Teatro · Célia Helena (2025)</li>
             </ul>
           </div>
         </aside>
@@ -160,7 +167,6 @@
             <span class="chip" data-i18n="sk.jazz">Jazz</span>
             <span class="chip" data-i18n="sk.samba">Samba</span>
             <span class="chip" data-i18n="sk.salao">Dança de salão</span>
-            <span class="chip" data-i18n="sk.folk">Danças folclóricas</span>
             <span class="chip" data-i18n="sk.hiphop">Hip Hop</span>
             <span class="chip" data-i18n="sk.valsa">Valsa</span>
           </div>
@@ -224,19 +230,19 @@
   </section>
 
   <!-- PROJETOS -->
-  <section class="section section--dark" id="projetos">
+  <section class="section section--dark view" id="projetos">
     <div class="wrap">
       <div class="section__head">
         <span class="label">02</span>
         <h2 class="label label--title" data-i18n="projetos.title">Projetos</h2>
         <span class="section__sub" data-i18n="projetos.sub">Teatro · TV · Cinema · Dança · Modelo</span>
       </div>
-      <p class="intro-line intro-line--light" data-i18n="projetos.lead">Do palco ao set, da dança à moda — trabalhos que atravessam linguagens.</p>
+      <p class="intro-line intro-line--light" data-i18n="projetos.lead">Do palco ao set, da dança à moda. Trabalhos que atravessam linguagens.</p>
 
       <article class="feature">
         <span class="feature__tag" data-i18n="atriz.feat.tag">Destaque · Solo</span>
         <h3 class="feature__title">A Última Valsa de Zelda Fitzgerald</h3>
-        <p class="feature__desc" data-i18n="atriz.feat.desc">Solo autoral sobre Zelda Fitzgerald — escritora, pintora e bailarina, para além do mito de musa dos anos 1920. Nasce da pesquisa Dramaturgias do Corpo, sobre mais de 40 mulheres artistas apagadas pela história.</p>
+        <p class="feature__desc" data-i18n="atriz.feat.desc">Solo autoral sobre Zelda Fitzgerald: escritora, pintora e bailarina, para além do mito de musa dos anos 1920. Nasce da pesquisa Dramaturgias do Corpo, sobre mais de 40 mulheres artistas apagadas pela história.</p>
         <span class="feature__credit" data-i18n="atriz.feat.credit">Concepção e atuação: Larissa da Matta · Dramaturgia: Larissa da Matta e Pedro Amaral · Espaço º Andar (São Paulo), 2026</span>
       </article>
 
@@ -263,7 +269,7 @@
           </li>
           <li class="work">
             <span class="work__year" data-i18n="tag.tv">TV</span>
-            <span class="work__title">HERvolution — Banheiro Feminino</span>
+            <span class="work__title">HERvolution: Banheiro Feminino</span>
             <span class="work__meta">2021 · dir. Alana Leguth</span>
             <span class="work__place">RedeTV! · KondZilla Filmes</span>
           </li>
@@ -284,22 +290,21 @@
 
       <div class="projgroup">
         <span class="projgroup__label" data-i18n="proj.cinema">Cinema</span>
-        <p class="soon-line" data-i18n="proj.cinema.soon">Trabalhos em cinema — em breve.</p>
+        <p class="soon-line" data-i18n="proj.cinema.soon">Trabalhos em cinema, em breve.</p>
       </div>
 
       <div class="projgroup">
         <span class="projgroup__label" data-i18n="proj.danca">Dança</span>
         <div class="projgroup__grid">
           <div class="projgroup__text">
-            <p class="lead" data-i18n="danc.lead">Da dança urbana às danças populares brasileiras.</p>
-            <p data-i18n="danc.p1">Formada em danças urbanas pelo Centro de Artes Lílian Gumieiro. Estudou danças folclóricas brasileiras e combate cênico no Teatro de Arte de Moscou.</p>
+            <p class="lead" data-i18n="danc.lead">Da dança urbana ao corpo em cena.</p>
+            <p data-i18n="danc.p1">Formada em danças urbanas pelo Centro de Artes Lílian Gumieiro. Estudou combate cênico no Teatro de Arte de Moscou.</p>
             <p data-i18n="danc.p2">Em 2021, integrou como dançarina e performer o projeto de live-painting Corpo e Cor., do Estúdio Thiago Drummond.</p>
             <div class="meta__block meta__block--inline">
               <h3 data-i18n="danc.form.title">Formação em dança</h3>
               <ul>
-                <li data-i18n="danc.form.1">Danças Urbanas — Lílian Gumieiro</li>
-                <li data-i18n="danc.form.2">Danças folclóricas brasileiras</li>
-                <li data-i18n="danc.form.3">Combate cênico — Teatro de Arte de Moscou</li>
+                <li data-i18n="danc.form.1">Danças Urbanas · Lílian Gumieiro</li>
+                <li data-i18n="danc.form.3">Combate cênico · Teatro de Arte de Moscou</li>
               </ul>
             </div>
           </div>
@@ -311,47 +316,44 @@
         <span class="projgroup__label" data-i18n="proj.modelo">Modelo</span>
         <p class="intro-line intro-line--light" data-i18n="modelo.lead">Trabalhos como modelo para marcas e campanhas.</p>
         <div class="media-grid media-grid--3">
-          <div class="media-photo"><picture><source type="image/webp" srcset="./assets/images/larissa-film-01.webp" /><img src="./assets/images/larissa-film-01.jpg" alt="Larissa da Matta — still do fashion film Mujeres al borde de un ataque de nervios" width="853" height="1280" loading="lazy" decoding="async" /></picture></div>
-          <div class="media-photo"><picture><source type="image/webp" srcset="./assets/images/larissa-film-02.webp" /><img src="./assets/images/larissa-film-02.jpg" alt="Larissa da Matta — still do fashion film Mujeres al borde de un ataque de nervios" width="1280" height="853" loading="lazy" decoding="async" /></picture></div>
-          <div class="media-photo"><picture><source type="image/webp" srcset="./assets/images/larissa-film-03.webp" /><img src="./assets/images/larissa-film-03.jpg" alt="Larissa da Matta — still do fashion film Mujeres al borde de un ataque de nervios" width="848" height="1280" loading="lazy" decoding="async" /></picture></div>
+          <div class="media-photo"><picture><source type="image/webp" srcset="./assets/images/larissa-film-01.webp" /><img src="./assets/images/larissa-film-01.jpg" alt="Larissa da Matta, still do fashion film Mujeres al borde de un ataque de nervios" width="853" height="1280" loading="lazy" decoding="async" /></picture></div>
+          <div class="media-photo"><picture><source type="image/webp" srcset="./assets/images/larissa-film-02.webp" /><img src="./assets/images/larissa-film-02.jpg" alt="Larissa da Matta, still do fashion film Mujeres al borde de un ataque de nervios" width="1280" height="853" loading="lazy" decoding="async" /></picture></div>
+          <div class="media-photo"><picture><source type="image/webp" srcset="./assets/images/larissa-film-03.webp" /><img src="./assets/images/larissa-film-03.jpg" alt="Larissa da Matta, still do fashion film Mujeres al borde de un ataque de nervios" width="848" height="1280" loading="lazy" decoding="async" /></picture></div>
         </div>
-        <p class="works__note" data-i18n="modelo.credit">Fashion film “Mujeres al borde de un ataque de nervios” (2023) — Fotografia Dela · Rayssa Zago.</p>
+        <p class="works__note" data-i18n="modelo.credit">Fashion film “Mujeres al borde de un ataque de nervios” (2023). Fotografia Dela · Rayssa Zago.</p>
       </div>
 
       <div class="bts">
         <span class="bts__label" data-i18n="atriz.bts.title">Também nos bastidores</span>
         <div class="bts__list">
-          <p>Escavando Tebas (2021) — documentário · dir. Marcelo Lazzaratto · Cia. Elevador de Teatro Panorâmico</p>
-          <p>Fronteira (2019) — dir. Marcelo Lazzaratto · Sesc Pinheiros</p>
-          <p>Aproximando-se de A Fera na Selva (2018) — dir. Malú Bazán · Centro Cultural São Paulo</p>
-          <p>Cindy (2017) — dir. Marcelo Lazzaratto · Biblioteca Mário de Andrade</p>
+          <p>Escavando Tebas (2021) · documentário · dir. Marcelo Lazzaratto · Cia. Elevador de Teatro Panorâmico</p>
+          <p>Fronteira (2019) · dir. Marcelo Lazzaratto · Sesc Pinheiros</p>
+          <p>Aproximando-se de A Fera na Selva (2018) · dir. Malú Bazán · Centro Cultural São Paulo</p>
+          <p>Cindy (2017) · dir. Marcelo Lazzaratto · Biblioteca Mário de Andrade</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- PESQUISA -->
-  <section class="section section--green" id="pesquisa">
+  <section class="section section--green view" id="pesquisa">
     <div class="wrap">
       <div class="section__head">
         <span class="label">03</span>
         <h2 class="label label--title" data-i18n="pesquisa.title">Pesquisa</h2>
         <span class="section__sub" data-i18n="pesquisa.sub">Dramaturgias do Corpo</span>
       </div>
-      <div class="pesquisa__grid">
-        <div class="pesquisa__text">
-          <p class="lead" data-i18n="pesquisa.lead">Uma investigação sobre mulheres artistas apagadas pela história — e sobre o corpo como arquivo e dramaturgia.</p>
-          <p data-i18n="pesquisa.p1">Em Dramaturgias do Corpo, Larissa pesquisou a vida e a obra de mais de 40 mulheres artistas, do século XVI ao XXI. O trabalho cruza teatro, dança, escrita e memória, e deu origem ao solo autoral sobre Zelda Fitzgerald.</p>
-          <p data-i18n="pesquisa.p2">A pesquisa parte de uma pergunta: o que resta, no corpo e na cena, das artistas que a história insistiu em esquecer? Dela nascem espetáculos, artigos e processos de criação.</p>
-          <p class="pesquisa__note" data-i18n="pesquisa.mestrado">Linha de investigação que Larissa pretende aprofundar no mestrado.</p>
-        </div>
-        <figure class="pesquisa__photo"><picture><source type="image/webp" srcset="./assets/images/larissa-06.webp" /><img src="./assets/images/larissa-06.jpg" alt="Larissa da Matta" width="881" height="1280" loading="lazy" decoding="async" /></picture></figure>
+      <div class="pesquisa__text">
+        <p class="lead" data-i18n="pesquisa.lead">Uma investigação sobre mulheres artistas apagadas pela história, e sobre o corpo como arquivo e dramaturgia.</p>
+        <p data-i18n="pesquisa.p1">Em Dramaturgias do Corpo, Larissa pesquisou a vida e a obra de mais de 40 mulheres artistas, do século XVI ao XXI. O trabalho cruza teatro, dança, escrita e memória, e deu origem ao solo autoral sobre Zelda Fitzgerald.</p>
+        <p data-i18n="pesquisa.p2">A pesquisa parte de uma pergunta: o que resta, no corpo e na cena, das artistas que a história insistiu em esquecer? Dela nascem espetáculos, artigos e processos de criação.</p>
+        <p class="pesquisa__note" data-i18n="pesquisa.mestrado">Linha de investigação que Larissa pretende aprofundar no mestrado.</p>
       </div>
     </div>
   </section>
 
   <!-- MÍDIA -->
-  <section class="section" id="midia">
+  <section class="section view" id="midia">
     <div class="wrap">
       <div class="section__head">
         <span class="label">04</span>
@@ -432,12 +434,12 @@
       <p class="soon-line" data-i18n="midia.pub.soon">Novos artigos a caminho neste semestre.</p>
 
       <span class="projgroup__label projgroup__label--dark projgroup__label--mt" data-i18n="midia.entrevistas">Entrevistas</span>
-      <p class="soon-line" data-i18n="midia.entrevistas.soon">Entrevistas — em breve.</p>
+      <p class="soon-line" data-i18n="midia.entrevistas.soon">Entrevistas, em breve.</p>
     </div>
   </section>
 
   <!-- CURRÍCULOS -->
-  <section class="section section--dark" id="curriculos">
+  <section class="section section--dark view" id="curriculos">
     <div class="wrap">
       <div class="section__head">
         <span class="label">05</span>
@@ -471,7 +473,7 @@
   </section>
 
   <!-- AULAS -->
-  <section class="section" id="aulas">
+  <section class="section view" id="aulas">
     <div class="wrap">
       <div class="section__head">
         <span class="label">06</span>
@@ -487,8 +489,8 @@
         </article>
         <article class="card">
           <span class="card__num">02</span>
-          <h3 data-i18n="aulas.c2.t">Inglês — Conversação</h3>
-          <p data-i18n="aulas.c2.d">Conversação em inglês para praticar sem travar.</p>
+          <h3 data-i18n="aulas.c2.t">Inglês · Conversação</h3>
+          <p data-i18n="aulas.c2.d">Conversação em inglês para ganhar fluência e confiança.</p>
         </article>
         <article class="card">
           <span class="card__num">03</span>
@@ -497,12 +499,12 @@
         </article>
       </div>
       <p class="aulas__note" data-i18n="aulas.formato">Online e presencial (São Paulo) · turmas e valores sob consulta.</p>
-      <a href="https://wa.me/5511941220402" data-i18n-href="wa.link" target="_blank" rel="noopener" class="btn-line"><span data-i18n="aulas.cta">Quero agendar uma aula</span> <span aria-hidden="true">→</span></a>
+      <a href="mailto:larissa.fmatta@gmail.com?subject=Aulas" class="btn-line"><span data-i18n="aulas.cta">Quero agendar uma aula</span> <span aria-hidden="true">→</span></a>
     </div>
   </section>
 
   <!-- CONTATO -->
-  <section class="section" id="contato">
+  <section class="section view" id="contato">
     <div class="wrap">
       <div class="section__head">
         <span class="label">07</span>
@@ -512,9 +514,9 @@
         <div class="contato__intro">
           <p class="contato__title" data-i18n-html="contato.headline">Vamos<br />conversar.</p>
           <p class="contato__lead" data-i18n="contato.lead">Para trabalhos, casting ou aulas, fale direto com a Larissa.</p>
-          <a class="btn-wa" href="https://wa.me/5511941220402" data-i18n-href="wa.link" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.359.101 11.892c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a11.882 11.882 0 005.71 1.447h.006c6.585 0 11.946-5.359 11.949-11.893a11.821 11.821 0 00-3.495-8.407"/></svg>
-            <span data-i18n="wa.label">Falar no WhatsApp</span>
+          <a class="btn-mail" href="mailto:larissa.fmatta@gmail.com">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/></svg>
+            <span data-i18n="contato.email">Enviar e-mail</span>
           </a>
         </div>
         <div class="contato__info">
@@ -549,10 +551,6 @@
       <span class="footer__copy">© 2026</span>
     </div>
   </footer>
-
-  <a class="wa-float" href="https://wa.me/5511941220402" data-i18n-href="wa.link" target="_blank" rel="noopener" aria-label="WhatsApp">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.359.101 11.892c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652a11.882 11.882 0 005.71 1.447h.006c6.585 0 11.946-5.359 11.949-11.893a11.821 11.821 0 00-3.495-8.407"/></svg>
-  </a>
 
   <!-- Lightbox (galeria) -->
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada" hidden>

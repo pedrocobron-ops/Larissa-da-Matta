@@ -23,27 +23,34 @@ O texto padrão (PT) fica no próprio HTML — se o JS não carregar, o site con
 
 ## Estrutura
 
-Arquitetura enxuta (7 seções), cada uma com conteúdo rico:
+**Arquitetura de abas:** o site abre numa **capa** (imagem grande + nome) e um
+**menu ☰** que abre cada seção como uma "aba"/página própria (troca de vista no
+cliente, sem rolagem infinita). Sem JavaScript, tudo aparece em rolagem clássica
+(degradação graciosa). São 7 seções, cada uma com conteúdo rico:
 
 ```
-index.html                 Página única com âncoras (nav = "abas")
-  ├─ Início (hero)
+index.html                 Capa + menu (☰); cada seção abre como uma "aba"
+  ├─ Início (capa)
   ├─ Sobre (bio · idiomas · características · formação · habilidades)
   ├─ Projetos (Teatro · TV · Cinema · Dança · Modelo + bastidores)
-  ├─ Pesquisa (Dramaturgias do Corpo · mestrado) — seção em verde
+  ├─ Pesquisa (Dramaturgias do Corpo · mestrado) — seção em verde, só texto
   ├─ Mídia (Fotos · Vídeos · Imprensa · Publicações · Entrevistas)
   ├─ Currículos (Portfólio PDF · Lattes · CV PT/EN/ES)
   ├─ Aulas (Espanhol · Inglês · Curso livre de Teatro)
-  └─ Contato (WhatsApp · e-mail · portfólio PDF · agência · redes)
+  └─ Contato (e-mail · portfólio PDF · agência · redes)
 assets/
   css/style.css                    Estilos + tokens (paleta terrosa + acento verde)
   js/i18n.js                       Traduções PT/EN/ES + seletor
-  js/main.js                       Nav, menu, scrollspy, lightbox, vídeos
+  js/main.js                       Roteador de abas, menu, lightbox, vídeos
   fonts/                           Cinzel + Fraunces + Inter (woff2)
   images/                          Fotos + stills do fashion film + og-cover.jpg
   favicon.svg                      Ícone (monograma "L")
   larissa-da-matta-portfolio.pdf   Portfólio (vertical, na estética do site)
 ```
+
+> **Contato por e-mail:** a pedido da atriz, o site usa **e-mail**
+> (`larissa.fmatta@gmail.com`) no lugar de WhatsApp/telefone, para evitar
+> exposição do número. O texto foi revisado para **não usar travessões (—)**.
 
 Os **CVs em PT/EN/ES** (na estética do site) já estão gerados e ligados na
 seção Currículos, junto do Portfólio (PDF) e do Lattes.
@@ -79,19 +86,15 @@ pasta ou conecte o repositório; sem passo de build).
 (Settings → Pages → Custom domain) e atualize as URLs absolutas de
 `og:image` / `twitter:image` no `<head>` para melhorar o preview em redes sociais.
 
-> Os arquivos também estão espelhados num bucket público do Supabase
-> (projeto `larissa-da-matta`), útil como CDN e para futuramente ativar o
-> formulário de contato.
-
 ## Pendências (a completar com a cliente)
 
+- [ ] Foto de cena para a **capa** (hoje usa um retrato como provisório)
+- [ ] Definir os papéis/abas finais (ex.: Atriz · Dramaturga · Performer · Educadora · Pesquisadora)
 - [ ] Reel / vídeos de dança / videobook em alta
-- [ ] Mais fotos (cena, ensaios recentes)
-- [ ] Trabalhos com marcas (Modelo) — nomes/campanhas
+- [ ] Mais fotos (cena, ensaios recentes) e trabalhos com marcas (Modelo)
 - [ ] Revisar traduções EN/ES com a artista
 - [ ] Detalhes das Aulas (formato, valores, online/presencial)
 - [ ] Domínio + hospedagem final
-- [ ] Ativar formulário de contato (backend / Supabase)
 
 ## Créditos
 

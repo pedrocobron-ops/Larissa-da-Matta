@@ -594,33 +594,6 @@ body::after{
 }
 
 /* ============================================================
-   WHATSAPP — botão e ação flutuante
-   ============================================================ */
-.btn-wa{
-  display:inline-flex;align-items:center;gap:.7rem;margin:1.9rem 0 .4rem;
-  background:var(--espresso);color:var(--cream);
-  padding:.9rem 1.7rem;border-radius:100px;
-  font-family:var(--font-sans);font-size:.82rem;letter-spacing:.04em;
-  box-shadow:0 16px 34px -18px rgba(0,0,0,.55);
-  transition:background .3s ease,transform .3s ease;
-}
-.btn-wa:hover{background:var(--umber);transform:translateY(-2px);}
-.btn-wa svg{width:20px;height:20px;fill:currentColor;flex:none;}
-.section--dark .btn-wa{background:var(--ocre);color:var(--espresso-2);}
-.section--dark .btn-wa:hover{background:var(--caramel);}
-
-.wa-float{
-  position:fixed;right:clamp(1rem,3vw,2.2rem);bottom:clamp(1rem,3vw,2.2rem);z-index:70;
-  width:58px;height:58px;border-radius:50%;
-  background:var(--espresso);color:var(--cream);
-  display:grid;place-items:center;
-  box-shadow:0 14px 34px -10px rgba(0,0,0,.55),0 0 0 1px rgba(245,240,231,.06);
-  transition:transform .3s ease,background .3s ease;
-}
-.wa-float:hover{transform:scale(1.09);background:var(--umber);}
-.wa-float svg{width:30px;height:30px;fill:currentColor;}
-
-/* ============================================================
    FOTOS REAIS — retrato, galeria (masonry), vídeos
    ============================================================ */
 .sobre__portrait{margin:2.6rem 0 0;max-width:360px;}
@@ -815,12 +788,6 @@ h2.label{margin:0;font-size:.72rem;font-weight:500;line-height:1;}
   .pesquisa__photo{max-width:min(64vw,520px);}
 }
 
-/* WhatsApp flutuante: menor em telas pequenas + respiro nas Aulas */
-@media (max-width:900px){
-  .wa-float{width:48px;height:48px;}
-  .wa-float svg{width:26px;height:26px;}
-  #aulas{padding-bottom:5.5rem;}
-}
 
 /* ============================================================
    REESTRUTURA — Projetos, Pesquisa (verde), Mídia, Currículos
@@ -894,4 +861,143 @@ a.cv-card:hover{background:rgba(245,240,231,.08);transform:translateY(-2px);bord
 .section--dark .soon-line{color:var(--sand);}
 .cv-card{padding:clamp(1.1rem,2vw,1.5rem);}
 @media (min-width:1024px){ #curriculos .cv-grid{grid-template-columns:repeat(5,1fr);} }
-@media (min-width:561px) and (max-width:900px){ .pesquisa__photo{max-width:min(64vw,520px);} }
+
+/* ============================================================
+   ARQUITETURA DE ABAS — capa + menu, cada seção como uma página
+   ============================================================ */
+
+/* Sistema de vistas: com JS, uma seção de cada vez.
+   Sem JS, todas aparecem (rolagem) — degradação graciosa. */
+.js .view{display:none;}
+.js .view.is-active{display:block;}
+.js .hero.view.is-active{display:flex;}
+.js .section.view.is-active{min-height:100svh;}
+.view:focus{outline:none;}
+
+/* ---------- Barra superior ---------- */
+.topbar{
+  position:fixed;top:0;left:0;right:0;z-index:90;
+  transition:background .4s ease, box-shadow .4s ease, color .4s ease;
+  color:var(--cream);
+}
+.topbar__inner{
+  max-width:var(--wrap);margin-inline:auto;padding:1.1rem var(--pad);
+  display:flex;align-items:center;justify-content:space-between;gap:1.5rem;
+}
+.topbar__brand{
+  font-family:"Cinzel",Georgia,serif;font-weight:600;
+  letter-spacing:.2em;text-transform:uppercase;font-size:.8rem;color:inherit;
+}
+.topbar__right{display:flex;align-items:center;gap:clamp(.9rem,2.4vw,1.7rem);}
+.topbar__lang{display:inline-flex;align-items:center;gap:.4rem;font-size:.72rem;letter-spacing:.12em;}
+.topbar__lang button{opacity:.62;font-size:.72rem;letter-spacing:.12em;color:inherit;transition:opacity .25s,color .25s;}
+.topbar__lang button.is-active{opacity:1;color:var(--ocre);}
+.topbar__lang button:hover{opacity:1;}
+.topbar__lang i{opacity:.4;font-style:normal;}
+.topbar.is-solid{
+  background:rgba(27,20,15,.92);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  box-shadow:0 1px 0 var(--line-light);
+  color:var(--sand);
+}
+
+/* Botão do menu (hambúrguer) */
+.menu-toggle{
+  display:inline-flex;align-items:center;gap:.6rem;color:inherit;
+  position:relative;z-index:95;padding:.4rem;
+}
+.menu-toggle__text{
+  font-family:var(--font-sans);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;
+}
+.menu-toggle__bars{display:inline-flex;flex-direction:column;gap:5px;width:24px;}
+.menu-toggle__bars span{display:block;height:1.5px;background:currentColor;transition:transform .3s,opacity .3s;}
+.topbar.is-menu-open{color:var(--cream);}
+.topbar.is-menu-open .menu-toggle__bars span:first-child{transform:translateY(3.25px) rotate(45deg);}
+.topbar.is-menu-open .menu-toggle__bars span:last-child{transform:translateY(-3.25px) rotate(-45deg);}
+
+/* ---------- Overlay do menu (abas) ---------- */
+.js .menu{
+  position:fixed;inset:0;z-index:80;overflow-y:auto;
+  background:
+    radial-gradient(120% 90% at 80% 8%, rgba(156,111,71,.22), transparent 60%),
+    linear-gradient(180deg,var(--espresso-2),var(--espresso));
+  color:var(--sand);
+  display:flex;align-items:center;
+  opacity:0;visibility:hidden;transform:translateY(-8px);
+  transition:opacity .4s ease, transform .4s ease, visibility .4s;
+}
+.js .menu.is-open{opacity:1;visibility:visible;transform:none;}
+.menu__inner{
+  max-width:var(--wrap);margin:auto;padding:6rem var(--pad) 3rem;width:100%;
+}
+.menu__links{display:flex;flex-direction:column;gap:clamp(.35rem,1.4vw,.9rem);}
+.menu__links a{
+  font-family:var(--font-display);font-weight:300;
+  font-size:clamp(1.9rem,6.5vw,3.8rem);line-height:1.06;color:var(--cream);
+  letter-spacing:-.01em;width:max-content;max-width:100%;
+  opacity:.82;transition:opacity .25s,color .25s,padding-left .35s ease;
+}
+.menu__links a:hover,.menu__links a:focus-visible{opacity:1;color:var(--ocre);padding-left:.6rem;}
+.menu__links a.is-current{opacity:1;color:var(--ocre);}
+.menu__lang{
+  display:inline-flex;align-items:center;gap:.5rem;margin-top:clamp(2rem,4vw,3rem);
+  font-size:.95rem;letter-spacing:.14em;
+}
+.menu__lang button{opacity:.6;transition:opacity .25s,color .25s;font-size:.95rem;letter-spacing:.14em;}
+.menu__lang button.is-active{opacity:1;color:var(--ocre);}
+.menu__lang i{opacity:.4;font-style:normal;}
+
+/* Sem JS: barra e menu ficam estáticos e visíveis (rolagem clássica) */
+.no-js .topbar{position:static;color:var(--ink);}
+.no-js .menu-toggle{display:none;}
+.no-js .menu{position:static;background:none;color:inherit;padding:.4rem var(--pad) 1rem;border-bottom:1px solid var(--line);}
+.no-js .menu__inner{padding:0;margin:0;}
+.no-js .menu__links{flex-direction:row;flex-wrap:wrap;gap:1rem 1.4rem;}
+.no-js .menu__links a{font-family:var(--font-sans);font-size:.95rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);}
+.no-js .menu__lang{margin-top:.8rem;}
+
+/* ---------- CAPA (hero como página inicial) ---------- */
+.hero{
+  position:relative;min-height:100svh;overflow:hidden;
+  display:flex;align-items:flex-end;padding:0;
+}
+.hero__bg{display:block;position:absolute;inset:0;z-index:0;}
+.hero__bg img{width:100%;height:100%;object-fit:cover;object-position:center 20%;filter:saturate(1.02);}
+.hero__scrim{
+  position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:
+    linear-gradient(180deg, rgba(20,15,11,.48) 0%, rgba(20,15,11,.06) 30%, rgba(20,15,11,.68) 100%),
+    radial-gradient(120% 80% at 18% 100%, rgba(20,15,11,.5), transparent 62%);
+}
+.hero__content{
+  position:relative;z-index:2;width:100%;
+  max-width:var(--wrap);margin-inline:auto;
+  padding:0 var(--pad) clamp(3rem,9vh,7rem);
+}
+.hero__eyebrow{color:var(--ocre);}
+.hero__name{color:var(--cream);margin:.7rem 0 1.6rem;text-shadow:0 2px 30px rgba(0,0,0,.35);}
+.hero__cta{color:var(--cream);}
+.hero__cta span:last-child{color:var(--ocre);}
+
+/* ---------- Pesquisa: só texto (sem foto) ---------- */
+.pesquisa__text{max-width:64ch;}
+
+/* ---------- Botão de e-mail (Contato) ---------- */
+.btn-mail{
+  display:inline-flex;align-items:center;gap:.7rem;margin:1.9rem 0 .4rem;
+  background:var(--espresso);color:var(--cream);
+  padding:.9rem 1.7rem;border-radius:100px;
+  font-family:var(--font-sans);font-size:.82rem;letter-spacing:.04em;
+  box-shadow:0 16px 34px -18px rgba(0,0,0,.55);
+  transition:background .3s ease,transform .3s ease;
+}
+.btn-mail:hover{background:var(--umber);transform:translateY(-2px);}
+.btn-mail svg{width:20px;height:20px;fill:currentColor;flex:none;}
+
+/* ---------- Ajustes para telas estreitas ---------- */
+@media (max-width:560px){
+  .topbar__inner{padding:.9rem var(--pad);}
+  .topbar__brand{font-size:.72rem;letter-spacing:.16em;}
+  .menu-toggle__text{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+  .topbar__right{gap:1rem;}
+}
