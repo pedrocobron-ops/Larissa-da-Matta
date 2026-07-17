@@ -1001,3 +1001,44 @@ a.cv-card:hover{background:rgba(245,240,231,.08);transform:translateY(-2px);bord
   .menu-toggle__text{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
   .topbar__right{gap:1rem;}
 }
+
+/* ============================================================
+   PRÉVIA DE TEMA — "Equilíbrio marrom + verde" (opt-in ?tema=verde)
+   Não altera o padrão: só ativa com data-tema="verde" no <html>.
+   Espalha o verde (menu, rodapé, barra, capa, Currículos + fundo)
+   mantendo o marrom presente (Projetos segue marrom).
+   ============================================================ */
+[data-tema="verde"] body{
+  background:linear-gradient(176deg,#f4f3ea 0%,#ecefe0 55%,#e6ecdc 100%);
+  background-attachment:fixed;
+}
+/* Barra do topo esverdeada quando sólida */
+[data-tema="verde"] .topbar.is-solid{background:rgba(42,56,47,.9);}
+/* Menu ☰ em verde */
+[data-tema="verde"] .menu{
+  background:
+    radial-gradient(120% 90% at 80% 8%, rgba(138,151,111,.24), transparent 60%),
+    linear-gradient(180deg, var(--forest), var(--forest-2));
+}
+/* Capa: escurecido esverdeado em vez de marrom */
+[data-tema="verde"] .hero__scrim{
+  background:
+    linear-gradient(180deg, rgba(20,28,22,.4) 0%, rgba(20,28,22,.04) 32%, rgba(22,30,24,.6) 100%),
+    radial-gradient(120% 80% at 18% 100%, rgba(20,28,22,.46), transparent 64%);
+}
+/* Currículos vira seção verde (Pesquisa já é) — verde estrutural, 2x no site */
+[data-tema="verde"] #curriculos{
+  background:
+    radial-gradient(120% 85% at 82% 0%, rgba(138,151,111,.24), transparent 60%),
+    linear-gradient(180deg, var(--forest), var(--forest-2));
+  color:var(--sand);
+}
+[data-tema="verde"] #curriculos .label{color:var(--sage);}
+[data-tema="verde"] #curriculos .label--title{color:var(--cream);}
+[data-tema="verde"] #curriculos .section__sub{color:var(--sage);}
+/* Rodapé em verde profundo */
+[data-tema="verde"] .footer{background:var(--forest-2);}
+/* Toque de verde nos micro-rótulos claros (mistura com o ouro) */
+[data-tema="verde"] .label{color:var(--moss);}
+[data-tema="verde"] .section--dark .label,
+[data-tema="verde"] .section--green .label{color:var(--sage);}

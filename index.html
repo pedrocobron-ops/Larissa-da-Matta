@@ -54,7 +54,7 @@
   }
   </script>
 
-  <script>document.documentElement.classList.remove("no-js");document.documentElement.classList.add("js");</script>
+  <script>(function(){var d=document.documentElement;d.classList.remove("no-js");d.classList.add("js");try{var t=new URLSearchParams(location.search).get("tema")||localStorage.getItem("larissa_tema");if(t){d.setAttribute("data-tema",t);localStorage.setItem("larissa_tema",t);}}catch(e){}})();</script>
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
