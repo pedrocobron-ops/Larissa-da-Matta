@@ -14,13 +14,13 @@
 
 /* ---------- Tokens ---------- */
 :root{
-  --espresso:#241b15;
-  --espresso-2:#1b140f;
-  --umber:#3b2a1e;
+  --espresso:#3a2c1e;
+  --espresso-2:#2d2217;
+  --umber:#4c3826;
   --caramel:#9c6f47;
-  --ocre:#c39a5e;
-  --sand:#e9e0d2;
-  --cream:#f5f0e7;
+  --ocre:#c9a066;
+  --sand:#ece3d5;
+  --cream:#f7f2ea;
   --ink:#211a14;
   --line:rgba(33,26,20,.14);
   --line-light:rgba(245,240,231,.16);
@@ -539,8 +539,8 @@ body::after{
 .section--dark{
   position:relative;z-index:1;
   background:
-    radial-gradient(130% 85% at 50% -12%, rgba(180,130,80,.14), transparent 58%),
-    linear-gradient(180deg,#281f17,#201811);
+    radial-gradient(130% 85% at 50% -12%, rgba(190,140,88,.16), transparent 58%),
+    linear-gradient(180deg,#463421,#38291b);
   background-color:var(--espresso);
   box-shadow:
     0 44px 90px -58px rgba(0,0,0,.62),
@@ -794,7 +794,7 @@ h2.label{margin:0;font-size:.72rem;font-weight:500;line-height:1;}
    ============================================================ */
 
 /* Verde — tokens e seção */
-:root{ --forest:#28322a; --forest-2:#1f2721; --sage:#b7c199; --moss:#7d8a62; }
+:root{ --forest:#36473b; --forest-2:#2a382f; --sage:#c2cca6; --moss:#8a976f; }
 .section--green{
   background:
     radial-gradient(120% 85% at 82% 0%, rgba(125,138,98,.24), transparent 60%),
@@ -895,7 +895,7 @@ a.cv-card:hover{background:rgba(245,240,231,.08);transform:translateY(-2px);bord
 .topbar__lang button:hover{opacity:1;}
 .topbar__lang i{opacity:.4;font-style:normal;}
 .topbar.is-solid{
-  background:rgba(27,20,15,.92);
+  background:rgba(58,44,30,.9);
   -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
   box-shadow:0 1px 0 var(--line-light);
   color:var(--sand);
@@ -966,8 +966,8 @@ a.cv-card:hover{background:rgba(245,240,231,.08);transform:translateY(-2px);bord
 .hero__scrim{
   position:absolute;inset:0;z-index:1;pointer-events:none;
   background:
-    linear-gradient(180deg, rgba(20,15,11,.48) 0%, rgba(20,15,11,.06) 30%, rgba(20,15,11,.68) 100%),
-    radial-gradient(120% 80% at 18% 100%, rgba(20,15,11,.5), transparent 62%);
+    linear-gradient(180deg, rgba(28,21,14,.38) 0%, rgba(28,21,14,.04) 32%, rgba(28,21,14,.58) 100%),
+    radial-gradient(120% 80% at 18% 100%, rgba(28,21,14,.42), transparent 64%);
 }
 .hero__content{
   position:relative;z-index:2;width:100%;
