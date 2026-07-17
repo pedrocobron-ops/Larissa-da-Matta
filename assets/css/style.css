@@ -1090,9 +1090,17 @@ a.cv-card:hover{background:rgba(245,240,231,.08);transform:translateY(-2px);bord
 /* Vazios verticais: centra o conteúdo das abas (curtas centram; longas ficam iguais) */
 .js .section.view.is-active{ display:flex; flex-direction:column; justify-content:center; }
 
-/* Emenda da barra: fade na base em vez de corte seco (dissolve a costura verde↔marrom) */
-.topbar.is-solid{ background:linear-gradient(180deg, rgba(58,44,30,.94) 62%, rgba(58,44,30,0)); box-shadow:none; }
-[data-tema="verde"] .topbar.is-solid{ background:linear-gradient(180deg, rgba(42,56,47,.96) 62%, rgba(42,56,47,0)); }
+/* Barra: bloco 100% opaco (cobre o nome) + "saia" de fade longo e gradual
+   abaixo dela — sem linha/emenda dura na transição. */
+.topbar.is-solid{ background:var(--espresso); box-shadow:none; -webkit-backdrop-filter:none; backdrop-filter:none; }
+.topbar.is-solid::after{
+  content:"";position:absolute;left:0;right:0;top:100%;height:60px;pointer-events:none;
+  background:linear-gradient(180deg, var(--espresso) 0%, rgba(58,44,30,.72) 32%, rgba(58,44,30,0) 100%);
+}
+[data-tema="verde"] .topbar.is-solid{ background:#2a382f; }
+[data-tema="verde"] .topbar.is-solid::after{
+  background:linear-gradient(180deg, #2a382f 0%, rgba(42,56,47,.72) 32%, rgba(42,56,47,0) 100%);
+}
 
 /* Sobre no tablet: centra o retrato capado (tira o vazio à direita) */
 @media (min-width:561px) and (max-width:900px){ .sobre__portrait{ margin-inline:auto; } }
