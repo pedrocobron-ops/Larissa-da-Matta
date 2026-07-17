@@ -54,7 +54,7 @@
   }
   </script>
 
-  <script>(function(){var d=document.documentElement;d.classList.remove("no-js");d.classList.add("js");try{var t=new URLSearchParams(location.search).get("tema")||localStorage.getItem("larissa_tema");if(t){d.setAttribute("data-tema",t);localStorage.setItem("larissa_tema",t);}}catch(e){}})();</script>
+  <script>(function(){var d=document.documentElement;d.classList.remove("no-js");d.classList.add("js");try{var t=new URLSearchParams(location.search).get("tema")||"verde";d.setAttribute("data-tema",t);}catch(e){d.setAttribute("data-tema","verde");}})();</script>
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>

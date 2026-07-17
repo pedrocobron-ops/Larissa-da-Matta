@@ -794,16 +794,16 @@ h2.label{margin:0;font-size:.72rem;font-weight:500;line-height:1;}
    ============================================================ */
 
 /* Verde — tokens e seção */
-:root{ --forest:#36473b; --forest-2:#2a382f; --sage:#c2cca6; --moss:#8a976f; }
+:root{ --forest:#405446; --forest-2:#33443a; --sage:#c2cca6; --moss:#8a976f; }
 .section--green{
   background:
-    radial-gradient(120% 85% at 82% 0%, rgba(125,138,98,.24), transparent 60%),
+    radial-gradient(120% 85% at 82% 0%, rgba(125,138,98,.16), transparent 60%),
     linear-gradient(180deg, var(--forest), var(--forest-2));
   color:var(--sand);
 }
-.section--green .label{color:var(--sage);}
+.section--green .label{color:var(--ocre);}
 .section--green .label--title{color:var(--cream);}
-.section--green .section__sub{color:var(--sage);}
+.section--green .section__sub{color:var(--ocre);}
 .section--green .section__head{border-color:rgba(233,224,210,.16);box-shadow:0 1px 0 rgba(255,255,255,.04);}
 .section--green .intro-line{color:var(--cream);}
 
@@ -1003,10 +1003,11 @@ a.cv-card:hover{background:rgba(245,240,231,.08);transform:translateY(-2px);bord
 }
 
 /* ============================================================
-   PRÉVIA DE TEMA — "Equilíbrio marrom + verde" (opt-in ?tema=verde)
-   Não altera o padrão: só ativa com data-tema="verde" no <html>.
+   TEMA "Equilíbrio marrom + verde" — agora o PADRÃO do site.
+   O <html> recebe data-tema="verde" por padrão (via script no <head>).
    Espalha o verde (menu, rodapé, barra, capa, Currículos + fundo)
    mantendo o marrom presente (Projetos segue marrom).
+   Para ver o marrom original: acrescente ?tema=marrom na URL.
    ============================================================ */
 [data-tema="verde"] body{
   background:linear-gradient(176deg,#f4f3ea 0%,#ecefe0 55%,#e6ecdc 100%);
@@ -1029,16 +1030,13 @@ a.cv-card:hover{background:rgba(245,240,231,.08);transform:translateY(-2px);bord
 /* Currículos vira seção verde (Pesquisa já é) — verde estrutural, 2x no site */
 [data-tema="verde"] #curriculos{
   background:
-    radial-gradient(120% 85% at 82% 0%, rgba(138,151,111,.24), transparent 60%),
+    radial-gradient(120% 85% at 82% 0%, rgba(138,151,111,.16), transparent 60%),
     linear-gradient(180deg, var(--forest), var(--forest-2));
   color:var(--sand);
 }
-[data-tema="verde"] #curriculos .label{color:var(--sage);}
+/* Rótulos e subtítulo das seções verdes em dourado/ocre (contrasta com o verde) */
+[data-tema="verde"] #curriculos .label,
+[data-tema="verde"] #curriculos .section__sub{color:var(--ocre);}
 [data-tema="verde"] #curriculos .label--title{color:var(--cream);}
-[data-tema="verde"] #curriculos .section__sub{color:var(--sage);}
 /* Rodapé em verde profundo */
 [data-tema="verde"] .footer{background:var(--forest-2);}
-/* Toque de verde nos micro-rótulos claros (mistura com o ouro) */
-[data-tema="verde"] .label{color:var(--moss);}
-[data-tema="verde"] .section--dark .label,
-[data-tema="verde"] .section--green .label{color:var(--sage);}
