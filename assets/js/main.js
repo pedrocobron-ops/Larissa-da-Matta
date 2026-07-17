@@ -6,6 +6,9 @@
   var toggle = document.getElementById("menuToggle");
   var menu = document.getElementById("menu");
   var menuLinks = menu ? [].slice.call(menu.querySelectorAll(".menu__links a")) : [];
+  // Estado inicial (só quando há JS): menu fechado e oculto para a árvore de acessibilidade.
+  // Sem JS, o menu fica visível/rolável e NÃO deve ficar aria-hidden — por isso não é fixado no HTML.
+  if (menu) menu.setAttribute("aria-hidden", "true");
 
   /* ---------------------------------------------------------
      ROTEADOR DE VISTAS — cada seção é uma "aba"/página
@@ -47,7 +50,9 @@
 
   function route() {
     var h = (location.hash || "").replace(/^#/, "");
-    showView(views[h] ? h : HOME);
+    // Hash que não é uma view (ex.: #main do skip link) não deve trocar de aba
+    if (h && !views[h]) { closeMenu(); return; }
+    showView(h || HOME);
     closeMenu();
     started = true;
   }
@@ -75,8 +80,9 @@
     toggle.setAttribute("aria-label", "Fechar menu");
     topbar.classList.add("is-menu-open");
     document.body.style.overflow = "hidden";
+    // Adia o foco para depois do foco de mouse do browser no toggle e da transição de visibilidade
     var first = menu.querySelector(".menu__links a");
-    if (first) first.focus();
+    if (first) requestAnimationFrame(function () { first.focus(); });
   }
   function closeMenu() {
     if (!menu.classList.contains("is-open")) return;
@@ -108,8 +114,8 @@
       toggle.focus();
     }
   });
-  // Retém o foco dentro do menu enquanto aberto
-  menu.addEventListener("keydown", function (e) {
+  // Retém o foco dentro do menu enquanto aberto (no documento: o toggle fica FORA do #menu)
+  document.addEventListener("keydown", function (e) {
     if (e.key !== "Tab" || !menu.classList.contains("is-open")) return;
     var f = [toggle].concat([].slice.call(menu.querySelectorAll("a, button")));
     var i = f.indexOf(document.activeElement);
@@ -137,7 +143,6 @@
       f.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0";
       f.title = "Vídeo de Larissa da Matta";
       f.allow = "autoplay; encrypted-media; fullscreen";
-      f.setAttribute("allowfullscreen", "");
       var wrap = document.createElement("div");
       wrap.className = "video-embed";
       wrap.appendChild(f);

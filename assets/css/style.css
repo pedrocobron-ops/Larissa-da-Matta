@@ -1040,3 +1040,66 @@ a.cv-card:hover{background:rgba(245,240,231,.08);transform:translateY(-2px);bord
 [data-tema="verde"] #curriculos .label--title{color:var(--cream);}
 /* Rodapé em verde profundo */
 [data-tema="verde"] .footer{background:var(--forest-2);}
+
+/* ============================================================
+   REVISÃO POR AGENTES — contraste (AA), vazios, emenda, coerência, a11y
+   ============================================================ */
+:root{ --gold-green:#e6c78f; }
+
+/* Contraste AA do dourado sobre verde: dourado mais claro + realce do
+   cabeçalho verde reduzido (para os rótulos/subtítulos não pousarem no
+   ponto mais claro do gradiente). Unifica as duas superfícies verdes. */
+.section--green{
+  background:
+    radial-gradient(120% 85% at 82% 0%, rgba(138,151,111,.05), transparent 62%),
+    linear-gradient(180deg, var(--forest), var(--forest-2));
+}
+[data-tema="verde"] #curriculos{
+  background:
+    radial-gradient(120% 85% at 82% 0%, rgba(138,151,111,.05), transparent 62%),
+    linear-gradient(180deg, var(--forest), var(--forest-2));
+}
+.section--green .section__head{ border-color:var(--line-light); }
+.section--green .label,
+.section--green .section__sub,
+[data-tema="verde"] #curriculos .label,
+[data-tema="verde"] #curriculos .section__sub,
+[data-tema="verde"] #curriculos .cv-card__v{ color:var(--gold-green); }
+[data-tema="verde"] .topbar__lang button.is-active{ color:var(--gold-green); }
+
+/* Título de seção: número dourado + título creme em TODAS as superfícies escuras/verdes */
+.section--dark .label--title,
+.section--green .label--title,
+[data-tema="verde"] #curriculos .label--title{ color:var(--cream); }
+
+/* Rótulos pequenos que faltaram no ajuste de contraste (fundo claro) → caramelo escuro */
+.skill-cat__label,.chip--pro b{ color:var(--caramel-dark); }
+
+/* Anel de foco visível: escuro no claro, ocre no escuro/verde/capa/menu/barra */
+:focus-visible{ outline-color:var(--caramel-dark); }
+.section--dark :focus-visible,.section--green :focus-visible,.hero :focus-visible,
+.menu :focus-visible,.topbar :focus-visible{ outline-color:var(--ocre); }
+
+/* Padroniza os dourados de borda para o token ocre */
+.chip--pro{ border-color:rgba(201,160,102,.6); }
+.media-grid--3 .media-photo{ border-color:rgba(201,160,102,.32); }
+
+/* Cantos no padrão 2px; borda dos cards um tico mais visível */
+.cv-card{ border-radius:2px; border-color:rgba(236,227,213,.22); }
+
+/* Vazios verticais: centra o conteúdo das abas (curtas centram; longas ficam iguais) */
+.js .section.view.is-active{ display:flex; flex-direction:column; justify-content:center; }
+
+/* Emenda da barra: fade na base em vez de corte seco (dissolve a costura verde↔marrom) */
+.topbar.is-solid{ background:linear-gradient(180deg, rgba(58,44,30,.94) 62%, rgba(58,44,30,0)); box-shadow:none; }
+[data-tema="verde"] .topbar.is-solid{ background:linear-gradient(180deg, rgba(42,56,47,.96) 62%, rgba(42,56,47,0)); }
+
+/* Sobre no tablet: centra o retrato capado (tira o vazio à direita) */
+@media (min-width:561px) and (max-width:900px){ .sobre__portrait{ margin-inline:auto; } }
+
+/* Galeria no celular: mantém 2 colunas até bem estreito (corta o scroll pela metade) */
+@media (max-width:560px){ .gallery{ columns:2; } }
+@media (max-width:380px){ .gallery{ columns:1; } }
+
+/* Modelo: 1 coluna no celular pequeno (elimina o card órfão) */
+@media (max-width:480px){ .media-grid--3{ grid-template-columns:1fr; } }
