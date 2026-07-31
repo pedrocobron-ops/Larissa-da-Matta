@@ -139,8 +139,9 @@
     btn.addEventListener("click", function () {
       var id = btn.getAttribute("data-embed");
       if (!id) return;
+      var start = btn.getAttribute("data-start");
       var f = document.createElement("iframe");
-      f.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0";
+      f.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0" + (start ? "&start=" + start : "");
       f.title = "Vídeo de Larissa da Matta";
       f.allow = "autoplay; encrypted-media; fullscreen";
       var wrap = document.createElement("div");

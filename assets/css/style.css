@@ -1106,3 +1106,9 @@ a.cv-card:hover{background:rgba(245,240,231,.08);transform:translateY(-2px);bord
 
 /* Modelo: 1 coluna no celular pequeno (elimina o card órfão) */
 @media (max-width:480px){ .media-grid--3{ grid-template-columns:1fr; } }
+
+/* Lista de trabalhos ao lado de uma foto (ex.: bloco Cinema): a grade de 4
+   colunas não cabe na coluna estreita; empilha como no tablet. */
+.projgroup__grid .work{grid-template-columns:100px 1fr;gap:.4rem 1.2rem;}
+.projgroup__grid .work__meta{grid-column:2;}
+.projgroup__grid .work__place{grid-column:2;text-align:left;}
