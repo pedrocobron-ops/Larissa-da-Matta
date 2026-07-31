@@ -1112,3 +1112,10 @@ a.cv-card:hover{background:rgba(245,240,231,.08);transform:translateY(-2px);bord
 .projgroup__grid .work{grid-template-columns:100px 1fr;gap:.4rem 1.2rem;}
 .projgroup__grid .work__meta{grid-column:2;}
 .projgroup__grid .work__place{grid-column:2;text-align:left;}
+
+/* Linha de papéis (5 termos): no celular, compacta para quebrar em 2 linhas
+   limpas, sem cortar "Artista-pesquisadora" no hífen. */
+@media (max-width:560px){
+  .hero__eyebrow{font-size:.62rem;letter-spacing:.14em;line-height:1.9;}
+  .hero__eyebrow, .footer__role{ -webkit-hyphens:none; hyphens:none; }
+}
