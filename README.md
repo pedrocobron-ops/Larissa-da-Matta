@@ -1,41 +1,100 @@
 # Larissa da Matta — Site profissional
 
-Site portfólio da atriz, performer e dramaturga **Larissa da Matta**.
-Objetivo: portfólio para trabalhos e casting + presença profissional.
+Site portfólio da **Larissa da Matta** — atriz, dançarina e modelo (+ professora).
+Objetivo: portfólio para trabalhos/casting + divulgação de serviços.
 
-> **Status:** protótipo visual da _home_ (v0) — primeira direção para validação.
+> **Status:** v1 no ar. Design finalizado; conteúdo real integrado (bio,
+> filmografia, habilidades, idiomas, imprensa, vídeos, fotos). Aguardando novos
+> materiais da artista (reel/videobook, mais fotos) e um domínio próprio.
+>
+> **🔗 No ar:** https://pedrocobron-ops.github.io/Larissa-da-Matta/ (GitHub Pages)
 
 ## Direção de design
 
-- **Estética:** artística-autoral, minimalista, editorial (referências: Elisabete Finger, Janaína Leite).
-- **Paleta terrosa** (a partir do ensaio fotográfico):
-  - Espresso `#241B15` · Umber `#3B2A1E` · Caramelo `#9C6F47`
-  - Ocre (acento) `#C39A5E` · Areia `#E9E0D2` · Creme `#F5F0E7`
-- **Tipografia (auto-hospedada):** [Fraunces](https://fonts.google.com/specimen/Fraunces) (títulos) + [Inter](https://fonts.google.com/specimen/Inter) (texto).
+- **Estética:** artística-autoral, minimalista, editorial (ref.: Elisabete Finger, Janaína Leite).
+- **Paleta terrosa** (do ensaio fotográfico): Espresso `#241B15` · Umber `#3B2A1E` · Caramelo `#9C6F47` · Ocre `#C39A5E` · Areia `#E9E0D2` · Creme `#F5F0E7`.
+- **Tipografia (auto-hospedada):** Cinzel (nome/logo) · Fraunces (títulos) · Inter (texto).
+- Textura de grão, sombras suaves entre blocos e gradientes quentes nas seções escuras.
+
+## Idiomas
+
+Site trilíngue **PT / EN / ES** com seletor no topo (`assets/js/i18n.js`).
+O texto padrão (PT) fica no próprio HTML — se o JS não carregar, o site continua legível.
 
 ## Estrutura
 
+**Arquitetura de abas:** o site abre numa **capa** (imagem grande + nome) e um
+**menu ☰** que abre cada seção como uma "aba"/página própria (troca de vista no
+cliente, sem rolagem infinita). Sem JavaScript, tudo aparece em rolagem clássica
+(degradação graciosa). São 7 seções, cada uma com conteúdo rico:
+
 ```
-index.html              Página única (Início · Sobre · Trabalhos · Reel · Contato)
+index.html                 Capa + menu (☰); cada seção abre como uma "aba"
+  ├─ Início (capa)
+  ├─ Sobre (bio · idiomas · características · formação · habilidades)
+  ├─ Projetos (Teatro · TV · Cinema · Dança · Modelo + bastidores)
+  ├─ Pesquisa (Dramaturgias do Corpo · mestrado) — seção em verde, só texto
+  ├─ Mídia (Fotos · Vídeos · Imprensa · Publicações · Entrevistas)
+  ├─ Currículos (Portfólio PDF · Lattes · CV PT/EN/ES)
+  ├─ Aulas (Espanhol · Inglês · Curso livre de Teatro)
+  └─ Contato (e-mail · portfólio PDF · agência · redes)
 assets/
-  css/style.css         Estilos + tokens da identidade
-  js/main.js            Interações (nav, menu mobile, reveal on scroll)
-  fonts/                Fraunces + Inter (woff2, subset latin)
-  images/               Fotos (larissa-01.jpg = retrato do hero)
+  css/style.css                    Estilos + tokens (paleta terrosa + acento verde)
+  js/i18n.js                       Traduções PT/EN/ES + seletor
+  js/main.js                       Roteador de abas, menu, lightbox, vídeos
+  fonts/                           Cinzel + Fraunces + Inter (woff2)
+  images/                          Fotos + stills do fashion film + og-cover.jpg
+  favicon.svg                      Ícone (monograma "L")
+  larissa-da-matta-portfolio.pdf   Portfólio (vertical, na estética do site)
 ```
+
+> **Contato por e-mail:** a pedido da atriz, o site usa **e-mail**
+> (`larissa.fmatta@gmail.com`) no lugar de WhatsApp/telefone, para evitar
+> exposição do número. O texto foi revisado para **não usar travessões (—)**.
+
+Os **CVs em PT/EN/ES** (na estética do site) já estão gerados e ligados na
+seção Currículos, junto do Portfólio (PDF) e do Lattes.
+
+**Pendências de conteúdo (com a Larissa):** créditos de Cinema, texto/tema
+da pesquisa do mestrado, links de entrevistas e novos artigos — os espaços
+já estão prontos ("em breve") para receber. Se ela precisar do template
+oficial **Europass**, é só enviar os arquivos.
 
 ## Como visualizar
 
-Abra `index.html` em qualquer navegador (não precisa de servidor).
+Abra `index.html` em qualquer navegador. Como o site é 100% estático (sem
+build), qualquer servidor de arquivos serve. Para testar local com o PDF/OG
+funcionando:
 
-## Pendências (a confirmar com a cliente)
+```
+python3 -m http.server 8000   # depois abra http://localhost:8000
+```
 
-- [ ] Conteúdo do áudio da Larissa (desejos específicos + idioma do site)
-- [ ] Idioma: só PT ou bilíngue PT/EN
-- [ ] Mais fotos (ensaio em alta), reel/vídeos e currículo em PDF
-- [ ] Confirmar/corrigir filmografia (nomes, anos, papéis, direção)
-- [ ] Domínio (a ser comprado)
-- [ ] E-mail profissional de contato + formulário
+(`preview-larissa.html` é uma cópia autocontida gerada para envio — não versionada.)
+
+## Hospedagem
+
+Atualmente publicado via **GitHub Pages** (branch do site, raiz), com o arquivo
+`.nojekyll` para servir os assets sem processamento:
+
+**https://pedrocobron-ops.github.io/Larissa-da-Matta/**
+
+Sendo estático, também roda em Netlify / Vercel / Cloudflare Pages (arraste a
+pasta ou conecte o repositório; sem passo de build).
+
+**Domínio próprio:** ao comprar o domínio, aponte-o para o GitHub Pages
+(Settings → Pages → Custom domain) e atualize as URLs absolutas de
+`og:image` / `twitter:image` no `<head>` para melhorar o preview em redes sociais.
+
+## Pendências (a completar com a cliente)
+
+- [ ] Foto de cena para a **capa** (hoje usa um retrato como provisório)
+- [ ] Definir os papéis/abas finais (ex.: Atriz · Dramaturga · Performer · Educadora · Pesquisadora)
+- [ ] Reel / vídeos de dança / videobook em alta
+- [ ] Mais fotos (cena, ensaios recentes) e trabalhos com marcas (Modelo)
+- [ ] Revisar traduções EN/ES com a artista
+- [ ] Detalhes das Aulas (formato, valores, online/presencial)
+- [ ] Domínio + hospedagem final
 
 ## Créditos
 

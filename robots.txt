@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pedrocobron-ops.github.io/Larissa-da-Matta/sitemap.xml

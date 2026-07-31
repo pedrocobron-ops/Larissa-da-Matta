@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<title>Larissa da Matta · Portfólio</title>
+<style>
+/* ===== Fontes (auto-hospedadas) ===== */
+@font-face{font-family:'Cinzel';src:url('./assets/fonts/cinzel-latin-500-normal.woff2') format('woff2');font-weight:500;font-display:swap;}
+@font-face{font-family:'Cinzel';src:url('./assets/fonts/cinzel-latin-600-normal.woff2') format('woff2');font-weight:600;font-display:swap;}
+@font-face{font-family:'Fraunces';src:url('./assets/fonts/fraunces-latin-300-normal.woff2') format('woff2');font-weight:300;font-display:swap;}
+@font-face{font-family:'Fraunces';src:url('./assets/fonts/fraunces-latin-400-normal.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}
+@font-face{font-family:'Fraunces';src:url('./assets/fonts/fraunces-latin-400-italic.woff2') format('woff2');font-weight:400;font-style:italic;font-display:swap;}
+@font-face{font-family:'Fraunces';src:url('./assets/fonts/fraunces-latin-500-normal.woff2') format('woff2');font-weight:500;font-display:swap;}
+@font-face{font-family:'Inter';src:url('./assets/fonts/inter-latin-400-normal.woff2') format('woff2');font-weight:400;font-display:swap;}
+@font-face{font-family:'Inter';src:url('./assets/fonts/inter-latin-500-normal.woff2') format('woff2');font-weight:500;font-display:swap;}
+@font-face{font-family:'Inter';src:url('./assets/fonts/inter-latin-600-normal.woff2') format('woff2');font-weight:600;font-display:swap;}
+
+:root{
+  --espresso:#241B15; --umber:#3B2A1E; --caramel:#9C6F47; --ocre:#C39A5E;
+  --sand:#E9E0D2; --cream:#F5F0E7; --ink:#2B211A; --ink-soft:#5A4A3B; --line:#D8CBB6;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--cream);}
+
+@page{size:A4;margin:0;}
+
+.page{
+  position:relative; width:210mm; height:297mm; overflow:hidden;
+  background:var(--cream); page-break-after:always;
+}
+.page:last-child{page-break-after:auto;}
+.pad{padding:20mm 18mm;height:100%;position:relative;z-index:2;}
+
+/* Grão sutil comum ao site */
+.page::after{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.5;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/></svg>");
+}
+.page--dark{background:var(--espresso);color:var(--cream);}
+.page--dark::after{opacity:.6;mix-blend-mode:screen;}
+.page--warm{
+  background:
+    radial-gradient(120% 80% at 80% 0%, rgba(156,111,71,.18), transparent 60%),
+    var(--espresso);
+}
+
+/* ===== Tipografia utilitária ===== */
+.eyebrow{font-family:'Inter';font-weight:500;text-transform:uppercase;letter-spacing:.34em;font-size:8.5pt;color:var(--caramel);}
+.page--dark .eyebrow{color:var(--ocre);}
+.seclabel{display:flex;align-items:baseline;gap:.8rem;border-bottom:1px solid var(--line);padding-bottom:7pt;margin-bottom:14pt;}
+.page--dark .seclabel{border-color:rgba(233,224,210,.18);}
+.seclabel .num{font-family:'Inter';font-weight:600;font-size:9pt;letter-spacing:.2em;color:var(--caramel);}
+.seclabel .ttl{font-family:'Fraunces';font-weight:400;font-size:20pt;letter-spacing:.01em;}
+.seclabel .sub{font-family:'Inter';font-weight:400;font-size:8.5pt;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);margin-left:auto;}
+.page--dark .seclabel .sub{color:var(--sand);}
+
+h3.blocktitle{font-family:'Inter';font-weight:600;font-size:8.5pt;letter-spacing:.2em;text-transform:uppercase;color:var(--caramel);margin-bottom:8pt;}
+p.body{font-family:'Fraunces';font-weight:300;font-size:10.5pt;line-height:1.62;color:var(--ink);margin-bottom:9pt;}
+.page--dark p.body{color:var(--sand);}
+p.lead{font-family:'Fraunces';font-weight:400;font-size:13pt;line-height:1.5;margin-bottom:11pt;}
+
+/* ===== CAPA ===== */
+.cover-photo{position:absolute;top:0;right:0;width:92mm;height:100%;z-index:1;}
+.cover-photo img{width:100%;height:100%;object-fit:cover;object-position:center 22%;}
+.cover-photo::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(90deg, var(--espresso) 0%, rgba(36,27,21,.55) 22%, rgba(36,27,21,0) 55%);}
+.cover-inner{position:relative;z-index:3;height:100%;display:flex;flex-direction:column;justify-content:space-between;}
+.cover-top .eyebrow{color:var(--ocre);}
+.cover-name{font-family:'Cinzel';font-weight:600;color:var(--cream);
+  font-size:41pt;line-height:1.04;letter-spacing:.02em;text-transform:uppercase;margin-top:8mm;}
+.cover-name span{display:block;color:var(--ocre);}
+.cover-tag{font-family:'Fraunces';font-style:italic;font-weight:300;font-size:13pt;line-height:1.5;
+  color:var(--sand);max-width:78mm;margin-top:9mm;}
+.cover-rule{width:26mm;height:1px;background:var(--caramel);margin:9mm 0;}
+.cover-foot{font-family:'Inter';font-weight:400;font-size:8.5pt;line-height:1.9;color:var(--sand);letter-spacing:.02em;}
+.cover-foot b{color:var(--ocre);font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:7.5pt;display:block;margin-bottom:2pt;}
+
+/* ===== PERFIL ===== */
+.two{display:grid;grid-template-columns:1fr 62mm;gap:12mm;height:calc(100% - 40pt);}
+.profile-photo{width:100%;height:150mm;border-radius:2px;overflow:hidden;box-shadow:0 18px 40px -26px rgba(0,0,0,.5);}
+.profile-photo img{width:100%;height:100%;object-fit:cover;}
+.datacard{margin-top:11pt;}
+.datacard h3{font-family:'Inter';font-weight:600;font-size:8pt;letter-spacing:.2em;text-transform:uppercase;color:var(--caramel);margin-bottom:6pt;padding-bottom:4pt;border-bottom:1px solid var(--line);}
+.datacard ul{list-style:none;margin-bottom:12pt;}
+.datacard li{font-family:'Inter';font-weight:400;font-size:9pt;line-height:1.65;color:var(--ink-soft);}
+.datacard li b{color:var(--ink);font-weight:500;}
+
+/* ===== HABILIDADES ===== */
+.skillcat{margin-bottom:10pt;}
+.skillcat__label{font-family:'Inter';font-weight:600;font-size:8pt;letter-spacing:.16em;text-transform:uppercase;color:var(--caramel);display:block;margin-bottom:5pt;}
+.chips{display:flex;flex-wrap:wrap;gap:5pt;}
+.chip{font-family:'Inter';font-weight:400;font-size:8.5pt;color:var(--ink);
+  border:1px solid var(--line);border-radius:40px;padding:3pt 8pt;line-height:1;background:rgba(255,255,255,.35);}
+.chip b{color:var(--caramel);font-weight:600;}
+.chip--pro{border-color:var(--caramel);background:rgba(156,111,71,.08);}
+
+.form-list{list-style:none;}
+.form-list li{font-family:'Inter';font-weight:400;font-size:9.5pt;line-height:1.5;color:var(--ink);
+  padding:6pt 0 6pt 14pt;border-bottom:1px solid var(--line);position:relative;}
+.form-list li::before{content:"";position:absolute;left:0;top:11pt;width:5pt;height:5pt;border-radius:50%;background:var(--caramel);}
+.form-list li b{font-weight:600;}
+.form-list li span{color:var(--ink-soft);}
+
+/* ===== ATRIZ ===== */
+.feature{border-left:2px solid var(--ocre);padding:2pt 0 2pt 12pt;margin-bottom:13pt;}
+.feature .tag{font-family:'Inter';font-weight:600;font-size:7.5pt;letter-spacing:.2em;text-transform:uppercase;color:var(--ocre);}
+.feature h4{font-family:'Fraunces';font-weight:400;font-size:17pt;line-height:1.1;margin:4pt 0 5pt;color:var(--cream);}
+.feature p{font-family:'Fraunces';font-weight:300;font-size:10pt;line-height:1.55;color:var(--sand);margin-bottom:5pt;}
+.feature .credit{font-family:'Inter';font-weight:400;font-size:8pt;line-height:1.5;color:var(--caramel);font-style:normal;}
+
+.works{list-style:none;}
+.work{display:grid;grid-template-columns:20mm 1fr;gap:6mm;padding:7pt 0;border-bottom:1px solid rgba(233,224,210,.16);align-items:baseline;}
+.work__cat{font-family:'Inter';font-weight:600;font-size:7.5pt;letter-spacing:.14em;text-transform:uppercase;color:var(--ocre);}
+.work__title{font-family:'Fraunces';font-weight:400;font-size:11.5pt;color:var(--cream);}
+.work__meta{font-family:'Inter';font-weight:400;font-size:8.5pt;color:var(--sand);display:block;margin-top:2pt;}
+.work__place{font-family:'Inter';font-weight:400;font-size:8pt;color:var(--caramel);display:block;margin-top:1pt;}
+.bts{margin-top:12pt;border-top:1px solid rgba(233,224,210,.16);padding-top:9pt;}
+.bts__label{font-family:'Inter';font-weight:600;font-size:7.5pt;letter-spacing:.2em;text-transform:uppercase;color:var(--ocre);display:block;margin-bottom:6pt;}
+.bts p{font-family:'Inter';font-weight:400;font-size:8.5pt;line-height:1.75;color:var(--sand);}
+
+/* ===== DANÇA / MODELO ===== */
+.dm-photos{display:grid;grid-template-columns:1fr 1fr 1fr;gap:5mm;margin-top:10pt;}
+.dm-photos figure{height:62mm;overflow:hidden;border-radius:2px;box-shadow:0 16px 34px -24px rgba(0,0,0,.55);}
+.dm-photos img{width:100%;height:100%;object-fit:cover;}
+.wide-photo{width:100%;height:74mm;overflow:hidden;border-radius:2px;margin:8pt 0 2pt;box-shadow:0 16px 34px -24px rgba(0,0,0,.5);}
+.wide-photo img{width:100%;height:100%;object-fit:cover;object-position:center 40%;}
+.credit-line{font-family:'Inter';font-weight:400;font-size:8pt;color:var(--caramel);margin-top:6pt;font-style:italic;}
+
+/* ===== IMPRENSA / CONTATO ===== */
+.press{list-style:none;margin-bottom:4pt;}
+.press li{padding:7pt 0;border-bottom:1px solid var(--line);}
+.press .outlet{font-family:'Inter';font-weight:600;font-size:7.5pt;letter-spacing:.16em;text-transform:uppercase;color:var(--caramel);}
+.press .ttl{font-family:'Fraunces';font-weight:400;font-size:10.5pt;line-height:1.35;color:var(--ink);display:block;margin-top:2pt;}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:10mm;margin-top:6pt;}
+.contact-grid h3{font-family:'Inter';font-weight:600;font-size:8pt;letter-spacing:.2em;text-transform:uppercase;color:var(--caramel);margin-bottom:6pt;}
+.contact-grid p{font-family:'Inter';font-weight:400;font-size:10pt;line-height:1.7;color:var(--ink);}
+.closing{position:absolute;left:0;bottom:0;width:100%;height:120mm;z-index:1;}
+.closing img{width:100%;height:100%;object-fit:cover;object-position:center 30%;}
+.closing::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--cream) 0%,rgba(245,240,231,.25) 30%,rgba(245,240,231,0) 60%);}
+
+.foot-mark{position:absolute;left:18mm;bottom:10mm;font-family:'Cinzel';font-weight:500;font-size:8pt;letter-spacing:.22em;text-transform:uppercase;color:var(--caramel);z-index:5;}
+.page--dark .foot-mark,.page--warm .foot-mark{color:var(--ocre);}
+.foot-num{position:absolute;right:18mm;bottom:10mm;font-family:'Inter';font-weight:500;font-size:8pt;letter-spacing:.1em;color:var(--ink-soft);z-index:5;}
+.page--dark .foot-num,.page--warm .foot-num{color:var(--sand);}
+</style>
+</head>
+<body>
+
+<!-- ===================== 1 · CAPA ===================== -->
+<section class="page page--warm">
+  <div class="cover-photo"><img src="./assets/images/larissa-08.jpg" alt="" /></div>
+  <div class="pad">
+    <div class="cover-inner">
+      <div class="cover-top">
+        <p class="eyebrow">Portfólio · Dossiê de atriz</p>
+      </div>
+      <div>
+        <h1 class="cover-name">Larissa<span>da Matta</span></h1>
+        <div class="cover-rule"></div>
+        <p class="eyebrow">Atriz · Dançarina · Modelo</p>
+        <p class="cover-tag">Entre a cena, o corpo e a imagem.</p>
+      </div>
+      <div class="cover-foot">
+        <b>Contato</b>
+        Patricia Blanco · Acervo de Atores &nbsp;·&nbsp; +55 11 99109-4535<br>
+        larissa.fmatta@gmail.com &nbsp;·&nbsp; @larissadamatta_ &nbsp;·&nbsp; DRT 0054773/SP
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 2 · PERFIL ===================== -->
+<section class="page">
+  <div class="pad">
+    <div class="seclabel"><span class="num">01</span><span class="ttl">Perfil</span><span class="sub">Sobre</span></div>
+    <div class="two">
+      <div>
+        <p class="lead">Larissa da Matta é atriz, dançarina, modelo e artista-pesquisadora.</p>
+        <p class="body">Bacharel em Artes Cênicas, licenciada em Teatro e pós-graduada em Direção e Atuação pela Escola Superior de Artes Célia Helena. Transita entre teatro, audiovisual, dança e moda, no Brasil e em festivais na América Latina e na Rússia.</p>
+        <p class="body">Na pesquisa <i>Dramaturgias do Corpo</i>, investigou a vida e a obra de mais de 40 mulheres artistas, do século XVI ao XXI, trabalho que deu origem ao seu solo autoral sobre Zelda Fitzgerald.</p>
+        <div class="datacard">
+          <h3>Idiomas</h3>
+          <ul>
+            <li><b>Português</b>: nativo</li>
+            <li><b>Espanhol</b>: fluente (DELE C1)</li>
+            <li><b>Inglês</b>: fluente (FCE · IELTS)</li>
+            <li><b>Italiano</b>: básico &nbsp;·&nbsp; <b>Russo</b>: básico</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="profile-photo"><img src="./assets/images/larissa-05.jpg" alt="" /></div>
+        <div class="datacard">
+          <h3>Características</h3>
+          <ul>
+            <li>Altura: <b>1,67 m</b></li>
+            <li>Olhos castanho-claros</li>
+            <li>Cabelo preto, liso e longo</li>
+            <li>Manequim 38 · Calçado 37</li>
+            <li>DRT <b>0054773/SP</b></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot-mark">Larissa da Matta</div><div class="foot-num">02</div>
+</section>
+
+<!-- ===================== 3 · FORMAÇÃO & HABILIDADES ===================== -->
+<section class="page">
+  <div class="pad">
+    <div class="seclabel"><span class="num">02</span><span class="ttl">Formação &amp; Habilidades</span><span class="sub">Currículo técnico</span></div>
+    <h3 class="blocktitle">Formação</h3>
+    <ul class="form-list" style="margin-bottom:14pt;">
+      <li><b>Bacharelado em Artes Cênicas</b> <span>· Escola Superior de Artes Célia Helena (2018)</span></li>
+      <li><b>Pós-graduação em Direção e Atuação</b> <span>· Célia Helena (2021)</span></li>
+      <li><b>Licenciatura em Teatro</b> <span>· Célia Helena (2025)</span></li>
+      <li><b>Atuação cênica</b> <span>· Teatro de Arte de Moscou, Rússia (2020)</span></li>
+      <li><b>Interpretação para câmera</b> <span>· Academia Internacional de Cinema (AIC)</span></li>
+      <li><b>Danças urbanas</b> <span>· Centro de Artes Lílian Gumieiro</span></li>
+      <li><b>História da Arte</b> <span>· Prof. Dr. Rodrigo Naves</span></li>
+    </ul>
+    <h3 class="blocktitle">Habilidades</h3>
+    <div class="skillcat">
+      <span class="skillcat__label">Dança</span>
+      <div class="chips">
+        <span class="chip chip--pro">Street Dance <b>· Prof.</b></span>
+        <span class="chip chip--pro">Expressão corporal <b>· Prof.</b></span>
+        <span class="chip">Contemporânea</span><span class="chip">Jazz</span><span class="chip">Samba</span>
+        <span class="chip">Dança de salão</span><span class="chip">Hip Hop</span><span class="chip">Valsa</span>
+      </div>
+    </div>
+    <div class="skillcat">
+      <span class="skillcat__label">Corpo &amp; Interpretação</span>
+      <div class="chips">
+        <span class="chip chip--pro">Improviso <b>· Prof.</b></span>
+        <span class="chip">Combate cênico</span><span class="chip">Viewpoints</span><span class="chip">Meisner</span>
+        <span class="chip">Feldenkrais</span><span class="chip">Palhaço / Clown</span><span class="chip">Comédia</span>
+      </div>
+    </div>
+    <div class="skillcat">
+      <span class="skillcat__label">Canto</span>
+      <div class="chips">
+        <span class="chip">Mezzosoprano</span><span class="chip">MPB</span><span class="chip">Samba</span>
+        <span class="chip">Sertanejo</span><span class="chip">Popular</span><span class="chip">Regional / Raiz</span>
+      </div>
+    </div>
+    <div class="skillcat">
+      <span class="skillcat__label">Música (percussão)</span>
+      <div class="chips">
+        <span class="chip">Pandeiro</span><span class="chip">Chocalho</span><span class="chip">Caxixi</span><span class="chip">Berrante</span>
+      </div>
+    </div>
+    <div class="skillcat">
+      <span class="skillcat__label">Direção &amp; Pilotagem</span>
+      <div class="chips">
+        <span class="chip chip--pro">Carro <b>· Prof.</b></span>
+        <span class="chip chip--pro">Moto <b>· Prof.</b></span>
+        <span class="chip">Cavalo</span><span class="chip">Bicicleta</span>
+      </div>
+    </div>
+    <div class="skillcat">
+      <span class="skillcat__label">Esporte</span>
+      <div class="chips">
+        <span class="chip">Yoga</span><span class="chip">Pilates</span><span class="chip">Natação</span><span class="chip">Corrida</span>
+        <span class="chip">Ciclismo</span><span class="chip">Vôlei</span><span class="chip">Musculação</span><span class="chip">Stand-up paddle</span>
+      </div>
+    </div>
+  </div>
+  <div class="foot-mark">Larissa da Matta</div><div class="foot-num">03</div>
+</section>
+
+<!-- ===================== 4 · ATRIZ ===================== -->
+<section class="page page--dark">
+  <div class="pad">
+    <div class="seclabel"><span class="num">03</span><span class="ttl" style="color:var(--cream)">Atriz</span><span class="sub">Teatro · TV</span></div>
+    <div class="feature">
+      <span class="tag">Destaque · Solo</span>
+      <h4>A Última Valsa de Zelda Fitzgerald</h4>
+      <p>Solo autoral sobre Zelda Fitzgerald: escritora, pintora e bailarina, para além do mito de musa dos anos 1920. Nasce da pesquisa <i>Dramaturgias do Corpo</i>, sobre mais de 40 mulheres artistas apagadas pela história.</p>
+      <span class="credit">Concepção e atuação: Larissa da Matta · Dramaturgia: Larissa da Matta e Pedro Amaral · Espaço º Andar (São Paulo), 2026</span>
+    </div>
+    <ul class="works">
+      <li class="work"><span class="work__cat">Teatro</span><span><span class="work__title">Granada</span><span class="work__meta">2024 · Tesmofória e Hades · dir. Paula Aros Gho</span><span class="work__place">Festival MIRADA · Santos</span></span></li>
+      <li class="work"><span class="work__cat">Teatro</span><span><span class="work__title">Tartufica-se!</span><span class="work__meta">2023 · Elmire · dir. Marco Antonio Rodrigues</span><span class="work__place">Parlapatões · São Paulo</span></span></li>
+      <li class="work"><span class="work__cat">Teatro</span><span><span class="work__title">Expresso 632</span><span class="work__meta">2022 · Stella · dir. Leila de Noce</span><span class="work__place">Cia. A Granel · São Paulo</span></span></li>
+      <li class="work"><span class="work__cat">TV</span><span><span class="work__title">HERvolution: Banheiro Feminino</span><span class="work__meta">2021 · dir. Alana Leguth</span><span class="work__place">RedeTV! · KondZilla Filmes</span></span></li>
+      <li class="work"><span class="work__cat">Teatro</span><span><span class="work__title">No Ar</span><span class="work__meta">2021 · dir. Loic Damiani</span><span class="work__place">Cia. A Granel · online</span></span></li>
+      <li class="work"><span class="work__cat">Teatro</span><span><span class="work__title">Édipo Rei</span><span class="work__meta">2019 · Jocasta · dir. Valentin Teplyakov</span><span class="work__place">Festival BRICS · Moscou</span></span></li>
+    </ul>
+    <div class="bts">
+      <span class="bts__label">Também nos bastidores</span>
+      <p>Escavando Tebas (2021) · documentário · dir. Marcelo Lazzaratto · Cia. Elevador de Teatro Panorâmico</p>
+      <p>Fronteira (2019) · dir. Marcelo Lazzaratto · Sesc Pinheiros</p>
+      <p>Aproximando-se de A Fera na Selva (2018) · dir. Malú Bazán · Centro Cultural São Paulo</p>
+      <p>Cindy (2017) · dir. Marcelo Lazzaratto · Biblioteca Mário de Andrade</p>
+    </div>
+  </div>
+  <div class="foot-mark">Larissa da Matta</div><div class="foot-num">04</div>
+</section>
+
+<!-- ===================== 5 · DANÇARINA & MODELO ===================== -->
+<section class="page">
+  <div class="pad">
+    <div class="seclabel"><span class="num">04</span><span class="ttl">Dançarina &amp; Modelo</span><span class="sub">Movimento · Imagem</span></div>
+    <p class="lead">Da dança urbana ao corpo em cena.</p>
+    <p class="body">Formada em danças urbanas pelo Centro de Artes Lílian Gumieiro. Estudou combate cênico no Teatro de Arte de Moscou. Em 2021, integrou como dançarina e performer o projeto de <i>live-painting</i> Corpo e Cor., do Estúdio Thiago Drummond.</p>
+    <div class="wide-photo"><img src="./assets/images/larissa-07.jpg" alt="" /></div>
+    <h3 class="blocktitle" style="margin-top:14pt;">Modelo · Fashion film</h3>
+    <p class="body" style="margin-bottom:2pt;">Stills do fashion film <i>“Mujeres al borde de un ataque de nervios”</i> (2023).</p>
+    <div class="dm-photos">
+      <figure><img src="./assets/images/larissa-film-01.jpg" alt="" /></figure>
+      <figure><img src="./assets/images/larissa-film-03.jpg" alt="" /></figure>
+      <figure><img src="./assets/images/larissa-film-02.jpg" alt="" /></figure>
+    </div>
+    <p class="credit-line">Fashion film “Mujeres al borde de un ataque de nervios” (2023). Fotografia Dela · Rayssa Zago.</p>
+  </div>
+  <div class="foot-mark">Larissa da Matta</div><div class="foot-num">05</div>
+</section>
+
+<!-- ===================== 6 · IMPRENSA & CONTATO ===================== -->
+<section class="page">
+  <div class="pad">
+    <div class="seclabel"><span class="num">05</span><span class="ttl">Imprensa &amp; Contato</span><span class="sub">Na mídia</span></div>
+    <ul class="press">
+      <li><span class="outlet">Cinepop</span><span class="ttl">‘A Última Valsa de Zelda Fitzgerald’ estreia em São Paulo e devolve protagonismo a uma artista apagada pela história</span></li>
+      <li><span class="outlet">Gazeta da Semana</span><span class="ttl">º Andar recebe a estreia do solo A Última Valsa de Zelda Fitzgerald, de Larissa da Matta</span></li>
+      <li><span class="outlet">Programa Foyer · Artigo</span><span class="ttl">Desenterrando Zelda Fitzgerald, ou A angústia como base para a imaginação e a criação artística</span></li>
+    </ul>
+    <div class="contact-grid">
+      <div>
+        <h3>Representação</h3>
+        <p>Acervo de Atores<br>Patricia Blanco<br>+55 11 99109-4535<br>pat.acervodeatores@gmail.com</p>
+      </div>
+      <div>
+        <h3>Direto</h3>
+        <p>larissa.fmatta@gmail.com<br>Instagram @larissadamatta_<br>DRT 0054773/SP</p>
+      </div>
+    </div>
+    <p style="text-align:center;font-family:'Fraunces';font-style:italic;font-weight:300;font-size:13.5pt;color:var(--ink-soft);margin-top:24mm;">“Entre a cena, o corpo e a imagem.”</p>
+  </div>
+  <div class="closing"><img src="./assets/images/larissa-09.jpg" alt="" /></div>
+  <div class="foot-mark">Larissa da Matta</div><div class="foot-num">06</div>
+</section>
+
+</body>
+</html>

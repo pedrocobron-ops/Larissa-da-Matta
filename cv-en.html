@@ -1,0 +1,114 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/>
+<style>
+
+@font-face{font-family:'Cinzel';src:url('./assets/fonts/cinzel-latin-600-normal.woff2') format('woff2');font-weight:600;}
+@font-face{font-family:'Fraunces';src:url('./assets/fonts/fraunces-latin-300-normal.woff2') format('woff2');font-weight:300;}
+@font-face{font-family:'Fraunces';src:url('./assets/fonts/fraunces-latin-400-normal.woff2') format('woff2');font-weight:400;}
+@font-face{font-family:'Fraunces';src:url('./assets/fonts/fraunces-latin-400-italic.woff2') format('woff2');font-weight:400;font-style:italic;}
+@font-face{font-family:'Inter';src:url('./assets/fonts/inter-latin-400-normal.woff2') format('woff2');font-weight:400;}
+@font-face{font-family:'Inter';src:url('./assets/fonts/inter-latin-500-normal.woff2') format('woff2');font-weight:500;}
+@font-face{font-family:'Inter';src:url('./assets/fonts/inter-latin-600-normal.woff2') format('woff2');font-weight:600;}
+
+:root{--espresso:#241B15;--umber:#3B2A1E;--caramel:#9C6F47;--ocre:#C39A5E;--sand:#E9E0D2;--cream:#F5F0E7;--ink:#2B211A;--ink-soft:#5A4A3B;--line:#D8CBB6;--forest:#2b352a;--sage:#7d8a62;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+@page{size:A4;margin:0;}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--cream);font-size:9.5pt;line-height:1.5;}
+.page{width:210mm;min-height:297mm;position:relative;}
+.grain{position:absolute;inset:0;z-index:0;opacity:.5;pointer-events:none;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/></svg>");}
+/* Header */
+.head{position:relative;z-index:2;background:linear-gradient(160deg,var(--umber),var(--espresso));color:var(--cream);padding:16mm 16mm 12mm;display:flex;gap:12mm;align-items:center;}
+.head__photo{width:34mm;height:34mm;border-radius:50%;overflow:hidden;flex:none;box-shadow:0 10px 24px -12px rgba(0,0,0,.6);}
+.head__photo img{width:100%;height:100%;object-fit:cover;object-position:center 20%;}
+.eyebrow{font-family:'Inter';font-weight:600;text-transform:uppercase;letter-spacing:.28em;font-size:7pt;color:var(--ocre);}
+.head__name{font-family:'Cinzel';font-weight:600;text-transform:uppercase;letter-spacing:.03em;font-size:26pt;line-height:1.05;margin:3pt 0 5pt;}
+.head__roles{font-family:'Fraunces';font-style:italic;font-weight:300;font-size:12pt;color:var(--sand);}
+/* Body columns */
+.cols{position:relative;z-index:2;display:grid;grid-template-columns:62mm 1fr;gap:0;}
+.side{background:rgba(59,42,30,.06);padding:12mm 9mm;border-right:1px solid var(--line);}
+.main{padding:12mm 12mm;}
+.sec{margin-bottom:9mm;}
+.sec__h{font-family:'Inter';font-weight:600;text-transform:uppercase;letter-spacing:.18em;font-size:8pt;color:var(--caramel);padding-bottom:4pt;margin-bottom:7pt;border-bottom:1px solid var(--line);}
+.side .sec__h{color:var(--caramel);}
+.side ul{list-style:none;}
+.side li{font-size:8.7pt;line-height:1.7;color:var(--ink-soft);}
+.contact li a,.contact li{color:var(--ink);}
+.contact li{margin-bottom:2pt;word-break:break-word;}
+.cvchips{display:flex;flex-wrap:wrap;gap:4pt;}
+.cvchip{font-size:7.6pt;border:1px solid var(--line);border-radius:30px;padding:2.5pt 6pt;color:var(--ink);line-height:1;}
+.profile{font-family:'Fraunces';font-weight:300;font-size:10pt;line-height:1.6;color:var(--ink);}
+.cvwork{display:grid;grid-template-columns:16mm 1fr;gap:4mm;padding:5pt 0;border-bottom:1px solid var(--line);align-items:baseline;}
+.cvwork__tag{font-family:'Inter';font-weight:600;font-size:6.6pt;letter-spacing:.12em;text-transform:uppercase;color:var(--caramel);}
+.cvwork__tag--solo{color:var(--ocre);}
+.cvwork__t{font-family:'Fraunces';font-weight:400;font-size:11pt;color:var(--ink);display:block;}
+.cvwork__m{font-size:8.2pt;color:var(--ink-soft);display:block;margin-top:1pt;}
+.subsec{margin-top:7pt;}
+.subsec__h{font-family:'Inter';font-weight:600;font-size:7.5pt;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);margin-bottom:3pt;}
+.subsec p{font-size:8.8pt;line-height:1.55;color:var(--ink-soft);}
+.cvform{padding:4.5pt 0;border-bottom:1px solid var(--line);}
+.cvform__k{font-family:'Inter';font-weight:600;font-size:9pt;color:var(--ink);display:block;}
+.cvform__v{font-size:8pt;color:var(--ink-soft);}
+.foot{position:relative;z-index:2;text-align:center;font-size:7pt;letter-spacing:.14em;text-transform:uppercase;color:var(--caramel);padding:6mm;}
+</style></head><body>
+<div class="page">
+  <div class="grain"></div>
+  <div class="head">
+    <div class="head__photo"><img src="./assets/images/larissa-09.jpg" alt=""/></div>
+    <div>
+      <p class="eyebrow">Curriculum Vitae</p>
+      <h1 class="head__name">Larissa da Matta</h1>
+      <p class="head__roles">Actress · Dancer · Model</p>
+    </div>
+  </div>
+  <div class="cols">
+    <aside class="side">
+      <div class="sec contact"><div class="sec__h">Contact</div><ul>
+        <li>São Paulo, Brasil</li>
+        <li><a href="mailto:larissa.fmatta@gmail.com">larissa.fmatta@gmail.com</a></li>
+        <li>@larissadamatta_</li>
+        <li>DRT 0054773/SP</li>
+      </ul></div>
+      <div class="sec"><div class="sec__h">Languages</div><ul><li>Portuguese: native</li>
+<li>Spanish: fluent (DELE C1)</li>
+<li>English: fluent (FCE · IELTS)</li>
+<li>Italian: basic</li>
+<li>Russian: basic</li></ul></div>
+      <div class="sec"><div class="sec__h">Physical</div><ul><li>Height 1.67 m</li>
+<li>Light brown eyes</li>
+<li>Black, straight, long hair</li>
+<li>Dress 38 (EU) · Shoe 37</li>
+<li>DRT 0054773/SP</li></ul></div>
+      <div class="sec"><div class="sec__h">Skills</div><div class="cvchips"><span class="cvchip">Street Dance · Prof.</span>
+<span class="cvchip">Body expression · Prof.</span>
+<span class="cvchip">Improvisation · Prof.</span>
+<span class="cvchip">Stage combat</span>
+<span class="cvchip">Singing (mezzo-soprano)</span>
+<span class="cvchip">Car & Motorcycle · Prof.</span>
+<span class="cvchip">Horse riding</span>
+<span class="cvchip">Percussion (pandeiro)</span></div></div>
+    </aside>
+    <main class="main">
+      <div class="sec"><div class="sec__h">Profile</div><p class="profile">Actress, dancer, model and artist-researcher. BA in Performing Arts, a teaching degree in Theatre and a postgraduate degree in Directing and Acting from Escola Superior de Artes Célia Helena. Works across theatre, audiovisual, dance and fashion, in Brazil and at festivals in Latin America and Russia. Develops the research <i>Dramaturgies of the Body</i>, on more than 40 women artists erased by history.</p></div>
+      <div class="sec"><div class="sec__h">Experience</div>
+        <div class="subsec"><div class="subsec__h">Theatre & TV</div><div class="cvwork"><span class="cvwork__tag cvwork__tag--solo">Solo</span><div><span class="cvwork__t">A Última Valsa de Zelda Fitzgerald</span><span class="cvwork__m">2026 · solo autoral · dir./drama. Larissa da Matta e Pedro Amaral · Espaço º Andar, São Paulo</span></div></div>
+<div class="cvwork"><span class="cvwork__tag ">Theatre</span><div><span class="cvwork__t">Granada</span><span class="cvwork__m">2024 · Tesmofória e Hades · dir. Paula Aros Gho · Festival MIRADA, Santos</span></div></div>
+<div class="cvwork"><span class="cvwork__tag ">Theatre</span><div><span class="cvwork__t">Tartufica-se!</span><span class="cvwork__m">2023 · Elmire · dir. Marco Antonio Rodrigues · Parlapatões, São Paulo</span></div></div>
+<div class="cvwork"><span class="cvwork__tag ">Theatre</span><div><span class="cvwork__t">Expresso 632</span><span class="cvwork__m">2022 · Stella · dir. Leila de Noce · Cia. A Granel, São Paulo</span></div></div>
+<div class="cvwork"><span class="cvwork__tag ">TV</span><div><span class="cvwork__t">HERvolution: Banheiro Feminino</span><span class="cvwork__m">2021 · dir. Alana Leguth · RedeTV! · KondZilla Filmes</span></div></div>
+<div class="cvwork"><span class="cvwork__tag ">Theatre</span><div><span class="cvwork__t">No Ar</span><span class="cvwork__m">2021 · dir. Loic Damiani · Cia. A Granel, online</span></div></div>
+<div class="cvwork"><span class="cvwork__tag ">Theatre</span><div><span class="cvwork__t">Édipo Rei</span><span class="cvwork__m">2019 · Jocasta · dir. Valentin Teplyakov · Festival BRICS, Moscou</span></div></div></div>
+        <div class="subsec"><div class="subsec__h">Dance</div><p>Corpo e Cor. (2021). Dancer and performer in the live-painting project by Estúdio Thiago Drummond. Trained in urban dance (Lílian Gumieiro) and stage combat (Moscow Art Theatre).</p></div>
+        <div class="subsec"><div class="subsec__h">Model</div><p>Fashion film “Mujeres al borde de un ataque de nervios” (2023). Photography Dela · Rayssa Zago.</p></div>
+      </div>
+      <div class="sec"><div class="sec__h">Education & Training</div><div class="cvform"><span class="cvform__k">BA in Performing Arts</span><span class="cvform__v">Escola Superior de Artes Célia Helena · 2018</span></div>
+<div class="cvform"><span class="cvform__k">Postgraduate in Directing & Acting</span><span class="cvform__v">Célia Helena · 2021</span></div>
+<div class="cvform"><span class="cvform__k">Teaching degree in Theatre</span><span class="cvform__v">Célia Helena · 2025</span></div>
+<div class="cvform"><span class="cvform__k">Stage acting</span><span class="cvform__v">Moscow Art Theatre, Russia · 2020</span></div>
+<div class="cvform"><span class="cvform__k">Acting for camera</span><span class="cvform__v">Academia Internacional de Cinema (AIC)</span></div>
+<div class="cvform"><span class="cvform__k">Urban dance</span><span class="cvform__v">Centro de Artes Lílian Gumieiro</span></div>
+<div class="cvform"><span class="cvform__k">Art History</span><span class="cvform__v">Prof. Dr. Rodrigo Naves</span></div></div>
+    </main>
+  </div>
+  <div class="foot">Larissa da Matta · @larissadamatta_</div>
+</div>
+</body></html>

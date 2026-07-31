@@ -1,171 +1,644 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="no-js">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Larissa da Matta — Atriz · Performer · Dramaturga</title>
-  <meta name="description" content="Larissa da Matta — atriz, dançarina, performer, dramaturga e pesquisadora. Portfólio de trabalhos, formação e contato." />
-  <link rel="preconnect" href="/" />
+  <title>Larissa da Matta · Atriz · Performer · Dramaturga</title>
+  <meta name="description" content="Larissa da Matta é atriz, performer, dramaturga, arte-educadora e artista-pesquisadora. Portfólio de teatro, cinema, TV, performance, pesquisa e aulas." />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Ícone -->
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+
+  <link rel="canonical" href="https://pedrocobron-ops.github.io/Larissa-da-Matta/" />
+
+  <!-- Open Graph / redes sociais -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Larissa da Matta" />
+  <meta property="og:title" content="Larissa da Matta · Atriz · Performer · Dramaturga" />
+  <meta property="og:description" content="Atriz, performer, dramaturga, arte-educadora e artista-pesquisadora. Portfólio de teatro, cinema, TV, performance, pesquisa e aulas." />
+  <meta property="og:url" content="https://pedrocobron-ops.github.io/Larissa-da-Matta/" />
+  <meta property="og:image" content="https://pedrocobron-ops.github.io/Larissa-da-Matta/assets/images/og-cover.jpg" />
+  <meta property="og:image:alt" content="Larissa da Matta, atriz, performer e dramaturga" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="es_ES" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Larissa da Matta · Atriz · Performer · Dramaturga" />
+  <meta name="twitter:description" content="Atriz, performer, dramaturga, arte-educadora e artista-pesquisadora. Portfólio de teatro, cinema, TV, performance, pesquisa e aulas." />
+  <meta name="twitter:image" content="https://pedrocobron-ops.github.io/Larissa-da-Matta/assets/images/og-cover.jpg" />
+  <meta name="twitter:image:alt" content="Larissa da Matta, atriz, performer e dramaturga" />
+
+  <!-- Dados estruturados (schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Larissa da Matta",
+    "alternateName": "Larissa Fernandes da Matta",
+    "jobTitle": ["Atriz", "Performer", "Dramaturga", "Arte-educadora", "Artista-pesquisadora"],
+    "description": "Atriz, performer, dramaturga, arte-educadora e artista-pesquisadora. Mestranda em Artes da Cena pela UNICAMP, pós-graduada em Direção e Atuação, bacharela e licenciada em Teatro pela Escola Superior de Artes Célia Helena.",
+    "url": "https://pedrocobron-ops.github.io/Larissa-da-Matta/",
+    "image": "https://pedrocobron-ops.github.io/Larissa-da-Matta/assets/images/og-cover.jpg",
+    "nationality": "Brazilian",
+    "knowsLanguage": ["pt-BR", "es", "en", "it", "ru"],
+    "sameAs": [
+      "https://instagram.com/larissadamatta_",
+      "https://www.youtube.com/@larissa_da_matta",
+      "https://br.linkedin.com/in/larissa-da-matta-6b3b41273",
+      "http://lattes.cnpq.br/2520353948330757",
+      "https://elencodigital.com.br/LarissaDaMatta",
+      "https://acervodeatores.com.br/agenciados/larissa-da-matta/"
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Escola Superior de Artes Célia Helena"
+    }
+  }
+  </script>
+
+  <script>(function(){var d=document.documentElement;d.classList.remove("no-js");d.classList.add("js");try{var t=new URLSearchParams(location.search).get("tema")||"verde";d.setAttribute("data-tema",t);}catch(e){d.setAttribute("data-tema","verde");}})();</script>
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
 
-  <!-- NAV -->
-  <header class="nav" id="nav">
-    <div class="nav__inner">
-      <a href="#top" class="nav__brand">Larissa&nbsp;da&nbsp;Matta</a>
-      <nav class="nav__links" id="navLinks">
-        <a href="#sobre">Sobre</a>
-        <a href="#trabalhos">Trabalhos</a>
-        <a href="#reel">Reel</a>
-        <a href="#contato">Contato</a>
-        <span class="nav__lang"><button class="is-active">PT</button><i>/</i><button>EN</button></span>
-      </nav>
-      <button class="nav__toggle" id="navToggle" aria-label="Menu">
-        <span></span><span></span>
-      </button>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Pular para o conteúdo</a>
+
+  <!-- BARRA SUPERIOR -->
+  <header class="topbar" id="topbar">
+    <div class="topbar__inner">
+      <a href="#top" class="topbar__brand">Larissa&nbsp;da&nbsp;Matta</a>
+      <div class="topbar__right">
+        <span class="topbar__lang" id="langSwitch" role="group" aria-label="Idioma / Language">
+          <button type="button" data-lang="pt" class="is-active" aria-pressed="true" aria-label="Português">PT</button><i aria-hidden="true">·</i><button type="button" data-lang="en" aria-pressed="false" aria-label="English">EN</button><i aria-hidden="true">·</i><button type="button" data-lang="es" aria-pressed="false" aria-label="Español">ES</button>
+        </span>
+        <button class="menu-toggle" id="menuToggle" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+          <span class="menu-toggle__text" data-i18n="nav.menu">Menu</span>
+          <span class="menu-toggle__bars" aria-hidden="true"><span></span><span></span></span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero" id="top">
-    <div class="hero__grid">
-      <div class="hero__text">
-        <p class="eyebrow">Atriz · Performer · Dramaturga</p>
-        <h1 class="hero__name">Larissa<br />da&nbsp;Matta</h1>
-        <p class="hero__lead"><em>Uma investigação cênica entre o corpo, a palavra<br />e a memória latino-americana.</em></p>
-        <a href="#trabalhos" class="hero__cta">Ver trabalhos <span>↓</span></a>
-      </div>
-      <div class="hero__media">
-        <div class="hero__frame">
-          <img src="./assets/images/larissa-01.jpg" alt="Larissa da Matta" />
-        </div>
-        <span class="hero__index">01 — Retrato</span>
-      </div>
+  <!-- MENU (abas) -->
+  <nav class="menu" id="menu" aria-label="Menu principal">
+    <div class="menu__inner">
+      <ul class="menu__links" id="menuLinks">
+        <li><a href="#top" data-i18n="nav.inicio">Início</a></li>
+        <li><a href="#sobre" data-i18n="nav.sobre">Sobre</a></li>
+        <li><a href="#projetos" data-i18n="nav.projetos">Projetos</a></li>
+        <li><a href="#pesquisa" data-i18n="nav.pesquisa">Pesquisa</a></li>
+        <li><a href="#midia" data-i18n="nav.midia">Mídia</a></li>
+        <li><a href="#curriculos" data-i18n="nav.curriculos">Currículos</a></li>
+        <li><a href="#aulas" data-i18n="nav.aulas">Aulas</a></li>
+        <li><a href="#contato" data-i18n="nav.contato">Contato</a></li>
+      </ul>
     </div>
-    <div class="hero__scroll"><span>rolar</span></div>
+  </nav>
+
+  <main id="main">
+
+  <!-- INÍCIO / CAPA -->
+  <section class="hero view is-active" id="top">
+    <picture class="hero__bg"><source type="image/webp" srcset="./assets/images/larissa-01.webp" /><img src="./assets/images/larissa-01.jpg" alt="Larissa da Matta" width="846" height="650" decoding="async" fetchpriority="high" /></picture>
+    <div class="hero__scrim" aria-hidden="true"></div>
+    <div class="hero__content">
+      <p class="eyebrow hero__eyebrow" data-i18n="hero.eyebrow">Atriz · Performer · Dramaturga · Arte-educadora · Artista-pesquisadora</p>
+      <h1 class="hero__name">Larissa<br />da&nbsp;Matta</h1>
+      <a href="#projetos" class="hero__cta"><span data-i18n="hero.cta">Ver trabalhos</span> <span aria-hidden="true">→</span></a>
+    </div>
   </section>
 
   <!-- SOBRE -->
-  <section class="sobre section" id="sobre">
+  <section class="sobre section view" id="sobre">
     <div class="wrap">
       <div class="section__head">
         <span class="label">01</span>
-        <span class="label label--title">Sobre</span>
+        <h2 class="label label--title" data-i18n="sobre.title">Sobre</h2>
       </div>
       <div class="sobre__grid">
         <div class="sobre__bio">
-          <p class="lead">Larissa da Matta é atriz, dançarina, performer, dramaturga e pesquisadora.</p>
-          <p>Bacharel e licenciada em Teatro pela Escola Superior de Artes Célia Helena, transita entre a cena, a dança e a criação autoral. Sua trajetória atravessa o teatro, o audiovisual e a performance, com passagens por festivais internacionais na América Latina e na Rússia.</p>
-          <p>Investiga a presença cênica como território de pesquisa — do gesto à dramaturgia, da tradição popular brasileira ao teatro contemporâneo.</p>
+          <p class="lead" data-i18n="sobre.lead">Larissa da Matta é atriz, performer, dramaturga, arte-educadora e artista-pesquisadora.</p>
+          <p data-i18n="sobre.p1">Mestranda em Artes da Cena pela UNICAMP, na linha Poéticas e Linguagens da Cena, é pós-graduada em Direção e Atuação, bacharela e licenciada em Teatro pela Escola Superior de Artes Célia Helena. Sua prática transita entre teatro, dança, performance e audiovisual, articulando criação cênica, pesquisa e formação.</p>
+          <p data-i18n="sobre.p2">Na pós-graduação, investigou corporalmente a vida e a obra de mais de quarenta mulheres artistas, dos séculos XVI ao XXI. É dessa investigação que nasce seu solo autoral sobre Zelda Fitzgerald.</p>
+          <p data-i18n="sobre.p3">Hoje leciona em cursos livres e de extensão de teatro no Célia Helena Centro de Artes e Educação, onde também responde pelo Departamento Internacional, e mantém treinamento contínuo em Viewpoints no Estúdio Oito Nova Dança.</p>
+          <figure class="sobre__portrait"><picture><source type="image/webp" srcset="./assets/images/larissa-05.webp" /><img src="./assets/images/larissa-05.jpg" alt="Larissa da Matta em retrato preto e branco" width="853" height="1280" loading="lazy" decoding="async" /></picture></figure>
         </div>
         <aside class="sobre__meta">
           <div class="meta__block">
-            <h3>Formação</h3>
+            <h3 data-i18n="sobre.langs.title">Idiomas</h3>
             <ul>
-              <li>Teatro — Esc. Sup. de Artes Célia Helena</li>
-              <li>História da Arte — Prof. Dr. Rodrigo Naves</li>
-              <li>Danças Urbanas — Centro de Artes Lílian Gumieiro</li>
+              <li data-i18n="sobre.langs.pt">Português: nativo</li>
+              <li data-i18n="sobre.langs.es">Espanhol: fluente (DELE C1)</li>
+              <li data-i18n="sobre.langs.en">Inglês: fluente (FCE · IELTS)</li>
+              <li data-i18n="sobre.langs.it">Italiano: básico</li>
+              <li data-i18n="sobre.langs.ru">Russo: básico</li>
             </ul>
           </div>
           <div class="meta__block">
-            <h3>Habilidades</h3>
+            <h3 data-i18n="sobre.fisico.title">Características</h3>
             <ul>
-              <li>Combate cênico — Teatro de Arte de Moscou</li>
-              <li>Danças urbanas e folclóricas brasileiras</li>
-              <li>Performance e dramaturgia</li>
+              <li data-i18n="sobre.fisico.1">Altura: 1,67 m</li>
+              <li data-i18n="sobre.fisico.2">Olhos castanho-claros</li>
+              <li data-i18n="sobre.fisico.3">Cabelo preto, liso e longo</li>
+              <li data-i18n="sobre.fisico.4">Manequim 38 · Calçado 37</li>
+              <li data-i18n="sobre.fisico.5">DRT 0054773/SP</li>
+            </ul>
+          </div>
+          <div class="meta__block">
+            <h3 data-i18n="sobre.form.title">Formação</h3>
+            <ul>
+              <li data-i18n="sobre.form.8">Mestrado em Artes da Cena · UNICAMP (em andamento)</li>
+              <li data-i18n="sobre.form.1">Bacharel em Artes Cênicas · Célia Helena (2018)</li>
+              <li data-i18n="sobre.form.2">Pós-graduação em Direção e Atuação · Célia Helena (2021)</li>
+              <li data-i18n="sobre.form.3">Atuação cênica · Teatro de Arte de Moscou, Rússia (2020)</li>
+              <li data-i18n="sobre.form.4">Interpretação para câmera · Academia Internacional de Cinema</li>
+              <li data-i18n="sobre.form.5">Danças urbanas · Centro de Artes Lílian Gumieiro</li>
+              <li data-i18n="sobre.form.6">História da Arte · Prof. Dr. Rodrigo Naves</li>
+              <li data-i18n="sobre.form.7">Licenciatura em Teatro · Célia Helena (2025)</li>
             </ul>
           </div>
         </aside>
       </div>
+
+      <div class="skills">
+        <p class="label skills__head" data-i18n="skills.title">Habilidades</p>
+        <div class="skill-cat">
+          <span class="skill-cat__label" data-i18n="skc.danca">Dança</span>
+          <div class="chips">
+            <span class="chip chip--pro"><span data-i18n="sk.street">Street Dance</span> <b>· Prof.</b></span>
+            <span class="chip chip--pro"><span data-i18n="sk.expr">Expressão corporal</span> <b>· Prof.</b></span>
+            <span class="chip" data-i18n="sk.contemp">Contemporânea</span>
+            <span class="chip" data-i18n="sk.jazz">Jazz</span>
+            <span class="chip" data-i18n="sk.samba">Samba</span>
+            <span class="chip" data-i18n="sk.salao">Dança de salão</span>
+            <span class="chip" data-i18n="sk.hiphop">Hip Hop</span>
+            <span class="chip" data-i18n="sk.valsa">Valsa</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <span class="skill-cat__label" data-i18n="skc.corpo">Corpo &amp; Interpretação</span>
+          <div class="chips">
+            <span class="chip chip--pro"><span data-i18n="sk.improv">Improviso</span> <b>· Prof.</b></span>
+            <span class="chip" data-i18n="sk.combate">Combate cênico</span>
+            <span class="chip" data-i18n="sk.viewpoints">Viewpoints</span>
+            <span class="chip" data-i18n="sk.meisner">Meisner</span>
+            <span class="chip" data-i18n="sk.feldenkrais">Feldenkrais</span>
+            <span class="chip" data-i18n="sk.clown">Palhaço / Clown</span>
+            <span class="chip" data-i18n="sk.comedia">Comédia</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <span class="skill-cat__label" data-i18n="skc.canto">Canto</span>
+          <div class="chips">
+            <span class="chip" data-i18n="sk.mezzo">Mezzosoprano</span>
+            <span class="chip" data-i18n="sk.mpb">MPB</span>
+            <span class="chip" data-i18n="sk.samba">Samba</span>
+            <span class="chip" data-i18n="sk.sertanejo">Sertanejo</span>
+            <span class="chip" data-i18n="sk.popular">Popular</span>
+            <span class="chip" data-i18n="sk.raiz">Regional / Raiz</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <span class="skill-cat__label" data-i18n="skc.musica">Música</span>
+          <div class="chips">
+            <span class="chip" data-i18n="sk.pandeiro">Pandeiro</span>
+            <span class="chip" data-i18n="sk.chocalho">Chocalho</span>
+            <span class="chip" data-i18n="sk.caxixi">Caxixi</span>
+            <span class="chip" data-i18n="sk.berrante">Berrante</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <span class="skill-cat__label" data-i18n="skc.pilota">Direção &amp; Pilotagem</span>
+          <div class="chips">
+            <span class="chip chip--pro"><span data-i18n="sk.carro">Carro</span> <b>· Prof.</b></span>
+            <span class="chip chip--pro"><span data-i18n="sk.moto">Moto</span> <b>· Prof.</b></span>
+            <span class="chip" data-i18n="sk.cavalo">Cavalo</span>
+            <span class="chip" data-i18n="sk.bike">Bicicleta</span>
+          </div>
+        </div>
+        <div class="skill-cat">
+          <span class="skill-cat__label" data-i18n="skc.esporte">Esporte</span>
+          <div class="chips">
+            <span class="chip" data-i18n="sk.yoga">Yoga</span>
+            <span class="chip" data-i18n="sk.pilates">Pilates</span>
+            <span class="chip" data-i18n="sk.natacao">Natação</span>
+            <span class="chip" data-i18n="sk.corrida">Corrida</span>
+            <span class="chip" data-i18n="sk.ciclismo">Ciclismo</span>
+            <span class="chip" data-i18n="sk.volei">Vôlei</span>
+            <span class="chip" data-i18n="sk.muscul">Musculação</span>
+            <span class="chip" data-i18n="sk.paddle">Stand-up paddle</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- TRABALHOS -->
-  <section class="trabalhos section section--dark" id="trabalhos">
+  <!-- PROJETOS -->
+  <section class="section section--dark view" id="projetos">
     <div class="wrap">
       <div class="section__head">
         <span class="label">02</span>
-        <span class="label label--title">Trabalhos selecionados</span>
+        <h2 class="label label--title" data-i18n="projetos.title">Projetos</h2>
+        <span class="section__sub" data-i18n="projetos.sub">Teatro · TV · Cinema · Dança · Modelo</span>
       </div>
-      <ul class="works">
-        <li class="work">
-          <span class="work__year">Solo</span>
-          <span class="work__title">A Última Valsa de Zelda Fitzgerald</span>
-          <span class="work__meta">Teatro · autoria e atuação</span>
-          <span class="work__place">Espaço º Andar</span>
-        </li>
-        <li class="work">
-          <span class="work__year">Internacional</span>
-          <span class="work__title">Granada</span>
-          <span class="work__meta">Teatro · elenco</span>
-          <span class="work__place">Festival MIRADA — Ibero-Americano</span>
-        </li>
-        <li class="work">
-          <span class="work__year">Internacional</span>
-          <span class="work__title">Édipo Rei</span>
-          <span class="work__meta">Teatro · dir. Valentin Teplyakov</span>
-          <span class="work__place">Festival de Escolas — BRICS, Rússia</span>
-        </li>
-        <li class="work">
-          <span class="work__year">Audiovisual</span>
-          <span class="work__title">Curtas &amp; Videoclipes</span>
-          <span class="work__meta">Atriz e preparadora de elenco</span>
-          <span class="work__place">Diversos</span>
-        </li>
-      </ul>
-      <p class="works__note">Seleção — portfólio completo em atualização.</p>
+      <p class="intro-line intro-line--light" data-i18n="projetos.lead">Do palco ao set, da dança à moda. Trabalhos que atravessam linguagens.</p>
+
+      <article class="feature">
+        <span class="feature__tag" data-i18n="atriz.feat.tag">Destaque · Solo</span>
+        <h3 class="feature__title">A Última Valsa de Zelda Fitzgerald</h3>
+        <p class="feature__desc" data-i18n="atriz.feat.desc">Solo autoral sobre Zelda Fitzgerald: escritora, pintora e bailarina, para além do mito de musa dos anos 1920. Nasce da pesquisa Dramaturgias do Corpo, sobre mais de 40 mulheres artistas apagadas pela história.</p>
+        <span class="feature__credit" data-i18n="atriz.feat.credit">Concepção e atuação: Larissa da Matta · Dramaturgia: Larissa da Matta e Pedro Amaral · Espaço º Andar (São Paulo), 2026</span>
+      </article>
+
+      <div class="projgroup">
+        <span class="projgroup__label" data-i18n="proj.teatro">Teatro &amp; TV</span>
+        <ul class="works">
+          <li class="work">
+            <span class="work__year" data-i18n="tag.performance">Performance</span>
+            <span class="work__title">ZAPLAB</span>
+            <span class="work__meta">2025 · atriz-performer · ZU-UK + LUME Teatro</span>
+            <span class="work__place">LUME Teatro · Campinas</span>
+          </li>
+          <li class="work">
+            <span class="work__year" data-i18n="tag.teatro">Teatro</span>
+            <span class="work__title">Maria/Sade</span>
+            <span class="work__meta">2025 · Joséphine · texto: Renato Janine Ribeiro · dir. Lígia Cortez</span>
+            <span class="work__place">Leitura dramática · Célia Helena · SP</span>
+          </li>
+          <li class="work">
+            <span class="work__year" data-i18n="tag.teatro">Teatro</span>
+            <span class="work__title">Granada</span>
+            <span class="work__meta">2024 · Tesmofória e Hades · dir. Paula Aros Gho</span>
+            <span class="work__place">Festival MIRADA · Santos</span>
+          </li>
+          <li class="work">
+            <span class="work__year" data-i18n="tag.teatro">Teatro</span>
+            <span class="work__title">Tartufica-se!</span>
+            <span class="work__meta">2023 · Elmire · dir. Marco Antonio Rodrigues</span>
+            <span class="work__place">Parlapatões · SP</span>
+          </li>
+          <li class="work">
+            <span class="work__year" data-i18n="tag.teatro">Teatro</span>
+            <span class="work__title">Expresso 632</span>
+            <span class="work__meta">2022 · Stella · dir. Leila de Noce</span>
+            <span class="work__place">Cia. A Granel · SP</span>
+          </li>
+          <li class="work">
+            <span class="work__year" data-i18n="tag.tv">TV</span>
+            <span class="work__title">HERvolution: Banheiro Feminino</span>
+            <span class="work__meta">2021 · dir. Alana Leguth</span>
+            <span class="work__place">RedeTV! · KondZilla Filmes</span>
+          </li>
+          <li class="work">
+            <span class="work__year" data-i18n="tag.teatro">Teatro</span>
+            <span class="work__title">No Ar</span>
+            <span class="work__meta">2021 · dir. Loic Damiani</span>
+            <span class="work__place">Cia. A Granel · online</span>
+          </li>
+          <li class="work">
+            <span class="work__year" data-i18n="tag.teatro">Teatro</span>
+            <span class="work__title">Édipo Rei</span>
+            <span class="work__meta">2019 · Jocasta · dir. Valentin Teplyakov</span>
+            <span class="work__place">Festival BRICS · Moscou</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="projgroup">
+        <span class="projgroup__label" data-i18n="proj.cinema">Cinema</span>
+        <div class="projgroup__grid">
+          <div class="projgroup__text">
+            <ul class="works">
+              <li class="work">
+                <span class="work__year" data-i18n="tag.cinema">Cinema</span>
+                <span class="work__title">O Que Ela Quer?</span>
+                <span class="work__meta">curta-metragem · dir. Dani Di Donato e Julia Maria</span>
+                <span class="work__place">Belas Artes · Memorial da América Latina</span>
+              </li>
+              <li class="work">
+                <span class="work__year" data-i18n="tag.cinema">Cinema</span>
+                <span class="work__title">From My Window</span>
+                <span class="work__meta">2022 · curta-metragem · dir. Carolina Liz</span>
+              </li>
+              <li class="work">
+                <span class="work__year" data-i18n="tag.cinema">Cinema</span>
+                <span class="work__title">Telling Not to Forget</span>
+                <span class="work__meta">2021 · média-metragem, a partir de Dostoiévski · Célia Helena</span>
+                <span class="work__place">V Festival BRICS · Moscou</span>
+              </li>
+            </ul>
+          </div>
+          <figure class="projgroup__photo"><picture><source type="image/webp" srcset="./assets/images/larissa-poster-oqueelaquer.webp" /><img src="./assets/images/larissa-poster-oqueelaquer.jpg" alt="Cartaz do curta-metragem O Que Ela Quer?, com Larissa da Matta" width="828" height="1447" loading="lazy" decoding="async" /></picture></figure>
+        </div>
+      </div>
+
+      <div class="projgroup">
+        <span class="projgroup__label" data-i18n="proj.danca">Dança</span>
+        <div class="projgroup__grid">
+          <div class="projgroup__text">
+            <p class="lead" data-i18n="danc.lead">Da dança urbana ao corpo em cena.</p>
+            <p data-i18n="danc.p1">Formada em danças urbanas pelo Centro de Artes Lílian Gumieiro. Estudou combate cênico no Teatro de Arte de Moscou.</p>
+            <p data-i18n="danc.p2">Em 2021, integrou como dançarina e performer o projeto de live-painting Corpo e Cor., do Estúdio Thiago Drummond.</p>
+            <div class="meta__block meta__block--inline">
+              <h3 data-i18n="danc.form.title">Formação em dança</h3>
+              <ul>
+                <li data-i18n="danc.form.1">Danças Urbanas · Lílian Gumieiro</li>
+                <li data-i18n="danc.form.3">Combate cênico · Teatro de Arte de Moscou</li>
+              </ul>
+            </div>
+          </div>
+          <figure class="projgroup__photo"><picture><source type="image/webp" srcset="./assets/images/larissa-corpoecor.webp" /><img src="./assets/images/larissa-corpoecor.jpg" alt="Larissa da Matta coberta de tinta, em movimento, no live-painting Corpo e Cor" width="828" height="1028" loading="lazy" decoding="async" /></picture><figcaption class="works__note" data-i18n="modelo.credit.cc">Live-painting Corpo e Cor (2021), como modelo-performer. Concepção: Estúdio Thiago Drummond.</figcaption></figure>
+        </div>
+      </div>
+
+      <div class="projgroup">
+        <span class="projgroup__label" data-i18n="proj.modelo">Modelo</span>
+        <p class="intro-line intro-line--light" data-i18n="modelo.lead">Trabalhos como modelo para marcas, campanhas e projetos de arte.</p>
+        <div class="media-grid media-grid--3">
+          <div class="media-photo"><picture><source type="image/webp" srcset="./assets/images/larissa-drummond-01.webp" /><img src="./assets/images/larissa-drummond-01.jpg" alt="Larissa da Matta em ensaio de estúdio, vestido preto, sentada num banquinho" width="828" height="962" loading="lazy" decoding="async" /></picture></div>
+          <div class="media-photo"><picture><source type="image/webp" srcset="./assets/images/larissa-drummond-02.webp" /><img src="./assets/images/larissa-drummond-02.jpg" alt="Larissa da Matta em ensaio de estúdio, blusa de poás, numa poltrona" width="828" height="1030" loading="lazy" decoding="async" /></picture></div>
+          <div class="media-photo"><picture><source type="image/webp" srcset="./assets/images/larissa-drummond-03.webp" /><img src="./assets/images/larissa-drummond-03.jpg" alt="Larissa da Matta em retrato de estúdio, blusa branca e colar dourado" width="828" height="819" loading="lazy" decoding="async" /></picture></div>
+        </div>
+        <p class="works__note" data-i18n="modelo.credit.td">Ensaios em estúdio (2020 a 2022). Fotos: Thiago Drummond · Estúdio Thiago Drummond.</p>
+        <div class="media-grid media-grid--3">
+          <div class="media-photo"><picture><source type="image/webp" srcset="./assets/images/larissa-film-01.webp" /><img src="./assets/images/larissa-film-01.jpg" alt="Larissa da Matta, still do fashion film Mujeres al borde de un ataque de nervios" width="853" height="1280" loading="lazy" decoding="async" /></picture></div>
+          <div class="media-photo"><picture><source type="image/webp" srcset="./assets/images/larissa-film-02.webp" /><img src="./assets/images/larissa-film-02.jpg" alt="Larissa da Matta, still do fashion film Mujeres al borde de un ataque de nervios" width="1280" height="853" loading="lazy" decoding="async" /></picture></div>
+          <div class="media-photo"><picture><source type="image/webp" srcset="./assets/images/larissa-film-03.webp" /><img src="./assets/images/larissa-film-03.jpg" alt="Larissa da Matta, still do fashion film Mujeres al borde de un ataque de nervios" width="848" height="1280" loading="lazy" decoding="async" /></picture></div>
+        </div>
+        <p class="works__note" data-i18n="modelo.credit">Fashion film “Mujeres al borde de un ataque de nervios” (2023). Concepção: Larissa da Matta e Fotografia Dela (Rayssa Zago) · Maquiagem: Barbara Korbes.</p>
+        <p class="works__note" data-i18n="modelo.mais">Também em campanha para a marca Bemeker e em ensaios com o coletivo Leoas In Foco (fotografia de Bianca Freire).</p>
+      </div>
+
+      <div class="bts">
+        <span class="bts__label" data-i18n="atriz.bts.title">Também nos bastidores</span>
+        <div class="bts__list">
+          <p>Piracema: Uma Carta de Amor ao Teatro (2023) · curta · assistente de direção · dir. Dani Duarte</p>
+          <p>Quando Éramos Nós (2021) · curta · diretora de atuação · dir. Carolina Liz</p>
+          <p>Escavando Tebas (2021) · documentário · dir. Marcelo Lazzaratto · Cia. Elevador de Teatro Panorâmico</p>
+          <p>Fronteira (2019) · dir. Marcelo Lazzaratto · Sesc Pinheiros</p>
+          <p>Aproximando-se de A Fera na Selva (2018) · dir. Malú Bazán · Centro Cultural São Paulo</p>
+          <p>Cindy (2017) · dir. Marcelo Lazzaratto · Biblioteca Mário de Andrade</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- REEL -->
-  <section class="reel section" id="reel">
+  <!-- PESQUISA -->
+  <section class="section section--green view" id="pesquisa">
     <div class="wrap">
       <div class="section__head">
         <span class="label">03</span>
-        <span class="label label--title">Reel</span>
+        <h2 class="label label--title" data-i18n="pesquisa.title">Pesquisa</h2>
+        <span class="section__sub" data-i18n="pesquisa.sub">Dramaturgias do Corpo</span>
       </div>
-      <div class="reel__frame" role="img" aria-label="Demo reel em breve">
-        <button class="reel__play" aria-label="Reproduzir reel"><span></span></button>
-        <span class="reel__caption">Demo reel — em breve</span>
+      <div class="pesquisa__text">
+        <p class="lead" data-i18n="pesquisa.lead">Uma investigação sobre mulheres artistas apagadas pela história, e sobre o corpo como arquivo e dramaturgia.</p>
+        <p data-i18n="pesquisa.p1">Em Dramaturgias do Corpo, Larissa pesquisou a vida e a obra de mais de 40 mulheres artistas, do século XVI ao XXI. O trabalho cruza teatro, dança, escrita e memória, e deu origem ao solo autoral sobre Zelda Fitzgerald.</p>
+        <p data-i18n="pesquisa.p2">A pesquisa parte de uma pergunta: o que resta, no corpo e na cena, das artistas que a história insistiu em esquecer? Dela nascem espetáculos, artigos e processos de criação.</p>
+        <p class="pesquisa__note" data-i18n="pesquisa.mestrado">Linha de investigação que Larissa pretende aprofundar no mestrado.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- MÍDIA -->
+  <section class="section view" id="midia">
+    <div class="wrap">
+      <div class="section__head">
+        <span class="label">04</span>
+        <h2 class="label label--title" data-i18n="midia.title">Mídia</h2>
+        <span class="section__sub" data-i18n="midia.sub">Fotos · Vídeos · Imprensa · Publicações</span>
+      </div>
+
+      <span class="projgroup__label projgroup__label--dark" data-i18n="midia.fotos">Fotos</span>
+      <div class="gallery" id="gallery">
+        <button type="button" class="gallery__item" aria-label="Ampliar foto"><picture><source type="image/webp" srcset="./assets/images/larissa-02.webp" /><img src="./assets/images/larissa-02.jpg" alt="Larissa da Matta" width="939" height="1280" loading="lazy" decoding="async" /></picture></button>
+        <button type="button" class="gallery__item" aria-label="Ampliar foto"><picture><source type="image/webp" srcset="./assets/images/larissa-09.webp" /><img src="./assets/images/larissa-09.jpg" alt="Larissa da Matta" width="853" height="1280" loading="lazy" decoding="async" /></picture></button>
+        <button type="button" class="gallery__item" aria-label="Ampliar foto"><picture><source type="image/webp" srcset="./assets/images/larissa-06.webp" /><img src="./assets/images/larissa-06.jpg" alt="Larissa da Matta" width="881" height="1280" loading="lazy" decoding="async" /></picture></button>
+        <button type="button" class="gallery__item" aria-label="Ampliar foto"><picture><source type="image/webp" srcset="./assets/images/larissa-04.webp" /><img src="./assets/images/larissa-04.jpg" alt="Larissa da Matta" width="853" height="1280" loading="lazy" decoding="async" /></picture></button>
+        <button type="button" class="gallery__item" aria-label="Ampliar foto"><picture><source type="image/webp" srcset="./assets/images/larissa-08.webp" /><img src="./assets/images/larissa-08.jpg" alt="Larissa da Matta" width="1097" height="1280" loading="lazy" decoding="async" /></picture></button>
+        <button type="button" class="gallery__item" aria-label="Ampliar foto"><picture><source type="image/webp" srcset="./assets/images/larissa-05.webp" /><img src="./assets/images/larissa-05.jpg" alt="Larissa da Matta" width="853" height="1280" loading="lazy" decoding="async" /></picture></button>
+        <button type="button" class="gallery__item" aria-label="Ampliar foto"><picture><source type="image/webp" srcset="./assets/images/larissa-03.webp" /><img src="./assets/images/larissa-03.jpg" alt="Larissa da Matta" width="1024" height="1280" loading="lazy" decoding="async" /></picture></button>
+        <button type="button" class="gallery__item" aria-label="Ampliar foto"><picture><source type="image/webp" srcset="./assets/images/larissa-10.webp" /><img src="./assets/images/larissa-10.jpg" alt="Larissa da Matta" width="1097" height="1280" loading="lazy" decoding="async" /></picture></button>
+      </div>
+
+      <span class="projgroup__label projgroup__label--dark projgroup__label--mt" data-i18n="midia.videos">Vídeos</span>
+      <div class="videos">
+        <button type="button" class="video-embed video-facade" data-embed="629dMqAfO2Y" aria-label="Reproduzir vídeo HERvolution, com Larissa da Matta">
+          <span class="video-facade__play" aria-hidden="true"></span>
+          <span class="video-facade__label">HERvolution</span>
+        </button>
+        <button type="button" class="video-embed video-facade" data-embed="TUWcgPKThBE" aria-label="Reproduzir vídeo de Larissa da Matta">
+          <span class="video-facade__play" aria-hidden="true"></span>
+          <span class="video-facade__label">Assistir</span>
+        </button>
+        <button type="button" class="video-embed video-facade" data-embed="4cxqNd7R6mA" aria-label="Reproduzir vídeo No Ar de Larissa da Matta">
+          <span class="video-facade__play" aria-hidden="true"></span>
+          <span class="video-facade__label">No Ar</span>
+        </button>
+        <button type="button" class="video-embed video-facade" data-embed="6iwwXuuMFHw" aria-label="Reproduzir vídeo do live-painting Corpo e Cor, com Larissa da Matta">
+          <span class="video-facade__play" aria-hidden="true"></span>
+          <span class="video-facade__label">Corpo e Cor</span>
+        </button>
+        <button type="button" class="video-embed video-facade" data-embed="BYNKnU4e2u0" data-start="9310" aria-label="Reproduzir vídeo Telling Not to Forget, com Larissa da Matta">
+          <span class="video-facade__play" aria-hidden="true"></span>
+          <span class="video-facade__label">Telling Not to Forget</span>
+        </button>
+      </div>
+
+      <span class="projgroup__label projgroup__label--dark projgroup__label--mt" data-i18n="midia.imprensa">Imprensa</span>
+      <ul class="press">
+        <li class="press__item">
+          <a href="https://cinepop.com.br/a-ultima-valsa-de-zelda-fitzgerald-estreia-em-sao-paulo-e-devolve-protagonismo-a-uma-artista-apagada-pela-historia-728238/" target="_blank" rel="noopener">
+            <span class="press__outlet">Cinepop</span>
+            <span class="press__title">‘A Última Valsa de Zelda Fitzgerald’ estreia em São Paulo e devolve protagonismo a uma artista apagada pela história</span>
+            <span class="press__cta" data-i18n="imprensa.read">Ler matéria →</span>
+          </a>
+        </li>
+        <li class="press__item">
+          <a href="https://gazetadasemana.com.br/noticia/273388/andar-recebe-estreia-do-solo-a-ultima-valsa-de-zelda-fitzgerald-de-larissa-da-matta-em-abril" target="_blank" rel="noopener">
+            <span class="press__outlet">Gazeta da Semana</span>
+            <span class="press__title">Espaço º Andar recebe a estreia do solo A Última Valsa de Zelda Fitzgerald, de Larissa da Matta</span>
+            <span class="press__cta" data-i18n="imprensa.read">Ler matéria →</span>
+          </a>
+        </li>
+        <li class="press__item">
+          <a href="https://www.sodapop.com.br/oandar-recebe-estreia-do-solo-a-ultima-valsa-de-zelda-fitzgerald-de-larissa-da-matta/" target="_blank" rel="noopener">
+            <span class="press__outlet">Soda Pop</span>
+            <span class="press__title">Espaço º Andar recebe a estreia do solo ‘A Última Valsa de Zelda Fitzgerald’, de Larissa da Matta</span>
+            <span class="press__cta" data-i18n="imprensa.read">Ler matéria →</span>
+          </a>
+        </li>
+        <li class="press__item">
+          <a href="https://www.resenhando.com/2026/04/andar-recebe-estreia-do-solo-ultima.html" target="_blank" rel="noopener">
+            <span class="press__outlet">Resenhando</span>
+            <span class="press__title">Espaço º Andar recebe ‘A Última Valsa de Zelda Fitzgerald’, com Larissa da Matta</span>
+            <span class="press__cta" data-i18n="imprensa.read">Ler matéria →</span>
+          </a>
+        </li>
+      </ul>
+
+      <span class="projgroup__label projgroup__label--dark projgroup__label--mt" data-i18n="midia.publicacoes">Publicações</span>
+      <ul class="press">
+        <li class="press__item">
+          <a href="https://www.olharesceliahelena.com.br/olhares/pt_BR/article/view/256/191" target="_blank" rel="noopener">
+            <span class="press__outlet">Revista Olhares · Resenha</span>
+            <span class="press__title">Casa do Teatro de portas abertas: práticas de teatro para crianças e adolescentes</span>
+            <span class="press__cta" data-i18n="imprensa.read">Ler matéria →</span>
+          </a>
+        </li>
+        <li class="press__item">
+          <a href="https://www.foyer.digital/post/desenterrando-zelda-fitzgerald" target="_blank" rel="noopener">
+            <span class="press__outlet">Foyer Digital · Artigo</span>
+            <span class="press__title">Desenterrando Zelda Fitzgerald ou A angústia como base para a imaginação e criação artística</span>
+            <span class="press__cta" data-i18n="imprensa.read">Ler matéria →</span>
+          </a>
+        </li>
+        <li class="press__item">
+          <a href="https://drive.google.com/file/d/11ezpH9Ju1v2z1Hnp5jfaLj0iabuOLZZD/view" target="_blank" rel="noopener">
+            <span class="press__outlet">SPA · USP · Resumo expandido</span>
+            <span class="press__title">Cartas à minha avó e às mulheres que virão depois de mim</span>
+            <span class="press__cta" data-i18n="imprensa.read">Ler matéria →</span>
+          </a>
+        </li>
+      </ul>
+
+      <span class="projgroup__label projgroup__label--dark projgroup__label--mt" data-i18n="midia.entrevistas">Entrevistas</span>
+      <p class="soon-line" data-i18n="midia.entrevistas.soon">Entrevistas, em breve.</p>
+    </div>
+  </section>
+
+  <!-- CURRÍCULOS -->
+  <section class="section section--dark view" id="curriculos">
+    <div class="wrap">
+      <div class="section__head">
+        <span class="label">05</span>
+        <h2 class="label label--title" data-i18n="curriculos.title">Currículos</h2>
+        <span class="section__sub" data-i18n="curriculos.sub">CVs &amp; materiais</span>
+      </div>
+      <p class="intro-line intro-line--light" data-i18n="curriculos.lead">Currículos e materiais para download, em diferentes formatos e idiomas.</p>
+      <div class="cv-grid">
+        <a class="cv-card" href="./assets/larissa-da-matta-portfolio.pdf" target="_blank" rel="noopener">
+          <span class="cv-card__k" data-i18n="curriculos.portfolio">Portfólio</span>
+          <span class="cv-card__v">PDF ↓</span>
+        </a>
+        <a class="cv-card" href="https://lattes.cnpq.br/2520353948330757" target="_blank" rel="noopener">
+          <span class="cv-card__k">Currículo Lattes</span>
+          <span class="cv-card__v">CNPq ↗</span>
+        </a>
+        <a class="cv-card" href="./assets/larissa-da-matta-cv-pt.pdf" target="_blank" rel="noopener">
+          <span class="cv-card__k">Currículo · PT</span>
+          <span class="cv-card__v">PDF ↓</span>
+        </a>
+        <a class="cv-card" href="./assets/larissa-da-matta-cv-en.pdf" target="_blank" rel="noopener">
+          <span class="cv-card__k">CV · EN</span>
+          <span class="cv-card__v">PDF ↓</span>
+        </a>
+        <a class="cv-card" href="./assets/larissa-da-matta-cv-es.pdf" target="_blank" rel="noopener">
+          <span class="cv-card__k">Currículum · ES</span>
+          <span class="cv-card__v">PDF ↓</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AULAS -->
+  <section class="section view" id="aulas">
+    <div class="wrap">
+      <div class="section__head">
+        <span class="label">06</span>
+        <h2 class="label label--title" data-i18n="aulas.title">Aulas</h2>
+        <span class="section__sub" data-i18n="aulas.sub">Cursos e serviços</span>
+      </div>
+      <p class="intro-line" data-i18n="aulas.lead">Aulas particulares e cursos, presenciais e online.</p>
+      <div class="cards">
+        <article class="card">
+          <span class="card__num">01</span>
+          <h3 data-i18n="aulas.c1.t">Espanhol</h3>
+          <p data-i18n="aulas.c1.d">Espanhol para iniciantes e para quem quer destravar a conversação.</p>
+        </article>
+        <article class="card">
+          <span class="card__num">02</span>
+          <h3 data-i18n="aulas.c2.t">Inglês · Conversação</h3>
+          <p data-i18n="aulas.c2.d">Conversação em inglês para ganhar fluência e confiança.</p>
+        </article>
+        <article class="card">
+          <span class="card__num">03</span>
+          <h3 data-i18n="aulas.c3.t">Curso livre de Teatro</h3>
+          <p data-i18n="aulas.c3.d">Curso livre de teatro para iniciantes e atores em formação.</p>
+        </article>
+      </div>
+      <p class="aulas__note" data-i18n="aulas.formato">Online e presencial (São Paulo) · turmas e valores sob consulta.</p>
+      <a href="mailto:larissa.fmatta@gmail.com?subject=Aulas" class="btn-line"><span data-i18n="aulas.cta">Quero agendar uma aula</span> <span aria-hidden="true">→</span></a>
     </div>
   </section>
 
   <!-- CONTATO -->
-  <section class="contato section section--dark" id="contato">
+  <section class="section view" id="contato">
     <div class="wrap">
       <div class="section__head">
-        <span class="label">04</span>
-        <span class="label label--title">Contato</span>
+        <span class="label">07</span>
+        <h2 class="label label--title" data-i18n="contato.title">Contato</h2>
       </div>
       <div class="contato__grid">
-        <div>
-          <h2 class="contato__title">Vamos criar<br />algo juntos.</h2>
+        <div class="contato__intro">
+          <p class="contato__title" data-i18n-html="contato.headline">Vamos<br />conversar.</p>
+          <p class="contato__lead" data-i18n="contato.lead">Para trabalhos, casting ou aulas, fale direto com a Larissa.</p>
+          <a class="btn-mail" href="mailto:larissa.fmatta@gmail.com">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/></svg>
+            <span data-i18n="contato.email">Enviar e-mail</span>
+          </a>
         </div>
         <div class="contato__info">
           <div class="info__block">
-            <h3>Representação</h3>
-            <p>Acervo de Atores<br />Patricia Blanco<br /><a href="tel:+5511991094535">+55 11 99109-4535</a></p>
+            <h3 data-i18n="contato.direct.title">Direto</h3>
+            <p><a href="mailto:larissa.fmatta@gmail.com">larissa.fmatta@gmail.com</a></p>
           </div>
           <div class="info__block">
-            <h3>Redes</h3>
+            <h3 data-i18n="contato.material.title">Material</h3>
+            <p><a href="./assets/larissa-da-matta-portfolio.pdf" target="_blank" rel="noopener" data-i18n="contato.material.pdf">Baixar portfólio (PDF)</a></p>
+          </div>
+          <div class="info__block">
+            <h3 data-i18n="contato.rep.title">Representação</h3>
+            <p data-i18n-html="contato.rep.body">Acervo de Atores<br />Patricia Blanco<br /><a href="tel:+5511991094535">+55 11 99109-4535</a><br /><a href="mailto:pat.acervodeatores@gmail.com">pat.acervodeatores@gmail.com</a></p>
+          </div>
+          <div class="info__block">
+            <h3 data-i18n="contato.social.title">Redes</h3>
             <p><a href="https://instagram.com/larissadamatta_" target="_blank" rel="noopener">Instagram @larissadamatta_</a></p>
+            <p><a href="https://www.youtube.com/@larissa_da_matta" target="_blank" rel="noopener">YouTube @larissa_da_matta</a></p>
+            <p><a href="https://br.linkedin.com/in/larissa-da-matta-6b3b41273" target="_blank" rel="noopener">LinkedIn</a></p>
+            <p><a href="https://elencodigital.com.br/LarissaDaMatta" target="_blank" rel="noopener">Elenco Digital</a></p>
+            <p><a href="https://acervodeatores.com.br/agenciados/larissa-da-matta/" target="_blank" rel="noopener">Acervo de Atores</a></p>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- FOOTER -->
   <footer class="footer">
     <div class="wrap footer__inner">
       <span class="footer__name">Larissa da Matta</span>
-      <span class="footer__role">Atriz · Performer · Dramaturga</span>
+      <span class="footer__role" data-i18n="hero.eyebrow">Atriz · Performer · Dramaturga · Arte-educadora · Artista-pesquisadora</span>
       <span class="footer__copy">© 2026</span>
     </div>
   </footer>
 
+  <!-- Lightbox (galeria) -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada" hidden>
+    <button type="button" class="lightbox__close" id="lightboxClose" aria-label="Fechar">&times;</button>
+    <button type="button" class="lightbox__nav lightbox__prev" id="lightboxPrev" aria-label="Anterior">&#8249;</button>
+    <img class="lightbox__img" id="lightboxImg" src="" alt="" />
+    <button type="button" class="lightbox__nav lightbox__next" id="lightboxNext" aria-label="Próxima">&#8250;</button>
+  </div>
+
+  <script src="./assets/js/i18n.js"></script>
   <script src="./assets/js/main.js"></script>
 </body>
 </html>
